@@ -1,5 +1,6 @@
 const userRouter = require('./user')
 const {notFound, errHandler} = require('../middlewares/errHandler');
+const { verifyAccessTokenoken} = require('../middlewares/verifyToken');
 
 const initRoutes = (app) => {
     app.use('/api/user', userRouter)

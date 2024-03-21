@@ -3,6 +3,8 @@ const asyncHandler = require("express-async-handler");
 
 const jwt = require("jsonwebtoken");
 const { response } = require("express");
+
+const sttCode = require("../constants/statusCode");
 const {
   generateAccessToken,
   generatereFreshToken,
@@ -40,7 +42,6 @@ const login = asyncHandler(async (req, res) => {
   if (response && (await response.isCorrectPassword(password))) {
     const { password, role, ...userData } = response.toObject();
     const accessToken = generateAccessToken(response._id, role);
-
     const refreshToken = generatereFreshToken(response._id);
     await User.findOneAndUpdate(response._id, { refreshToken }, { new: true });
     res.cookie("refreshToken", refreshToken, {
@@ -57,7 +58,29 @@ const login = asyncHandler(async (req, res) => {
     throw new Error("Email or password is incorrect");
   }
 });
+
+const getCurrent = asyncHandler(async (req, res) => {
+  const {_id} = req.user;
+  const user = await User.findById(_id).select('-password -role -refreshToken');
+  return res.status(sttCode.Ok).json({
+    success: user ? true: false,
+    mes: user ? user : "User not found"
+  })
+})
+
+const refreshToken = asyncHandler(async(req, res) => {
+  const cookie = req.cookies
+  if(!cookie && !cookie.refreshToken) throw new Error("No refresh token")
+  const rs = await jwt.verify(cookie.refreshToken, process.env.JWT_SECRET)
+  const user = await User.findOne({_id: rs._id, refreshToken: cookie.refreshToken})
+  return res.status(200).json({
+    success: user ? true: false,
+    mes: user ? generateAccessToken(user._id, user.role) : 'RefreshToken Invalid'
+  })
+})
 module.exports = {
   register,
   login,
+  getCurrent,
+  refreshToken
 };
