@@ -4,11 +4,13 @@ const asyncHandler = require("express-async-handler");
 const jwt = require("jsonwebtoken");
 const { response } = require("express");
 
+const crypto = require("crypto");
 const sttCode = require("../constants/statusCode");
 const {
   generateAccessToken,
   generatereFreshToken,
 } = require("../middlewares/jwt");
+const { sendMail } = require("../utils/sendMail");
 
 const register = asyncHandler(async (req, res) => {
   const { email, password, fullname } = req.body;
@@ -60,27 +62,85 @@ const login = asyncHandler(async (req, res) => {
 });
 
 const getCurrent = asyncHandler(async (req, res) => {
-  const {_id} = req.user;
-  const user = await User.findById(_id).select('-password -role -refreshToken');
+  const { _id } = req.user;
+  const user = await User.findById(_id).select("-password -role -refreshToken");
   return res.status(sttCode.Ok).json({
-    success: user ? true: false,
-    mes: user ? user : "User not found"
-  })
-})
+    success: user ? true : false,
+    mes: user ? user : "User not found",
+  });
+});
 
-const refreshToken = asyncHandler(async(req, res) => {
-  const cookie = req.cookies
-  if(!cookie && !cookie.refreshToken) throw new Error("No refresh token")
-  const rs = await jwt.verify(cookie.refreshToken, process.env.JWT_SECRET)
-  const user = await User.findOne({_id: rs._id, refreshToken: cookie.refreshToken})
+const refreshToken = asyncHandler(async (req, res) => {
+  const cookie = req.cookies;
+  if (!cookie && !cookie.refreshToken) throw new Error("No refresh token");
+  const rs = await jwt.verify(cookie.refreshToken, process.env.JWT_SECRET);
+  const user = await User.findOne({
+    _id: rs._id,
+    refreshToken: cookie.refreshToken,
+  });
   return res.status(200).json({
-    success: user ? true: false,
-    mes: user ? generateAccessToken(user._id, user.role) : 'RefreshToken Invalid'
-  })
-})
+    success: user ? true : false,
+    mes: user
+      ? generateAccessToken(user._id, user.role)
+      : "RefreshToken Invalid",
+  });
+});
+
+const forgotPassword = asyncHandler(async (req, res) => {
+  const { email } = req.body;
+  if (!email) throw new Error("Missing email");
+  const user = await User.findOne({ email });
+  if (user) {
+    const tokenPassword = user.createPasswordToken();
+    await user.save();
+    const html = `Vui lòng click vào link để lấy lại mật khẩu. Link sẽ hết hạn sau 15 phút. <a href=${process.env.URL_SERVER}api/user/reset-password/${tokenPassword}>Click vào đây</a>`;
+    const subject = "Quên mật khẩu";
+    const data = {
+      email,
+      html,
+      subject,
+    };
+    const rs = await sendMail(data);
+    return res.status(sttCode.Ok).json({
+      success: true,
+      mes: rs,
+    });
+  }
+  return res.status(sttCode.NotFound).json({
+    success: false,
+    mes: "User not found",
+  });
+});
+
+const resetPassword = asyncHandler(async (req, res) => {
+  const { token } = req.params;
+  if (!token) {
+    throw new Error("Error");
+  }
+  const passwordToken = crypto.createHash('sha256').update(token).digest('hex');
+  const user = await User.findOne({
+    passwordToken, passwordTokenExpiration: { $gt: Date.now() }
+  });
+  if (user) {
+    user.password = '000000'
+    user.createPasswordToken = ''
+    user.passwordTokenExpiration = ''
+    await user.save()
+    return res.status(sttCode.Ok).json({
+      success: true,
+      mes: 'Reset password success. New password is 123456'
+    });
+  }
+  return res.status(sttCode.NotImplemented).json({
+    success: false,
+    mes: "Token expired!",
+  });
+});
 module.exports = {
   register,
   login,
   getCurrent,
-  refreshToken
+  refreshToken,
+  forgotPassword,
+  resetPassword,
 };

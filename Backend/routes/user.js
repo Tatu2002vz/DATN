@@ -6,5 +6,7 @@ router.post('/register', controller.register)
 router.post('/login', controller.login)
 router.get('/current', verifyAccessToken, controller.getCurrent)
 router.post('/refreshtoken', controller.refreshToken)
+router.post('/forgotpassword', controller.forgotPassword)
+router.put('/reset-password/:token', controller.resetPassword)
 
 module.exports = router
