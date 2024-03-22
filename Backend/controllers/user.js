@@ -40,7 +40,7 @@ const login = asyncHandler(async (req, res) => {
       mes: "Missing inputs",
     });
   }
-  const response = await User.findOne({ email });
+  const response = await User.findOne({ email }).select('-passwordToken -passwordTokenExpiration -refreshToken');
   if (response && (await response.isCorrectPassword(password))) {
     const { password, role, ...userData } = response.toObject();
     const accessToken = generateAccessToken(response._id, role);
@@ -113,8 +113,9 @@ const forgotPassword = asyncHandler(async (req, res) => {
 });
 
 const resetPassword = asyncHandler(async (req, res) => {
+  const {password} = req.body;
   const { token } = req.params;
-  if (!token) {
+  if (!token || !password) {
     throw new Error("Error");
   }
   const passwordToken = crypto.createHash('sha256').update(token).digest('hex');
@@ -122,13 +123,13 @@ const resetPassword = asyncHandler(async (req, res) => {
     passwordToken, passwordTokenExpiration: { $gt: Date.now() }
   });
   if (user) {
-    user.password = '000000'
-    user.createPasswordToken = ''
+    user.password = password
+    user.passwordToken = ''
     user.passwordTokenExpiration = ''
     await user.save()
     return res.status(sttCode.Ok).json({
       success: true,
-      mes: 'Reset password success. New password is 123456'
+      mes: 'Changed password success'
     });
   }
   return res.status(sttCode.NotImplemented).json({
