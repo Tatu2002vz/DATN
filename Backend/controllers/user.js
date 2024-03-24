@@ -137,6 +137,38 @@ const resetPassword = asyncHandler(async (req, res) => {
     mes: "Token expired!",
   });
 });
+
+
+// -------------------------------
+
+const getAllUsers = asyncHandler(async(req, res) => {
+  const response = await User.find()
+  return res.status(sttCode.Ok).json({
+    success: response ? true : false,
+    mes: response
+  })
+})
+
+const deleteUser = asyncHandler(async(req, res) => {
+  const {id} = req.query
+  const user = await User.findByIdAndDelete(id)
+  return res.status(sttCode.Ok).json({
+    success: user ? true: false,
+    mes: user ? 'Deleted successfully' : 'Something went wrong'
+  })
+})
+
+const updateUser = asyncHandler(async(req, res) => {
+  const {id} = req.query
+  const {email, fullname} = req.body
+  if(!email && !fullname) throw new Error('Missing input!')
+  const user = await User.findByIdAndUpdate(id, {email, fullname}, {new: true})
+  return res.status(sttCode.Ok).json({
+    success: user ? true: false,
+    mes: user ? 'Updated successfully' : 'Something went wrong'
+  })
+})
+
 module.exports = {
   register,
   login,
@@ -144,4 +176,7 @@ module.exports = {
   refreshToken,
   forgotPassword,
   resetPassword,
+  getAllUsers,
+  deleteUser,
+  updateUser
 };
