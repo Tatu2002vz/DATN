@@ -21,7 +21,7 @@ var userSchema = new mongoose.Schema(
     role: {
       type: String,
       default: "user",
-      enum: ["admin", "user", "author"],
+      enum: ["admin", "user"],
     },
     favorites: [
       {

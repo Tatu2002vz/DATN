@@ -20,7 +20,7 @@ var comicSchema = new mongoose.Schema(
     },
     createdBy: {
       type: mongoose.Types.ObjectId,
-      ref: "Author",
+      ref: "User",
     },
     genre: [
       {

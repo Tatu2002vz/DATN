@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
 const sttCode = require("../constants/statusCode");
+const Comic = require("../models/comic");
 
 const verifyAccessToken = asyncHandler(async (req, res, next) => {
   if (req?.headers?.authorization?.startsWith("Bearer ")) {
@@ -32,7 +33,27 @@ const isAdmin = asyncHandler(async (req, res, next) => {
   next();
 });
 
+const isAuthor = asyncHandler(async (req, res, next) => {
+  const { id } = req.params;
+  const authorID = req.user._id;
+  if (!id) throw new Error("Invalid id");
+  const comic = await Comic.findById(id);
+  if (!comic)
+    return res.status(sttCode.NotFound).json({
+      success: false,
+      mes: "Not Found Comic with id " + id,
+    });
+  if (authorID.localeCompare(comic.createdBy._id) !== 0) {
+    return res.status(sttCode.Unauthorized).json({
+      success: false,
+      mes: "Required Author Role",
+    });
+  }
+  next();
+});
+
 module.exports = {
   verifyAccessToken,
   isAdmin,
+  isAuthor,
 };
