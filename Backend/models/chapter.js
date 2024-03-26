@@ -15,14 +15,8 @@ var chapterSchema = new mongoose.Schema({
   images: [{ type: String }],
   comments: [
     {
-      user: {
-        type: mongoose.Types.ObjectId,
-        ref: "User",
-      },
-      content: {
-        type: String,
-        required: true,
-      },
+      type: mongoose.Types.ObjectId,
+      ref: 'Comment'
     },
   ],
 });
