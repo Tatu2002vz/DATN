@@ -1,6 +1,6 @@
 const Genre = require('../models/genre')
 const asyncHandler = require('express-async-handler')
-const sttCode = require('../constants/statusCode')
+const sttCode = require('../enum/statusCode')
 const getGenre = asyncHandler(async(req, res) => {
     const {id} = req.params
     if(!id) throw new Error('Invalid id genre')

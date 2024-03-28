@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 
 var chapterSchema = new mongoose.Schema({
+  comic: {
+    type: mongoose.Types.ObjectId,
+    ref: 'Comic'
+  },
   chapName: {
     type: String,
   },
   chapNumber: {
     type: Number,
-    unique: true,
+    require: true,
   },
   price: {
     type: Number,

@@ -1,22 +1,77 @@
 const Comic = require("../models/comic");
 const asyncHandler = require("express-async-handler");
-const sttCode = require("../constants/statusCode");
-
+const sttCode = require("../enum/statusCode");
+const cloudinary = require("../config/cloudinary.config");
 const slugify = require("slugify");
+const { formidable } = require("formidable");
 const createComic = asyncHandler(async (req, res) => {
-  const { title, description, coverImage, genre } = req.body;
-  const { _id } = req.user;
-  req.body.createdBy = _id;
-  if (!title || !description || !coverImage || !genre)
-    throw new Error("Missing input");
-  req.body.slug = slugify(title);
-  const newComic = await Comic.create(req.body);
-  return res.status(sttCode.Ok).json({
-    success: newComic ? true : false,
-    mes: newComic ? newComic : "Something went wrong!",
-  });
-});
+  const form = formidable({ multiples: true });
+  form.parse(req, async (err, fields, files) => {
+    if (err) {
+      // Xử lý lỗi nếu có
+      console.error(err);
+      return res.status(500).json({ error: "Something went wrong" });
+    }
 
+    // Lấy giá trị từ trường comic và chapter
+    let { title, description, ...genres } = fields;
+
+    // Xử lý dữ liệu vào
+    if(!title) throw new Error('Title must not be empty');
+    // Chuyển các key từ Object thành String
+    title = JSON.parse(JSON.stringify(title).toString().replace(/\[|\]/g, ''))
+    description = JSON.parse(JSON.stringify(description).toString().replace(/\[|\]/g, ''))
+    let genre = Object.values(genres).map((el) => {
+      return JSON.parse(JSON.stringify(el).toString().replace(/\[|\]/g, ''))
+    })
+    const { _id } = req.user;
+    const data = {
+      title,
+      slug: slugify(title),
+      description,
+      genre,
+      createdBy: _id
+    }
+    const newComic = await Comic.create(data)
+    if(newComic) {
+      try {
+        // Upload tệp tin img lên Cloudinary
+        const result = await cloudinary.uploader.upload(files.coverImage[0].filepath, {
+          folder: `comicMarket/`,
+        });
+        // Lấy đường dẫn công khai của tệp tin đã upload
+        const coverImage = result.secure_url;
+        const updateComic = await Comic.findByIdAndUpdate(newComic._id, {coverImage}, {new: true});
+        return res.status(sttCode.Ok).json({
+          success: updateComic ? true : false,
+          mes: updateComic ? 'Create a comic success' : 'Something went wrong',
+          updateComic
+        })
+  
+      } catch (error) {
+        // Xử lý lỗi nếu có
+        console.error(error);
+        return res.status(500).json({ error: "Something went wrong" });
+      }
+    } 
+    throw new Error("Error creating comic")
+    
+  });
+  // const { title, description, coverImage, genre } = req.body;
+  // const { _id } = req.user;
+  // req.body.createdBy = _id;
+  // if (!title || !description || !coverImage || !genre)
+  //   throw new Error("Missing input");
+  // req.body.slug = slugify(title);
+  // const newComic = await Comic.create(req.body);
+  // return res.status(sttCode.Ok).json({
+  //   success: newComic ? true : false,
+  //   mes: newComic ? newComic : "Something went wrong!",
+  // });
+});
+const uploadImg = asyncHandler(async (req, res) => {
+  const form = formidable({ multiples: true });
+});
 const getComic = asyncHandler(async (req, res) => {
   const { id } = req.params;
   if (!req.params || !req.params.id) throw new Error("Missing input");
@@ -107,10 +162,12 @@ const deleteComic = asyncHandler(async (req, res) => {
     mes: comic ? "Delete Success" : "Something went wrong",
   });
 });
+
 module.exports = {
   createComic,
   getComic,
   getComics,
   deleteComic,
   updateComic,
+  uploadImg,
 };

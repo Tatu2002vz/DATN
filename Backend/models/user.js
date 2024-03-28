@@ -29,6 +29,10 @@ var userSchema = new mongoose.Schema(
         ref: "Comic",
       },
     ],
+    walletBalance: {
+      type: Number,
+      default: 0,
+    },
     address: String,
     refreshToken: {
       type: String,

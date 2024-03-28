@@ -16,7 +16,6 @@ var comicSchema = new mongoose.Schema(
     },
     coverImage: {
       type: String,
-      required: true,
     },
     createdBy: {
       type: mongoose.Types.ObjectId,

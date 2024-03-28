@@ -7,4 +7,5 @@ router.get('/:id', controller.getComic)
 router.post('/', verifyAccessToken, controller.createComic)
 router.put('/:id', [verifyAccessToken, isAuthor], controller.updateComic)
 router.delete('/:id', [verifyAccessToken, isAuthor], controller.deleteComic)
+router.post('/upload', controller.uploadImg)
 module.exports = router

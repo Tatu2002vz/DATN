@@ -1,4 +1,4 @@
-const sttCode = require('../constants/statusCode')
+const sttCode = require('../enum/statusCode')
 const notFound = (req, res, next) => {
     const error = new Error(`Route ${req.originalUrl} not found`)
     res.status(sttCode.NotFound)

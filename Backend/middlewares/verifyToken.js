@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
-const sttCode = require("../constants/statusCode");
+const sttCode = require("../enum/statusCode");
 const Comic = require("../models/comic");
 
 const verifyAccessToken = asyncHandler(async (req, res, next) => {

@@ -17,4 +17,4 @@ var purchaseSchema = new mongoose.Schema({
     timestamps: true, //
 })
 
-module.exports = mongoose.Model('Purchase', purchaseSchema)
+module.exports = mongoose.model('Purchase', purchaseSchema)

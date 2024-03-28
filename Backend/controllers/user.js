@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { response } = require("express");
 
 const crypto = require("crypto");
-const sttCode = require("../constants/statusCode");
+const sttCode = require("../enum/statusCode");
 const {
   generateAccessToken,
   generatereFreshToken,
@@ -160,9 +160,8 @@ const deleteUser = asyncHandler(async(req, res) => {
 
 const updateUser = asyncHandler(async(req, res) => {
   const {id} = req.query
-  const {email, fullname} = req.body
-  if(!email && !fullname) throw new Error('Missing input!')
-  const user = await User.findByIdAndUpdate(id, {email, fullname}, {new: true})
+  if(Object.keys(req.body) === 0) throw new Error('Missing input!')
+  const user = await User.findByIdAndUpdate(id, req.body, {new: true})
   return res.status(sttCode.Ok).json({
     success: user ? true: false,
     mes: user ? 'Updated successfully' : 'Something went wrong'
