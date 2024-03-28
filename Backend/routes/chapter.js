@@ -5,6 +5,8 @@ const fileUpload = require('../config/cloudinary.config')
 
 
 router.post('/', controller.createChapter)
+router.get('/:id', controller.getListChapter)
+router.delete('/:id', controller.deleteChapter)
 
 
 module.exports = router

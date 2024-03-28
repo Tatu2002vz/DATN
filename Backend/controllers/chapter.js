@@ -1,21 +1,13 @@
 const Chapter = require("../models/chapter");
 const asyncHandler = require("express-async-handler");
 const sttCode = require("../enum/statusCode");
-const Comic = require("../models/comic")
+const Comic = require("../models/comic");
 const { formidable } = require("formidable");
 const cloudinary = require("../config/cloudinary.config");
 
-const getChapter = asyncHandler(async (req, res) => {
+const getListChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  if (!id) throw new Error("Invalid id chapter");
-  const chapter = await Chapter.findById(id);
-  return res.status(sttCode.Ok).json({
-    success: chapter ? true : false,
-    mes: chapter ? chapter : "Something went wrong!",
-  });
-});
-const getAllChapter = asyncHandler(async (req, res) => {
-  const chapter = await Chapter.find();
+  const chapter = await Chapter.find({comic: id}).select('chapNumber');
   return res.status(sttCode.Ok).json({
     success: chapter ? true : false,
     mes: chapter ? chapter : "Something went wrong!",
@@ -38,12 +30,15 @@ const createChapter = asyncHandler(async (req, res) => {
     price,
   };
   const rs = await Chapter.findOne({ chapNumber, comic });
-  const comicRecord = await Comic.findById(comic).select('title')
-  if (rs) throw new Error(`Chapter ${chapNumber} of "${comicRecord.title}" is already in database`);
+  const comicRecord = await Comic.findById(comic).select("title");
+  if (rs)
+    throw new Error(
+      `Chapter ${chapNumber} of "${comicRecord.title}" is already in database`
+    );
   const newChapter = await Chapter.create(data);
   if (newChapter) {
     const uploadedImages = [];
-    const files = formParse[1]
+    const files = formParse[1];
     for (let i = 0; i < files.image.length; i++) {
       const image = files.image[i];
       const filename = `${i}`;
@@ -71,7 +66,6 @@ const createChapter = asyncHandler(async (req, res) => {
   }
 });
 
-const updateChapter = asyncHandler(async (req, res) => {});
 
 const deleteChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
@@ -85,4 +79,6 @@ const deleteChapter = asyncHandler(async (req, res) => {
 
 module.exports = {
   createChapter,
+  getListChapter,
+  deleteChapter
 };
