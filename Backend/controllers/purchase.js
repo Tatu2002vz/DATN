@@ -3,22 +3,6 @@ const asyncHandler = require("express-async-handler");
 const sttCode = require("../enum/statusCode");
 const User = require("../models/user");
 const Chapter = require("../models/chapter");
-const getPurchase = asyncHandler(async (req, res) => {
-  const { id } = req.params;
-  if (!id) throw new Error("Invalid id chapter");
-  if (req.user && req.user._id) {
-    const userId = req.user._id;
-    const purchase = await Purchase.findOne({ user: userId, chapter: id });
-    return res.status(sttCode.Ok).json({
-      success: purchase ? true : false,
-      mes: purchase ? purchase : "Something went wrong!",
-    });
-  }
-  return res.status(sttCode.Ok).json({
-    success: false,
-    mes: "This chapter has not been purchased yet",
-  });
-});
 
 const createPurchase = asyncHandler(async (req, res) => {
   const { id } = req.params;
@@ -28,6 +12,8 @@ const createPurchase = asyncHandler(async (req, res) => {
   const userId = req.user._id;
   const user = await User.findById(userId).select("walletBalance");
   const chapter = await Chapter.findById(id).select("price");
+  const checkIsBought = await Purchase.findOne({user: userId, chapter: id})
+  if(checkIsBought) throw new Error('This chapter has been purchased!')
   if (user.walletBalance > chapter.price) {
     await User.findByIdAndUpdate(
       userId,
@@ -37,7 +23,6 @@ const createPurchase = asyncHandler(async (req, res) => {
     const data = {
         user: userId,
         chapter: chapter,
-
     }
     const purchase = await Purchase.create(data)
     return res.status(sttCode.Ok).json({
@@ -45,6 +30,7 @@ const createPurchase = asyncHandler(async (req, res) => {
         mes: 'Purchase successfully'
     })
   }
+  throw new Error('Purchase failed! Your balance is unavailable!')
 });
 
 const updatePurchase = asyncHandler(async (req, res) => {});
@@ -52,7 +38,6 @@ const updatePurchase = asyncHandler(async (req, res) => {});
 const deletePurchase = asyncHandler(async (req, res) => {});
 
 module.exports = {
-  getPurchase,
   createPurchase,
   updatePurchase,
   deletePurchase,

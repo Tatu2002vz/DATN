@@ -8,13 +8,14 @@ const multipleUploadMiddleware = require("../middlewares/uploadImg");
 
 const getListChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const chapter = await Chapter.find({ comic: id }).select("chapNumber");
+  const chapter = await Chapter.find({ comic: id })
+    .select("chapNumber")
+    .sort("chapNumber");
   return res.status(sttCode.Ok).json({
     success: chapter ? true : false,
     mes: chapter ? chapter : "Something went wrong!",
   });
 });
-let debug = console.log.bind(console);
 
 // const createChapter = asyncHandler(async (req, res) => {
 //   const form = formidable({ multiples: true });
@@ -76,16 +77,35 @@ const createChapter = asyncHandler(async (req, res) => {
   console.log(images);
   const data = {
     ...req.body,
-    images
-  }
-  
-  const newChapter = Chapter.create(data)
+    images,
+  };
+
+  const newChapter = Chapter.create(data);
   return res.status(sttCode.Ok).json({
     success: newChapter ? true : false,
-    mes: newChapter ? 'Create chapter successfully' : 'Error creating chapter'
-  })
+    mes: newChapter ? "Create chapter successfully" : "Error creating chapter",
+  });
 });
-
+const getChapter = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  if (!id) throw new Error("Invalid id chapter");
+  const chapter = await Chapter.findById(id);
+  if (chapter.price === 0)
+    return res.status(sttCode.Ok).json({
+      success: true,
+      mes: chapter,
+    });
+  else {
+    const {_id} = req.user
+    if(!_id) throw new Error("Please go to the login page!");
+    const purchase = await Purchase.findOne({user : _id, chapter: id})
+    if(purchase) return res.status(sttCode.Ok).json({
+      success: true,
+      mes: chapter
+    })
+    else throw new Error("This chapter requires purchase to view")
+  }
+});
 const deleteChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
   if (!id) throw new Error("Missing id");
@@ -100,4 +120,5 @@ module.exports = {
   createChapter,
   getListChapter,
   deleteChapter,
+  getChapter,
 };
