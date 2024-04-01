@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 8888
+app.use('/images', express.static('public'));
 app.use(express.json())
 app.use(cookieParser())
 app.use(bodyParser.json())
@@ -22,9 +23,6 @@ app.use(cors({
 
 dbConnect();
 initRoutes(app)
-app.use('/', (req, res) => {
-    res.send('hahaha')
-})
 
 
 app.listen(port, () => {

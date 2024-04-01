@@ -45,7 +45,6 @@ const createComic = asyncHandler(async (req, res) => {
         return res.status(sttCode.Ok).json({
           success: updateComic ? true : false,
           mes: updateComic ? 'Create a comic success' : 'Something went wrong',
-          updateComic
         })
   
       } catch (error) {
