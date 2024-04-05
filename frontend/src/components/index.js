@@ -1,0 +1,8 @@
+export {default as Header} from './Header.js'
+export {default as Footer} from './Footer.js'
+export {default as Button} from './Button.js'
+export {default as Login} from './Login.js'
+export {default as InputField} from './InputField.js'
+export {default as ListFilter} from './ListFilter.js'
+export {default as FilterTag} from './FilterTag.js'
+export {default as Comic} from './Comic.js'

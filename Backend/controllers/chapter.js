@@ -10,7 +10,7 @@ const getListChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const chapter = await Chapter.find({ comic: id })
     .select("chapNumber")
-    .sort("chapNumber");
+    .sort("chapNumber").countDocuments();
   return res.status(sttCode.Ok).json({
     success: chapter ? true : false,
     mes: chapter ? chapter : "Something went wrong!",
