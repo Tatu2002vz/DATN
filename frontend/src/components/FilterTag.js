@@ -6,6 +6,9 @@ const { FaCaretDown } = icons;
 const FilterTag = () => {
   const [tabActive, setTabActive] = useState();
   const genres = useSelector((state) => state.app.genres);
+  const [genreFilter, setGenreFilter] = useState("Tất cả")
+  const [sortFilter, setSortFilter] = useState("Tất cả")
+  const [chapFilter, setChapFilter] = useState("Tất cả")
   const title = [
     {
       name: "ttitle",
@@ -38,7 +41,8 @@ const FilterTag = () => {
     {
       id: 1,
       label: "Thể loại",
-      defaultValue: "Tất cả",
+      value: genreFilter,
+      setValue: setGenreFilter,
       options: [
         ...genres
       ]
@@ -46,7 +50,8 @@ const FilterTag = () => {
     {
       id: 2,
       label: "Sắp xếp theo",
-      defaultValue: "Tất cả",
+      value: sortFilter,
+      setValue: setSortFilter,
       options: [
         ...title
       ]
@@ -54,7 +59,8 @@ const FilterTag = () => {
     {
       id: 3,
       label: "Chapter tối thiểu",
-      defaultValue: "Tất cả",
+      value: chapFilter,
+      setValue: setChapFilter,
       options: [
         ...test
       ]
@@ -62,7 +68,8 @@ const FilterTag = () => {
     {
       id: 4,
       label: "Truyện hot",
-      defaultValue: "Tất cả",
+      value: "Tất cả",
+      setValue: setGenreFilter,
       options: [
         ...genres
       ]
@@ -83,11 +90,11 @@ const FilterTag = () => {
               {item.label}
             </label>
             <p className="cursor-pointer flex items-center">
-              {item.defaultValue}
+              {item.value}
               <FaCaretDown className="ml-1" />
             </p>
             {
-                tabActive === item.id && <ListFilter list={item.options}/>
+                tabActive === item.id && <ListFilter list={item.options} setValue={item.setValue}/>
             }
           </div>
         );

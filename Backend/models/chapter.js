@@ -16,6 +16,10 @@ var chapterSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  viewCount: {
+    type: Number,
+    default: 0
+  },
   images: [{ type: String }],
   comments: [
     {

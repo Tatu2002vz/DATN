@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { apiGetLastChapter } from "../apis";
+import { apiGetChapters } from "../apis";
 import { useEffect, useState } from "react";
 const Comic = ({ comic }) => {
   const [numberChap, setNumberChap] = useState();
   const fetchLastChapter = async (id) => {
-    const response = await apiGetLastChapter(id);
+    const response = await apiGetChapters(id);
     if (response?.data?.success === true) {
-      setNumberChap(response?.data?.mes);
+      setNumberChap(response?.data?.mes?.length);
     }
   };
   useEffect(() => {

@@ -11,6 +11,7 @@ module.exports = {
         "main-text-color": "#CCCEE3",
         "color-float": '#151D35',
         "label-text-color" : "#CCCEE3",
+        'chapter-border-color' : "#222F5C"
       },
       width: {
         main: "1300px",

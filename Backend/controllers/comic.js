@@ -78,7 +78,7 @@ const getComic = asyncHandler(async (req, res) => {
     id,
     { $inc: { viewCount: 1 } },
     { new: true }
-  );
+  ).populate('genre');
   return res.status(sttCode.Ok).json({
     success: comic ? true : false,
     mes: comic ? comic : "Something went wrong!",

@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import publicRoute from './routes';
+import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
+import publicRoute, {testRoute} from './routes';
 import {useDispatch} from "react-redux"
 import { useEffect } from "react";
 import {getGenres} from './store/app/asyncAction'

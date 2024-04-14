@@ -5,8 +5,14 @@ export const apiGetAllComic = () => axios({
     method: 'GET',
 })
 
-export const apiGetLastChapter = (id) => axios({
+export const apiGetComicFilter = (filter) => axios({
+    url: 'comic',
+    method: 'GET',
+    params: filter
+})
 
-    url: `chapter/${id}`,
+
+export const apiGetComic = (id) => axios({
+    url: `comic/${id}`,
     method: 'GET'
 })

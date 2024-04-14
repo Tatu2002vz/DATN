@@ -4,6 +4,10 @@ const cryptoJs = require("crypto-js");
 const crypto = require("crypto");
 var userSchema = new mongoose.Schema(
   {
+    avatar: {
+      type: String,
+      default: '/avatar_default.png'
+    },
     fullname: {
       type: String,
       required: true,
