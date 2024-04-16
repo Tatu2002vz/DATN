@@ -8,10 +8,10 @@ const Chapter = () => {
   const navigate = useNavigate()
   const fetchChapter = async() => {
     const res = await apiGetChapter(id)
-    if(res.response?.status === 401) {
+    if(res?.status === 401) {
       navigate('/')
     }
-    if(res.data?.success === true) setChapter(res.data.mes)
+    if(res?.success === true) setChapter(res?.mes)
   }
   useEffect(() => {
     fetchChapter()

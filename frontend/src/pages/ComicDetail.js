@@ -14,6 +14,7 @@ const {
   IoLogoFacebook,
   RiInformationFill,
   TfiMenuAlt,
+  RiMoneyDollarCircleFill
 } = icons;
 
 const ComicDetail = () => {
@@ -23,15 +24,15 @@ const ComicDetail = () => {
   const fetchComic = async () => {
     const comicApi = await apiGetComic(id);
     const chaptersApi = await apiGetChapters(id);
-    if (comicApi?.data?.success) {
-      setComic(comicApi?.data?.mes);
+    if (comicApi?.success) {
+      setComic(comicApi?.mes);
     } else {
-      console.log(comicApi?.data?.mes);
+      console.log(comicApi?.mes);
     }
-    if (chaptersApi?.data?.success) {
-      setChapters(chaptersApi?.data?.mes);
+    if (chaptersApi?.success) {
+      setChapters(chaptersApi?.mes);
     } else {
-      console.log(chaptersApi?.data?.mes);
+      console.log(chaptersApi?.mes);
     }
   };
   useEffect(() => {
@@ -125,18 +126,19 @@ const ComicDetail = () => {
             Danh sách chương
           </h2>
           <div className="h-[500px] w-full overflow-auto border border-chapter-border-color rounded-md">
-            <div className="grid grid-cols-4 border-b border-chapter-border-color">
+            <div className="grid grid-cols-5 border-b border-chapter-border-color">
               <div className="col-span-2 font-bold py-3 pl-2">Chapter</div>
               <div className="col-span-1 font-bold py-3 pl-2">Cập nhật</div>
               <div className="col-span-1 font-bold py-3 pl-2">
                 <IoEye />
               </div>
+              <div className="col-span-1 font-bold py-3 pl-2"><RiMoneyDollarCircleFill/></div>
             </div>
             {chapters?.map((item) => {
               return (
                 <div
                   key={item._id}
-                  className="grid grid-cols-4 border-b border-chapter-border-color"
+                  className="grid grid-cols-5 border-b border-chapter-border-color"
                 >
                   {item.price === 0 ? <NavLink
                     to={`/comic/chapter/${slug}/${item._id}`}
@@ -154,6 +156,9 @@ const ComicDetail = () => {
                   </div>
                   <div className="col-span-1 text-label-text-color py-3 pl-2">
                     {item.viewCount || 0}
+                  </div>
+                  <div className="col-span-1 text-label-text-color py-3 pl-2">
+                    {item.price === 0 ? 'Miễn phí' : (<span className="flex items-center">{item.price} <RiMoneyDollarCircleFill className="ml-1" color="yellow"/></span>)}
                   </div>
                 </div>
               );

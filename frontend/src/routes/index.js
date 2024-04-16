@@ -1,11 +1,12 @@
 import path from "../utils/path";
-import { Chapter, ComicDetail, Home } from "../pages";
+import { Chapter, ComicDetail, Home, ResetPassword } from "../pages";
 import { DefaultLayout, FullLayout } from "../layouts";
 import HeaderOnly from "../layouts/HeaderOnly";
 const publicRoute = [
   { pathRoute: path.HOME, component: Home, layout: DefaultLayout },
   { pathRoute: path.COMIC, component: ComicDetail, layout: HeaderOnly },
   { pathRoute: path.CHAPTER, component: Chapter, layout: FullLayout },
+  { pathRoute: path.RESET_PASSWORD, component: ResetPassword, layout: DefaultLayout },
 ];
 
 export default publicRoute;

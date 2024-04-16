@@ -12,7 +12,7 @@ const ListFilter = ({ list, setValue }) => {
       genre: id
     }
     const comicApi = await apiGetComicFilter(filter)
-    setComics(comicApi?.data?.mes)
+    setComics(comicApi?.mes)
   }
 
   return <div className="w-full grid grid-cols-5 absolute top-full left-0 bg-color-float p-4 translate-y-2 delay-1000">

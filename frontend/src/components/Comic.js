@@ -5,8 +5,8 @@ const Comic = ({ comic }) => {
   const [numberChap, setNumberChap] = useState();
   const fetchLastChapter = async (id) => {
     const response = await apiGetChapters(id);
-    if (response?.data?.success === true) {
-      setNumberChap(response?.data?.mes?.length);
+    if (response?.success === true) {
+      setNumberChap(response?.mes?.length);
     }
   };
   useEffect(() => {

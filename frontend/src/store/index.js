@@ -18,9 +18,7 @@ const commonConfig = {
   storage,
 };
 const userConfig = {
-  ...commonConfig,
-  blacklist: ['userData']
-  
+  ...commonConfig,  
 };
 
 export const store = configureStore({
@@ -35,4 +33,4 @@ export const store = configureStore({
       },
     }),
 });
-export const persistor = persistStore(store);
+export const persistor = await persistStore(store);

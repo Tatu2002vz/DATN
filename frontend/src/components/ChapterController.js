@@ -1,6 +1,6 @@
-import { NavLink, useParams, redirect, useNavigate } from "react-router-dom";
+import { NavLink, useParams, useNavigate } from "react-router-dom";
 import icons from "../utils/icons";
-import { apiGetChapter, apiGetChapterWithSlug } from "../apis";
+import { apiGetChapterWithSlug } from "../apis";
 import { useState, useEffect } from "react";
 const {
   TiHome,
@@ -11,17 +11,18 @@ const {
   FaCircleArrowUp,
 } = icons;
 const ChapterController = ({ chapNumber }) => {
-  const { slug, id } = useParams();
+  const { slug } = useParams();
   const [listChapters, setListChapters] = useState();
   const navigate = useNavigate();
   const fetchChapter = async () => {
     const getListChapters = await apiGetChapterWithSlug(slug);
     // const getChapNumber = await apiGetChapter(id)
-    if (getListChapters?.data?.success)
-      setListChapters(getListChapters?.data?.mes);
+    if (getListChapters?.success)
+      setListChapters(getListChapters?.mes);
   };
   useEffect(() => {
     fetchChapter();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleChangeSelect = (event) => {
     console.log(event.target.value);

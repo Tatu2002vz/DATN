@@ -4,8 +4,7 @@ export const getCurrent = createAsyncThunk(
   "app/user",
   async (data, { rejectWithValue }) => {
     const response = await apis.apiGetCurrent();
-    // if (!response.success) return rejectWithValue(response);
-    console.log(response.data.mes);
-    return response.data;
+    return response.mes;
   }
 );
+

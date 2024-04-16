@@ -5,6 +5,6 @@ export const getGenres = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     const response = await apis.apiGetGenres();
     // if (!response.success) return rejectWithValue(response);
-    return response.data.mes;
+    return response;
   }
 );

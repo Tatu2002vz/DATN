@@ -40,7 +40,9 @@ const login = asyncHandler(async (req, res) => {
       mes: "Missing inputs",
     });
   }
-  const response = await User.findOne({ email }).select('-passwordToken -passwordTokenExpiration -refreshToken');
+  const response = await User.findOne({ email }).select(
+    "-passwordToken -passwordTokenExpiration -refreshToken"
+  );
   if (response && (await response.isCorrectPassword(password))) {
     const { password, role, ...userData } = response.toObject();
     const accessToken = generateAccessToken(response._id, role);
@@ -63,7 +65,7 @@ const login = asyncHandler(async (req, res) => {
 
 const getCurrent = asyncHandler(async (req, res) => {
   const { _id } = req.user;
-  const user = await User.findById(_id).select("-password -role -refreshToken");
+  const user = await User.findById(_id).select("-password -role -refreshToken -passwordToken -passwordTokenExpiration");
   return res.status(sttCode.Ok).json({
     success: user ? true : false,
     mes: user ? user : "User not found",
@@ -93,7 +95,8 @@ const forgotPassword = asyncHandler(async (req, res) => {
   if (user) {
     const tokenPassword = user.createPasswordToken();
     await user.save();
-    const html = `Vui lòng click vào link để lấy lại mật khẩu. Link sẽ hết hạn sau 15 phút. <a href=${process.env.URL_SERVER}api/user/reset-password/${tokenPassword}>Click vào đây</a>`;
+    // const html = `Vui lòng click vào link để lấy lại mật khẩu. Link sẽ hết hạn sau 15 phút. <a href=${process.env.URL_SERVER}api/user/reset-password/${tokenPassword}>Click vào đây</a>`;
+    const html = `Vui lòng click vào link để lấy lại mật khẩu. Link sẽ hết hạn sau 15 phút. <a href=${process.env.URL_CLIENT}user/reset-password/${tokenPassword}>Click vào đây</a>`;
     const subject = "Quên mật khẩu";
     const data = {
       email,
@@ -113,23 +116,24 @@ const forgotPassword = asyncHandler(async (req, res) => {
 });
 
 const resetPassword = asyncHandler(async (req, res) => {
-  const {password} = req.body;
+  const { password } = req.body;
   const { token } = req.params;
   if (!token || !password) {
     throw new Error("Error");
   }
-  const passwordToken = crypto.createHash('sha256').update(token).digest('hex');
+  const passwordToken = crypto.createHash("sha256").update(token).digest("hex");
   const user = await User.findOne({
-    passwordToken, passwordTokenExpiration: { $gt: Date.now() }
+    passwordToken,
+    passwordTokenExpiration: { $gt: Date.now() },
   });
   if (user) {
-    user.password = password
-    user.passwordToken = ''
-    user.passwordTokenExpiration = ''
-    await user.save()
+    user.password = password;
+    user.passwordToken = "";
+    user.passwordTokenExpiration = "";
+    await user.save();
     return res.status(sttCode.Ok).json({
       success: true,
-      mes: 'Changed password success'
+      mes: "Changed password success",
     });
   }
   return res.status(sttCode.NotImplemented).json({
@@ -138,35 +142,34 @@ const resetPassword = asyncHandler(async (req, res) => {
   });
 });
 
-
 // -------------------------------
 
-const getAllUsers = asyncHandler(async(req, res) => {
-  const response = await User.find()
+const getAllUsers = asyncHandler(async (req, res) => {
+  const response = await User.find();
   return res.status(sttCode.Ok).json({
     success: response ? true : false,
-    mes: response
-  })
-})
+    mes: response,
+  });
+});
 
-const deleteUser = asyncHandler(async(req, res) => {
-  const {id} = req.query
-  const user = await User.findByIdAndDelete(id)
+const deleteUser = asyncHandler(async (req, res) => {
+  const { id } = req.query;
+  const user = await User.findByIdAndDelete(id);
   return res.status(sttCode.Ok).json({
-    success: user ? true: false,
-    mes: user ? 'Deleted successfully' : 'Something went wrong'
-  })
-})
+    success: user ? true : false,
+    mes: user ? "Deleted successfully" : "Something went wrong",
+  });
+});
 
-const updateUser = asyncHandler(async(req, res) => {
-  const {id} = req.query
-  if(Object.keys(req.body) === 0) throw new Error('Missing input!')
-  const user = await User.findByIdAndUpdate(id, req.body, {new: true})
+const updateUser = asyncHandler(async (req, res) => {
+  const { id } = req.query;
+  if (Object.keys(req.body) === 0) throw new Error("Missing input!");
+  const user = await User.findByIdAndUpdate(id, req.body, { new: true });
   return res.status(sttCode.Ok).json({
-    success: user ? true: false,
-    mes: user ? 'Updated successfully' : 'Something went wrong'
-  })
-})
+    success: user ? true : false,
+    mes: user ? "Updated successfully" : "Something went wrong",
+  });
+});
 
 module.exports = {
   register,
@@ -177,5 +180,5 @@ module.exports = {
   resetPassword,
   getAllUsers,
   deleteUser,
-  updateUser
+  updateUser,
 };

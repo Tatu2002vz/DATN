@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import bee_chibi from "../assets/bee_chibi.png";
 import { Button, Login } from "../components/";
@@ -7,8 +8,10 @@ import { logout } from "../store/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import icons from "../utils/icons";
 import Swal from "sweetalert2";
+import { getCurrent } from "../store/user/asyncAction";
 
-const { IoNotifications, IoPersonOutline, CgLogOut } = icons;
+const { IoNotifications, IoPersonOutline, CgLogOut, RiMoneyDollarCircleFill } =
+  icons;
 const Header = () => {
   const [isShow, setIsShow] = useState(false);
   const [active, setActive] = useState();
@@ -19,6 +22,9 @@ const Header = () => {
   const showForm = () => {
     setIsShow(true);
   };
+  useEffect(() => {
+    dispatch(getCurrent());
+  }, [dispatch]);
   return (
     <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10">
       {isShow && (
@@ -90,7 +96,15 @@ const Header = () => {
                 alt="avatar"
                 className="h-full mr-2 cursor-pointer"
               />
-              <p className="cursor-pointer">{userData.fullname}</p>
+              <div>
+                <p className="cursor-pointer font-semibold">
+                  {userData?.fullname}
+                </p>
+                <p className="text-xs flex items-center ml-1">
+                  {userData?.walletBalance}{" "}
+                  <RiMoneyDollarCircleFill color="yellow" className="ml-1" />
+                </p>
+              </div>
               {isShowOption && (
                 <div
                   className="absolute top-full right-0 py-2 bg-chapter-border-color flex flex-col justify-center translate-y-2 rounded-lg w-[250px] p-[10px]"
@@ -108,11 +122,20 @@ const Header = () => {
                     className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
                     onClick={(event) => {
                       // dispatch(logout());
-                      Swal.fire({icon: 'question', title: 'Bạn chắc chắn đăng xuất ?', showCancelButton: true, cancelButtonText: 'Không', confirmButtonText:'Đăng xuất', showConfirmButton: true, confirmButtonColor: '#3085d6', cancelButtonColor: '#d33'}).then((result) => {
-                        if(result.isConfirmed) {
+                      Swal.fire({
+                        icon: "question",
+                        title: "Bạn chắc chắn đăng xuất ?",
+                        showCancelButton: true,
+                        cancelButtonText: "Không",
+                        confirmButtonText: "Đăng xuất",
+                        showConfirmButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                      }).then((result) => {
+                        if (result.isConfirmed) {
                           dispatch(logout());
                         }
-                      })
+                      });
                     }}
                   >
                     <CgLogOut className="mr-2" size={20} />
