@@ -13,6 +13,7 @@ import { FaCircleArrowUp } from "react-icons/fa6";
 import { TbEye, TbEyeClosed } from "react-icons/tb";
 import { LuSwords } from "react-icons/lu";
 import { CgLogOut } from "react-icons/cg";
+import { FiSearch } from "react-icons/fi";
 
 const icons = {
     IoIosCloseCircle,
@@ -38,6 +39,7 @@ const icons = {
     LuSwords,
     IoPersonOutline,
     CgLogOut,
-    RiMoneyDollarCircleFill
+    RiMoneyDollarCircleFill,
+    FiSearch
 }
 export default icons

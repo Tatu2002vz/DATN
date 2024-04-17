@@ -85,6 +85,40 @@ const getComic = asyncHandler(async (req, res) => {
   });
 });
 
+const getComicWithTitle = asyncHandler(async (req, res) => {
+  const { title } = req.body;
+  if(title !== '' && title) {
+    const regex_title = new RegExp(title, 'i')
+    const regex_slug = new RegExp(slugify(title), 'i')
+    // Hiển thị kết quả không sát với từ khoá cần tìm
+    // const comic = await Comic.find({$or: [{title: regex_title}, {slug: regex_slug}]})
+    // Chia ra để hiển thị kết quả trực quan hơn
+    const searchTitle = await Comic.find({title: regex_title})
+    const searchSlug = await Comic.find({slug: regex_slug})
+    const comic = [...searchTitle, ...searchSlug]
+    const comicFilter = []
+  
+    // Lọc các bộ truyện trùng nhau
+    for(let item of comic) {
+      let check = true;
+      for(let index of comicFilter) {
+        if(item.slug == index.slug) {
+          check = false
+          break;
+        }
+      }
+      if(check) {
+        comicFilter.push(item)
+      }
+    }
+    return res.status(sttCode.Ok).json({
+      success: comic ? true : false,
+      mes: comic ? comicFilter : "Something went wrong!",
+    })
+  }
+});
+
+
 const getComics = asyncHandler(async (req, res) => {
   const queries = { ...req.query };
   // Tách các trường đặc biệt ra khỏi query
@@ -169,4 +203,5 @@ module.exports = {
   deleteComic,
   updateComic,
   uploadImg,
+  getComicWithTitle
 };

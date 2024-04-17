@@ -16,3 +16,11 @@ export const apiGetComic = (id) => axios({
     url: `comic/${id}`,
     method: 'GET'
 })
+
+export const apiGetComicWithTitle = (title) => axios({
+    url: `comic/comicwithtitle`,
+    method: 'POST',
+    data: {
+        title
+    }
+})

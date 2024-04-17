@@ -44,6 +44,7 @@ const FilterTag = () => {
       value: genreFilter,
       setValue: setGenreFilter,
       options: [
+        {name: 'Tất cả'},
         ...genres
       ]
     },
@@ -75,6 +76,7 @@ const FilterTag = () => {
       ]
     },
   ];
+  
   return (
     <div className="p-4 bg-color-float w-full flex gap-16 my-10 relative">
       {listTag.map((item) => {

@@ -61,7 +61,7 @@ const ComicDetail = () => {
             <div className="my-3">
               {comic?.genre?.map((item) => {
                 return (
-                  <span className="px-2 py-1 bg-[#4A5693]">{item?.name}</span>
+                  <span className="px-2 py-1 bg-[#4A5693] mr-2">{item?.name}</span>
                 );
               })}
             </div>

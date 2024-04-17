@@ -2,29 +2,48 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import bee_chibi from "../assets/bee_chibi.png";
-import { Button, Login } from "../components/";
+import { Button, Login, SearchResult } from "../components/";
 import { Link } from "react-router-dom";
 import { logout } from "../store/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import icons from "../utils/icons";
 import Swal from "sweetalert2";
 import { getCurrent } from "../store/user/asyncAction";
-
-const { IoNotifications, IoPersonOutline, CgLogOut, RiMoneyDollarCircleFill } =
-  icons;
+import { apiGetComicWithTitle } from "../apis";
+const {
+  IoNotifications,
+  IoPersonOutline,
+  CgLogOut,
+  RiMoneyDollarCircleFill,
+  FiSearch,
+} = icons;
 const Header = () => {
   const [isShow, setIsShow] = useState(false);
   const [active, setActive] = useState();
   const [isShowOption, setIsShowOption] = useState(false);
+  const [isResult, setIsResult] = useState(false);
+  const [search, setSearch] = useState("");
   const [isShowNotification, setIsShowNotification] = useState(false);
+  const [comics, setComics] = useState([]);
+
   const dispatch = useDispatch();
   const { isLoggingIn, userData } = useSelector((state) => state.user);
+
   const showForm = () => {
     setIsShow(true);
+  };
+  const fetchComic = async () => {
+    const response = await apiGetComicWithTitle(search);
+    setComics([...response?.mes]);
   };
   useEffect(() => {
     dispatch(getCurrent());
   }, [dispatch]);
+  useEffect(() => {
+    fetchComic();
+    console.log(search);
+    if (search === "") setIsResult(false);
+  }, [search]);
   return (
     <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10">
       {isShow && (
@@ -35,11 +54,28 @@ const Header = () => {
           <Link to={"/"}>
             <img src={logo} alt="" className="h-[30px] w-auto" />
           </Link>
-          <input
-            type="text"
-            placeholder="Bạn muốn tìm truyện gì"
-            className="rounded-full w-[400px] h-[44px] bg-inputBg pl-5 focus:outline-none ml-5"
-          />
+          <div className="rounded-full w-[400px] h-[44px] relative ml-5">
+            <input
+              type="text"
+              placeholder="Bạn muốn tìm truyện gì"
+              className="rounded-full w-full h-full bg-inputBg pl-5 focus:outline-none "
+              value={search}
+              onChange={(event) => {
+                setSearch(event.target.value);
+                setIsResult(true);
+              }}
+              onFocus={() => {
+                if (search !== "") {
+                  setIsResult(true);
+                }
+              }}
+              onBlur={() => {
+                setIsResult(false);
+              }}
+            />
+            <FiSearch size={24} className="text-main-text-color absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"/>
+            {isResult && <SearchResult data={comics} />}
+          </div>
         </div>
 
         {!isLoggingIn ? (

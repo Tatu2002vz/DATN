@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { apiGetChapters } from "../apis";
 import { useEffect, useState } from "react";
-const Comic = ({ comic }) => {
+const Comic = ({ comic, isResult }) => {
   const [numberChap, setNumberChap] = useState();
   const fetchLastChapter = async (id) => {
     const response = await apiGetChapters(id);
@@ -13,19 +13,45 @@ const Comic = ({ comic }) => {
     fetchLastChapter(comic._id);
   }, [comic]);
   return (
-    <NavLink className="flex flex-col justify-between" to={`/comic/${comic?.slug}/${comic?._id}`}>
-      <div>
-        <div className="w-full h-[330px] rounded-md overflow-hidden">
-          <img
-            src={comic?.coverImage}
-            alt={comic?.title}
-            className="rounded-md object-cover hover:scale-110 duration-300 ease-linear"
-          />
-        </div>
-        <p className="text-sm mt-2">{comic?.title}</p>
-      </div>
-      <p className="text-[13px] mt-3">Chapter {numberChap}</p>
-    </NavLink>
+    <div>
+      {!isResult ? (
+        <NavLink
+          className="flex flex-col justify-between"
+          to={`/comic/${comic?.slug}/${comic?._id}`}
+        >
+          <div>
+            <div className="w-full h-[330px] rounded-md overflow-hidden">
+              <img
+                src={comic?.coverImage}
+                alt={comic?.title}
+                className="rounded-md object-cover hover:scale-110 duration-300 ease-linear"
+              />
+            </div>
+            <p className="text-sm mt-2">{comic?.title}</p>
+          </div>
+          <p className="text-[13px] mt-3">Chapter {numberChap}</p>
+        </NavLink>
+      ) : (
+        <NavLink
+          className="flex w-full p-[10px] bg-color-float"
+          to={`/comic/${comic?.slug}/${comic?._id}`}
+        >
+          <div>
+            <div className="w-full rounded-md overflow-hidden">
+              <img
+                src={comic?.coverImage}
+                alt={comic?.title}
+                className="rounded-md object-cover w-[65px] h-[86px]"
+              />
+            </div>
+          </div>
+          <div className="pl-[10px]">
+            <p className="text-sm mt-2">{comic?.title}</p>
+            <p className="text-[13px] mt-3 text-[#999999]">Chapter {numberChap}</p>
+          </div>
+        </NavLink>
+      )}
+    </div>
   );
 };
 
