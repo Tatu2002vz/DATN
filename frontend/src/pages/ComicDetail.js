@@ -14,7 +14,7 @@ const {
   IoLogoFacebook,
   RiInformationFill,
   TfiMenuAlt,
-  RiMoneyDollarCircleFill
+  RiMoneyDollarCircleFill,
 } = icons;
 
 const ComicDetail = () => {
@@ -35,6 +35,9 @@ const ComicDetail = () => {
       console.log(chaptersApi?.mes);
     }
   };
+  const handleClick = () => {
+    
+  }
   useEffect(() => {
     fetchComic();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,7 +64,9 @@ const ComicDetail = () => {
             <div className="my-3">
               {comic?.genre?.map((item) => {
                 return (
-                  <span className="px-2 py-1 bg-[#4A5693] mr-2">{item?.name}</span>
+                  <span className="px-2 py-1 bg-[#4A5693] mr-2">
+                    {item?.name}
+                  </span>
                 );
               })}
             </div>
@@ -132,7 +137,9 @@ const ComicDetail = () => {
               <div className="col-span-1 font-bold py-3 pl-2">
                 <IoEye />
               </div>
-              <div className="col-span-1 font-bold py-3 pl-2"><RiMoneyDollarCircleFill/></div>
+              <div className="col-span-1 font-bold py-3 pl-2">
+                <RiMoneyDollarCircleFill />
+              </div>
             </div>
             {chapters?.map((item) => {
               return (
@@ -140,17 +147,20 @@ const ComicDetail = () => {
                   key={item._id}
                   className="grid grid-cols-5 border-b border-chapter-border-color"
                 >
-                  {item.price === 0 ? <NavLink
-                    to={`/comic/chapter/${slug}/${item._id}`}
-                    className="col-span-2 font-bold py-3 pl-2 cursor-pointer"
-                  >
-                    Chapter {item.chapNumber}
-                  </NavLink> : <NavLink
-                    to={`/comic/chapter/${slug}/${item._id}`}
-                    className="col-span-2 font-bold py-3 pl-2 cursor-pointer text-red-600"
-                  >
-                    Chapter {item.chapNumber}
-                  </NavLink>} 
+                  {item.price === 0 ? (
+                    <NavLink
+                      to={`/comic/chapter/${slug}/${item._id}`}
+                      className="col-span-2 font-bold py-3 pl-2 cursor-pointer"
+                    >
+                      Chapter {item.chapNumber}
+                    </NavLink>
+                  ) : (
+                    <div
+                      className="col-span-2 font-bold py-3 pl-2 cursor-pointer text-red-600"
+                    >
+                      Chapter {item.chapNumber}
+                    </div>
+                  )}
                   <div className="col-span-1 text-label-text-color py-3 pl-2">
                     0 phút trước
                   </div>
@@ -158,7 +168,17 @@ const ComicDetail = () => {
                     {item.viewCount || 0}
                   </div>
                   <div className="col-span-1 text-label-text-color py-3 pl-2">
-                    {item.price === 0 ? 'Miễn phí' : (<span className="flex items-center">{item.price} <RiMoneyDollarCircleFill className="ml-1" color="yellow"/></span>)}
+                    {item.price === 0 ? (
+                      "Miễn phí"
+                    ) : (
+                      <span className="flex items-center">
+                        {item.price}{" "}
+                        <RiMoneyDollarCircleFill
+                          className="ml-1"
+                          color="yellow"
+                        />
+                      </span>
+                    )}
                   </div>
                 </div>
               );

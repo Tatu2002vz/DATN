@@ -89,34 +89,41 @@ const createChapter = asyncHandler(async (req, res) => {
 const getChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
   if (!id) throw new Error("Invalid id chapter");
-  const chapter = await Chapter.findByIdAndUpdate(
-    id,
-    {
-      $inc: {
-        viewCount: 1,
-      },
-    },
-    { new: true }
-  ).populate("comic");
-  if (chapter.price === 0)
-    return res.status(sttCode.Ok).json({
-      success: true,
-      mes: chapter,
-    });
   else {
-    if(!req.user) return res.status(sttCode.Unauthorized).json({
-      success: false,
-      mes: "Please go to the login page!"
-    })
-    const { _id } = req.user;
-    if (!_id) throw new Error("Please go to the login page!");
-    const purchase = await Purchase.findOne({ user: _id, chapter: id });
-    if (purchase)
+    const chapter = await Chapter.findByIdAndUpdate(
+      id,
+      {
+        $inc: {
+          viewCount: 1,
+        },
+      },
+      { new: true }
+    ).populate("comic");
+    if (chapter.price === 0)
       return res.status(sttCode.Ok).json({
         success: true,
         mes: chapter,
       });
-    else throw new Error("This chapter requires purchase to view");
+    else {
+      if (!req.user)
+        return res.status(sttCode.Unauthorized).json({
+          success: false,
+          mes: "Please go to the login page!",
+        });
+      else {
+        const { _id } = req.user;
+        if (!_id) throw new Error("Please go to the login page!");
+        else {
+          const purchase = await Purchase.findOne({ user: _id, chapter: id });
+          if (purchase)
+            return res.status(sttCode.Ok).json({
+              success: true,
+              mes: chapter,
+            });
+          else throw new Error("This chapter requires purchase to view");
+        }
+      }
+    }
   }
 });
 const deleteChapter = asyncHandler(async (req, res) => {
@@ -131,8 +138,10 @@ const deleteChapter = asyncHandler(async (req, res) => {
 
 const getListChapterWithSlug = asyncHandler(async (req, res) => {
   const { slug } = req.params;
-  const comic = await Comic.findOne({ slug: slug })
-  const chapter = await Chapter.find({comic: comic._id}).sort('-chapNumber').select('chapNumber')
+  const comic = await Comic.findOne({ slug: slug });
+  const chapter = await Chapter.find({ comic: comic._id })
+    .sort("-chapNumber")
+    .select("chapNumber");
   return res.status(sttCode.Ok).json({
     success: chapter ? true : false,
     mes: chapter ? chapter : "Something went wrong!",
@@ -144,5 +153,5 @@ module.exports = {
   getListChapter,
   deleteChapter,
   getChapter,
-  getListChapterWithSlug
+  getListChapterWithSlug,
 };

@@ -34,7 +34,7 @@ const Header = () => {
   };
   const fetchComic = async () => {
     const response = await apiGetComicWithTitle(search);
-    setComics([...response?.mes]);
+    setComics(response?.mes);
   };
   useEffect(() => {
     dispatch(getCurrent());
