@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { memo } from "react";
 const Footer = () => {
   return (
     <div className="bg-headerBg">
@@ -28,4 +29,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

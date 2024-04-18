@@ -12,27 +12,40 @@ const createPurchase = asyncHandler(async (req, res) => {
   const userId = req.user._id;
   const user = await User.findById(userId).select("walletBalance");
   const chapter = await Chapter.findById(id).select("price");
-  const checkIsBought = await Purchase.findOne({user: userId, chapter: id})
-  if(checkIsBought) throw new Error('This chapter has been purchased!')
-  if (user.walletBalance > chapter.price) {
+  const checkIsBought = await Purchase.findOne({ user: userId, chapter: id });
+  if (checkIsBought) throw new Error("This chapter has been purchased!");
+  if (user.walletBalance >= chapter.price) {
     await User.findByIdAndUpdate(
       userId,
       { $inc: { walletBalance: -chapter.price } },
       { new: true }
     );
     const data = {
-        user: userId,
-        chapter: chapter,
-    }
-    const purchase = await Purchase.create(data)
+      user: userId,
+      chapter: chapter,
+    };
+    const purchase = await Purchase.create(data);
     return res.status(sttCode.Ok).json({
-        success: purchase ? true : false,
-        mes: 'Purchase successfully'
+      success: purchase ? true : false,
+      mes: "Purchase successfully",
+    });
+  }
+  throw new Error("Purchase failed! Your balance is unavailable!");
+});
+const getPurChase = asyncHandler(async (req, res) => {
+  if (!req.user) throw new Error("Please go to the login page");
+  else {
+    const { _id } = req.user;
+    if (!_id) throw new Error("Please go to the login page");
+    const { id } = req.params;
+    if (!id) throw new Error("Missing id chapter");
+
+    const purchase = await Purchase.findOne({ user: _id, chapter: id })
+    return res.status(sttCode.Ok).json({
+      success: purchase ? true : false
     })
   }
-  throw new Error('Purchase failed! Your balance is unavailable!')
 });
-
 const updatePurchase = asyncHandler(async (req, res) => {});
 
 const deletePurchase = asyncHandler(async (req, res) => {});
@@ -41,4 +54,5 @@ module.exports = {
   createPurchase,
   updatePurchase,
   deletePurchase,
+  getPurChase
 };

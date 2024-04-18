@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import icons from "../utils/icons";
 const { TbEye, TbEyeClosed } = icons;
 const InputField = ({
@@ -10,7 +10,7 @@ const InputField = ({
   value,
   invalidField,
   setInvalidField,
-  placeholder
+  placeholder,
 }) => {
   const [hide, setHide] = useState(true);
   const handleShowPassword = () => {
@@ -22,7 +22,7 @@ const InputField = ({
       <div className="relative mb-2">
         <input
           type={hide && type ? "password" : "text"}
-          placeholder={placeholder || ''}
+          placeholder={placeholder || ""}
           className="h-[44px] w-full px-[15px] rounded-md bg-inputBg autofill:bg-inputBg focus:outline-none"
           onChange={(event) =>
             setPayload((prev) => ({ ...prev, [namekey]: event.target.value }))
@@ -39,14 +39,18 @@ const InputField = ({
           </div>
         )}
       </div>
-      {invalidField.some((el) => el?.name === namekey) && (
+      {invalidField?.some((el) => el?.name === namekey) && (
         <div className="italic text-main duration-200 ease-in text-sm">
-          {invalidField.find((el) => el.name === namekey)?.mes.split('<br/>').map((el) => <div>{el}</div>)}
+          {invalidField
+            .find((el) => el.name === namekey)
+            ?.mes.split("<br/>")
+            .map((el, index) => (
+              <div key={index}>{el}</div>
+            ))}
         </div>
-        
       )}
     </div>
   );
 };
 
-export default InputField;
+export default memo(InputField);

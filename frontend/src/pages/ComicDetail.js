@@ -3,7 +3,7 @@ import { apiGetComic } from "../apis";
 import { useEffect, useState } from "react";
 import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
-import { RateArea } from "../components";
+import { RateArea, ChapterList } from "../components";
 const {
   HiStatusOnline,
   GrUpdate,
@@ -35,9 +35,7 @@ const ComicDetail = () => {
       console.log(chaptersApi?.mes);
     }
   };
-  const handleClick = () => {
-    
-  }
+
   useEffect(() => {
     fetchComic();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -62,9 +60,9 @@ const ComicDetail = () => {
           <div className="w-full">
             <h1 className="text-2xl">{comic?.title}</h1>
             <div className="my-3">
-              {comic?.genre?.map((item) => {
+              {comic?.genre?.map((item, index) => {
                 return (
-                  <span className="px-2 py-1 bg-[#4A5693] mr-2">
+                  <span key={index} className="px-2 py-1 bg-[#4A5693] mr-2">
                     {item?.name}
                   </span>
                 );
@@ -99,10 +97,10 @@ const ComicDetail = () => {
               <p className="">178</p>
             </div>
             <div className="flex my-4">
-              <div className="bg-main rounded-full px-5 flex items-center mr-2">
+              <NavLink to={comic ? `/comic/chapter/${slug}/${chapters[chapters.length - 1]._id}` : ''} className="bg-main rounded-full px-5 flex items-center mr-2">
                 <BiSolidBook className="mr-1" />
                 Đọc từ đầu
-              </div>
+              </NavLink>
               <div className="rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex items-center">
                 <IoBookmark className="mr-1" />
                 Theo dõi
@@ -141,48 +139,14 @@ const ComicDetail = () => {
                 <RiMoneyDollarCircleFill />
               </div>
             </div>
-            {chapters?.map((item) => {
-              return (
-                <div
-                  key={item._id}
-                  className="grid grid-cols-5 border-b border-chapter-border-color"
-                >
-                  {item.price === 0 ? (
-                    <NavLink
-                      to={`/comic/chapter/${slug}/${item._id}`}
-                      className="col-span-2 font-bold py-3 pl-2 cursor-pointer"
-                    >
-                      Chapter {item.chapNumber}
-                    </NavLink>
-                  ) : (
-                    <div
-                      className="col-span-2 font-bold py-3 pl-2 cursor-pointer text-red-600"
-                    >
-                      Chapter {item.chapNumber}
-                    </div>
-                  )}
-                  <div className="col-span-1 text-label-text-color py-3 pl-2">
-                    0 phút trước
-                  </div>
-                  <div className="col-span-1 text-label-text-color py-3 pl-2">
-                    {item.viewCount || 0}
-                  </div>
-                  <div className="col-span-1 text-label-text-color py-3 pl-2">
-                    {item.price === 0 ? (
-                      "Miễn phí"
-                    ) : (
-                      <span className="flex items-center">
-                        {item.price}{" "}
-                        <RiMoneyDollarCircleFill
-                          className="ml-1"
-                          color="yellow"
-                        />
-                      </span>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+            {chapters?.map((item, index) => (
+              <ChapterList
+                key={index}
+                slug={slug}
+                data={item}
+                coverImage={comic?.coverImage}
+              />
+            ))}
           </div>
         </div>
         <RateArea object={comic} />

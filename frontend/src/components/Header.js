@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import logo from "../assets/logo.png";
 import bee_chibi from "../assets/bee_chibi.png";
 import { Button, Login, SearchResult } from "../components/";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../store/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import icons from "../utils/icons";
@@ -18,10 +18,10 @@ const {
   FiSearch,
 } = icons;
 const Header = () => {
+  const navigate = useNavigate()
   const [isShow, setIsShow] = useState(false);
   const [active, setActive] = useState();
   const [isShowOption, setIsShowOption] = useState(false);
-  const [isResult, setIsResult] = useState(false);
   const [search, setSearch] = useState("");
   const [isShowNotification, setIsShowNotification] = useState(false);
   const [comics, setComics] = useState([]);
@@ -37,12 +37,13 @@ const Header = () => {
     setComics(response?.mes);
   };
   useEffect(() => {
-    dispatch(getCurrent());
-  }, [dispatch]);
+    if(isLoggingIn) {
+      dispatch(getCurrent());
+    }
+  }, []);
   useEffect(() => {
-    fetchComic();
-    console.log(search);
-    if (search === "") setIsResult(false);
+    if(search!=='')
+      fetchComic();
   }, [search]);
   return (
     <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10">
@@ -62,19 +63,14 @@ const Header = () => {
               value={search}
               onChange={(event) => {
                 setSearch(event.target.value);
-                setIsResult(true);
               }}
-              onFocus={() => {
-                if (search !== "") {
-                  setIsResult(true);
-                }
-              }}
+              
               onBlur={() => {
-                setIsResult(false);
+                setSearch('');
               }}
             />
             <FiSearch size={24} className="text-main-text-color absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"/>
-            {isResult && <SearchResult data={comics} />}
+            {search !== '' && <SearchResult data={comics} />}
           </div>
         </div>
 
@@ -170,6 +166,7 @@ const Header = () => {
                       }).then((result) => {
                         if (result.isConfirmed) {
                           dispatch(logout());
+                          navigate(0)
                         }
                       });
                     }}
@@ -187,4 +184,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

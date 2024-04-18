@@ -9,7 +9,7 @@ const upload = require('../middlewares/uploadImg')
 router.post('/', upload.array('files', 100), controller.createChapter);
 router.get('/:id', controller.getListChapter)
 router.delete('/:id', controller.deleteChapter)
-router.get('/chap/:id', controller.getChapter)
+router.get('/chap/:id', [isFree], controller.getChapter)
 router.get('/chapwithslug/:slug', controller.getListChapterWithSlug)
 
 module.exports = router

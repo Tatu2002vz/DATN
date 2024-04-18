@@ -1,5 +1,5 @@
 import { IoIosCloseCircle, IoMdWarning,  } from "react-icons/io";
-import { IoEye, IoBookmark, IoLogoFacebook, IoChatbubblesSharp,IoNotifications, IoPersonOutline  } from "react-icons/io5";
+import { IoEye, IoBookmark, IoLogoFacebook, IoChatbubblesSharp,IoNotifications, IoPersonOutline, IoClose } from "react-icons/io5";
 import { HiStatusOnline } from "react-icons/hi";
 import { FaCaretDown } from "react-icons/fa";
 import { GrUpdate } from "react-icons/gr";
@@ -13,7 +13,7 @@ import { FaCircleArrowUp } from "react-icons/fa6";
 import { TbEye, TbEyeClosed } from "react-icons/tb";
 import { LuSwords } from "react-icons/lu";
 import { CgLogOut } from "react-icons/cg";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiPlus } from "react-icons/fi";
 
 const icons = {
     IoIosCloseCircle,
@@ -40,6 +40,8 @@ const icons = {
     IoPersonOutline,
     CgLogOut,
     RiMoneyDollarCircleFill,
-    FiSearch
+    FiSearch,
+    FiPlus,
+    IoClose
 }
 export default icons

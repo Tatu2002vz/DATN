@@ -6,12 +6,14 @@ import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import { login } from "../store/user/userSlice";
 import validate from "../utils/validate";
-const { useState, useEffect } = require("react");
+import { useNavigate } from "react-router-dom";
+const { useState, useEffect, memo } = require("react");
 const { IoIosCloseCircle } = icons;
 const Login = ({ setIsShow, active, setActive }) => {
   const dispatch = useDispatch();
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [invalidField, setInvalidField] = useState([]);
+  const navigate = useNavigate()
   const closeForm = () => {
     setIsShow(false);
   };
@@ -29,10 +31,24 @@ const Login = ({ setIsShow, active, setActive }) => {
   };
   useEffect(() => {
     resetPayload()
-    setInvalidField([])
-  }, [active, isForgotPassword, ])
+    if(invalidField.length > 0) {
+      setInvalidField([])
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active, isForgotPassword])
   const handleSubmit = async (payload) => {
-    const invalid = validate(payload, setInvalidField);
+    let invalid
+    if (!active && !isForgotPassword) {
+      const {fullname, ...data} = payload
+      invalid = validate(data, setInvalidField);
+    }
+    if (active && !isForgotPassword) {
+      invalid = validate(payload, setInvalidField);
+    }
+    if (isForgotPassword) {
+      const {email} = payload
+      invalid = validate({email: email}, setInvalidField)
+    }
     if (invalid === 0) {
       if (!active && !isForgotPassword) {
         const res = await apiLogin(payload);
@@ -44,6 +60,7 @@ const Login = ({ setIsShow, active, setActive }) => {
               token: res?.accessToken,
             })
           );
+          navigate(0)
           setIsShow(false);
         } else {
           Swal.fire(
@@ -231,4 +248,4 @@ const Login = ({ setIsShow, active, setActive }) => {
   );
 };
 
-export default Login;
+export default memo(Login);

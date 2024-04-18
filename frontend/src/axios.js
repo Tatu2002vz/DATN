@@ -12,8 +12,7 @@ instance.interceptors.request.use(
   function (config) {
     // Do something before request is sent
     const { token } = JSON.parse(localStorage.getItem('persist:shop/user'));
-    // console.log(token);
-    if (token && typeof token === "string") {
+    if (token !== 'null' && typeof token === "string") {
       config.headers = { Authorization: `Bearer ${token.replaceAll(`"`, '')}` };
       return config;
     }
