@@ -18,14 +18,14 @@ const {
   FiSearch,
 } = icons;
 const Header = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [isShow, setIsShow] = useState(false);
   const [active, setActive] = useState();
   const [isShowOption, setIsShowOption] = useState(false);
   const [search, setSearch] = useState("");
   const [isShowNotification, setIsShowNotification] = useState(false);
   const [comics, setComics] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const { isLoggingIn, userData } = useSelector((state) => state.user);
 
@@ -33,17 +33,30 @@ const Header = () => {
     setIsShow(true);
   };
   const fetchComic = async () => {
-    const response = await apiGetComicWithTitle(search);
-    setComics(response?.mes);
+    try {
+      const response = await apiGetComicWithTitle(search);
+      setComics(response?.mes);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
   useEffect(() => {
-    if(isLoggingIn) {
+    if (isLoggingIn) {
       dispatch(getCurrent());
     }
   }, []);
   useEffect(() => {
-    if(search!=='')
-      fetchComic();
+    if (search !== "") {
+      setIsLoading(true);
+      const handler = setTimeout(() => {
+        fetchComic();
+      }, 500);
+      return () => clearTimeout(handler);
+    } else {
+      setIsLoading(false);
+    }
   }, [search]);
   return (
     <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10">
@@ -64,13 +77,21 @@ const Header = () => {
               onChange={(event) => {
                 setSearch(event.target.value);
               }}
-              
               onBlur={() => {
-                setSearch('');
+                setSearch("");
               }}
             />
-            <FiSearch size={24} className="text-main-text-color absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"/>
-            {search !== '' && <SearchResult data={comics} />}
+            {isLoading ? (
+              <div className="text-main-text-color absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer w-6 h-6">
+                <span className="loader-search"></span>
+              </div>
+            ) : (
+              <FiSearch
+                size={24}
+                className="text-main-text-color absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+              />
+            )}
+            {search !== "" && <SearchResult data={comics} />}
           </div>
         </div>
 
@@ -166,7 +187,7 @@ const Header = () => {
                       }).then((result) => {
                         if (result.isConfirmed) {
                           dispatch(logout());
-                          navigate(0)
+                          navigate(0);
                         }
                       });
                     }}

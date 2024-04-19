@@ -7,12 +7,14 @@ import { useDispatch } from "react-redux";
 import { login } from "../store/user/userSlice";
 import validate from "../utils/validate";
 import { useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 const { useState, useEffect, memo } = require("react");
 const { IoIosCloseCircle } = icons;
 const Login = ({ setIsShow, active, setActive }) => {
   const dispatch = useDispatch();
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [invalidField, setInvalidField] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate()
   const closeForm = () => {
     setIsShow(false);
@@ -72,8 +74,9 @@ const Login = ({ setIsShow, active, setActive }) => {
         // navigate(0)
       }
       if (active && !isForgotPassword) {
+        setIsLoading(true)
         const res = await apiRegister(payload);
-
+        setIsLoading(false)
         console.log(res?.data);
         if (res?.success) {
           Swal.fire({
@@ -243,7 +246,7 @@ const Login = ({ setIsShow, active, setActive }) => {
           </button>
         </div>
       </div>
-      ;
+      {isLoading && <Loading/>}
     </div>
   );
 };

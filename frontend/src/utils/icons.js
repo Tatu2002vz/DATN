@@ -14,7 +14,6 @@ import { TbEye, TbEyeClosed } from "react-icons/tb";
 import { LuSwords } from "react-icons/lu";
 import { CgLogOut } from "react-icons/cg";
 import { FiSearch, FiPlus } from "react-icons/fi";
-
 const icons = {
     IoIosCloseCircle,
     FaCaretDown,
@@ -42,6 +41,6 @@ const icons = {
     RiMoneyDollarCircleFill,
     FiSearch,
     FiPlus,
-    IoClose
+    IoClose,
 }
 export default icons
