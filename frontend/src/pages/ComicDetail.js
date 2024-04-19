@@ -3,7 +3,8 @@ import { apiGetComic } from "../apis";
 import { useEffect, useState } from "react";
 import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
-import { RateArea, ChapterList } from "../components";
+import { RateArea, ChapterList, Report } from "../components";
+import { comicError} from '../enum/listError'
 const {
   HiStatusOnline,
   GrUpdate,
@@ -21,6 +22,7 @@ const ComicDetail = () => {
   const { id, slug } = useParams();
   const [comic, setComic] = useState(null);
   const [chapters, setChapters] = useState(null);
+  const [showReport, setShowReport] = useState(false);
   const fetchComic = async () => {
     const comicApi = await apiGetComic(id);
     const chaptersApi = await apiGetChapters(id);
@@ -97,7 +99,16 @@ const ComicDetail = () => {
               <p className="">178</p>
             </div>
             <div className="flex my-4">
-              <NavLink to={comic ? `/comic/chapter/${slug}/${chapters[chapters.length - 1]._id}` : ''} className="bg-main rounded-full px-5 flex items-center mr-2">
+              <NavLink
+                to={
+                  comic
+                    ? `/comic/chapter/${slug}/${
+                        chapters[chapters.length - 1]._id
+                      }`
+                    : ""
+                }
+                className="bg-main rounded-full px-5 flex items-center mr-2"
+              >
                 <BiSolidBook className="mr-1" />
                 Đọc từ đầu
               </NavLink>
@@ -105,7 +116,12 @@ const ComicDetail = () => {
                 <IoBookmark className="mr-1" />
                 Theo dõi
               </div>
-              <div className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex  items-center">
+              <div
+                className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex cursor-pointer items-center"
+                onClick={() => {
+                  setShowReport(true);
+                }}
+              >
                 <IoMdWarning className="mr-1" />
                 Báo lỗi
               </div>
@@ -151,6 +167,7 @@ const ComicDetail = () => {
         </div>
         <RateArea object={comic} />
       </div>
+      {showReport && <Report setShowReport={setShowReport} errorComic={comic?.title} errorReport={comicError} isComic={true}/>}
     </div>
   );
 };

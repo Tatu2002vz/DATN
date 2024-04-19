@@ -35,7 +35,7 @@ const ChapterList = ({ data, slug, coverImage }) => {
     }
   };
   useEffect(() => {
-    if(data.price !== 0) {
+    if(data.price !== 0 && isLoggingIn) {
       fetchPurchase();
     }
   }, []);
