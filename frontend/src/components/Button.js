@@ -1,3 +1,4 @@
+
 const Button = ({ text, css, onClick }) => {
   const handleClick = (event) => {
     event.preventDefault();
@@ -12,5 +13,6 @@ const Button = ({ text, css, onClick }) => {
     </button>
   );
 };
+
 
 export default Button;

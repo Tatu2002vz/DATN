@@ -3,11 +3,13 @@ const mongoose = require('mongoose')
 var commentSchema = new mongoose.Schema({
     user: {
         type: mongoose.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     },
     comic: {
         type: mongoose.Types.ObjectId,
-        ref: 'Comic'
+        ref: 'Comic',
+        required: true
     },
     chapter: {
         type: mongoose.Types.ObjectId,
@@ -18,7 +20,7 @@ var commentSchema = new mongoose.Schema({
         required: true,
     }
 }, {
-    timestamps: true, //
+    timestamps: true,
 })
 
 

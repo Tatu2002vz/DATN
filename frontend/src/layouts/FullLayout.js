@@ -9,7 +9,7 @@ const DefaultLayout = ({ children }) => {
   const [showReport, setShowReport] = useState(false);
   const fetchChapter = async () => {
     const resp = await apiGetChapter(id);
-    if (resp.success) {
+    if (resp?.success) {
       setChapter(resp.mes);
     }
   };
@@ -20,7 +20,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <div className="relative">
       <Header />
-      <div className="bg-mainBg pt-[70px] relative">
+      <div className="bg-mainBg pt-[70px] pb-16 relative">
         <div className="mx-auto w-main">{children}</div>
         {showReport && (
           <Report

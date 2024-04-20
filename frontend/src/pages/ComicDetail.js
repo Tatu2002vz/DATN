@@ -1,10 +1,10 @@
 import { NavLink, useParams } from "react-router-dom";
-import { apiGetComic } from "../apis";
+import { apiGetComic, apiGetCommentWithComic } from "../apis";
 import { useEffect, useState } from "react";
 import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
-import { RateArea, ChapterList, Report } from "../components";
-import { comicError} from '../enum/listError'
+import { RateArea, ChapterList, Report, Comment } from "../components";
+import { comicError } from "../enum/listError";
 const {
   HiStatusOnline,
   GrUpdate,
@@ -23,9 +23,12 @@ const ComicDetail = () => {
   const [comic, setComic] = useState(null);
   const [chapters, setChapters] = useState(null);
   const [showReport, setShowReport] = useState(false);
+  const [comments, setComments] = useState(null);
+  console.log(comments);
   const fetchComic = async () => {
     const comicApi = await apiGetComic(id);
     const chaptersApi = await apiGetChapters(id);
+    const getComments = await apiGetCommentWithComic(id);
     if (comicApi?.success) {
       setComic(comicApi?.mes);
     } else {
@@ -36,14 +39,18 @@ const ComicDetail = () => {
     } else {
       console.log(chaptersApi?.mes);
     }
+    if (getComments?.success) {
+      setComments(getComments?.mes);
+    } else {
+      console.log(getComments?.mes);
+    }
   };
-
   useEffect(() => {
     fetchComic();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="bg-mainBg relative h-[1400px]">
+    <div className="bg-mainBg relative pb-6">
       <div className="h-[350px] overflow-hidden absolute top-0 left-0 w-full z-0">
         <img
           src={comic?.coverImage}
@@ -51,8 +58,10 @@ const ComicDetail = () => {
           className="w-full object-cover blur-xl opacity-50"
         />
       </div>
-      <p>BreadCrumb</p>
-      <div className="p-[25px] bg-color-float w-main mx-auto z-1 relative top-32 text-sm">
+      <p className="text-base pt-7 mb-5 w-main mx-auto text-white z-10">
+        BreadCrumb
+      </p>
+      <div className="p-[25px] bg-color-float w-main mx-auto z-1 relative text-sm rounded-b-md">
         <div className="flex mb-10">
           <img
             src={comic?.coverImage}
@@ -165,9 +174,21 @@ const ComicDetail = () => {
             ))}
           </div>
         </div>
-        <RateArea object={comic} />
+        <RateArea amount={comments?.length} isComic={true} id={id} />
+        <div className="py-4">
+          {comments?.map((item, index) => {
+            return <Comment key={index} data={item} />;
+          })}
+        </div>
       </div>
-      {showReport && <Report setShowReport={setShowReport} errorComic={comic?.title} errorReport={comicError} isComic={true}/>}
+      {showReport && (
+        <Report
+          setShowReport={setShowReport}
+          errorComic={comic?.title}
+          errorReport={comicError}
+          isComic={true}
+        />
+      )}
     </div>
   );
 };

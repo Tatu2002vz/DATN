@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { apiGetChapter } from "../apis";
+import { apiGetChapter, apiGetCommentWithChapter } from "../apis";
 import { useNavigate, useParams } from "react-router-dom";
-
+import {Comment, RateArea} from '../components'
 const Chapter = () => {
   const [chapter, setChapter] = useState(null);
+  const [comments, setComments] = useState('');
   const { id } = useParams();
   const navigate = useNavigate();
   const fetchChapter = async () => {
@@ -12,13 +13,17 @@ const Chapter = () => {
       navigate("/");
     }
     if (res?.success === true) setChapter(res?.mes);
+    const getComments = await apiGetCommentWithChapter(id)
+    if(getComments?.success) {
+      setComments(getComments?.mes)
+    }
   };
   useEffect(() => {
     fetchChapter();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="relative">
+    <div className="relative pb-16">
       <h1 className="text-center text-xl py-[30px]">
         {chapter?.comic?.title} - Chapter {chapter?.chapNumber}
       </h1>
@@ -32,6 +37,12 @@ const Chapter = () => {
           />
         );
       })}
+      <RateArea data={comments.length} isComic={false} id={id}/>
+      {comments.length > 0 && <div className="py-4">
+          {comments?.map((item, index) => {
+            return <Comment key={index} data={item} />;
+          })}
+        </div>}
     </div>
   );
 };

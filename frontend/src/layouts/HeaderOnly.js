@@ -4,7 +4,7 @@ const HeaderOnly = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <div className="pt-[70px]">{children}</div>
     </>
   );
 };

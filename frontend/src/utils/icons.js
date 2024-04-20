@@ -3,7 +3,7 @@ import { IoEye, IoBookmark, IoLogoFacebook, IoChatbubblesSharp,IoNotifications, 
 import { HiStatusOnline } from "react-icons/hi";
 import { FaCaretDown } from "react-icons/fa";
 import { GrUpdate } from "react-icons/gr";
-import { BiSolidBook } from "react-icons/bi";
+import { BiSolidBook, BiSolidLeftArrow } from "react-icons/bi";
 import { RiInformationFill, RiMoneyDollarCircleFill } from "react-icons/ri";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsFillSendFill } from "react-icons/bs";
@@ -42,5 +42,6 @@ const icons = {
     FiSearch,
     FiPlus,
     IoClose,
+    BiSolidLeftArrow
 }
 export default icons
