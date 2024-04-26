@@ -1,22 +1,29 @@
-import { useContext } from "react";
-import { comicContext } from "../pages/Home";
-import { apiGetAllComic, apiGetComicFilter } from "../apis";
-const ListFilter = ({ list, setValue }) => {
-  const { setComics } = useContext(comicContext);
+const ListFilter = ({ list, setValue, id, setFilter }) => {
 
-  const handleClick = async ({ id, name }) => {
-    console.log(name);
-    setValue(name);
-    const filter = {
-      genre: id,
-    };
-    let comicApi
-    if (!id) {
-      comicApi = await apiGetAllComic();
-    } else {
-      comicApi = await apiGetComicFilter(filter);
+  const handleClick = async (data) => {
+    setValue(data.name);
+    if(id === 1) {
+      setFilter(prev => {
+        return {...prev, genre: data._id}
+      })
     }
-    setComics(comicApi?.mes);
+    if(id === 2) {
+      let sortBy = ''
+      if(data.id === 1) sortBy = 'viewCount'
+      if(data.id === 2) sortBy = 'viewCount'
+      if(data.id === 3) sortBy = 'viewCount'
+      if(data.id === 4) sortBy = 'follow'
+      setFilter(prev => {
+        return {...prev, sort: `-${sortBy}`}
+      })
+    }
+    // let comicApi
+    // if (!id) {
+    //   comicApi = await apiGetAllComic();
+    // } else {
+    //   comicApi = await apiGetComicFilter(filter);
+    // }
+    // setComics(comicApi?.mes);
   };
 
   return (
@@ -25,11 +32,9 @@ const ListFilter = ({ list, setValue }) => {
         return (
           <div
             onClick={() => {
-              const data = {
-                id: item._id,
-                name: item.name,
-              };
-              handleClick(data);
+              
+
+              handleClick(item);
             }}
             key={index}
             className="text-sm leading-7 hover:bg-main rounded-md cursor-pointer"

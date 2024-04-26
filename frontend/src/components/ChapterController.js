@@ -30,37 +30,50 @@ const ChapterController = ({ chapNumber, setShowReport }) => {
     navigate(0); //reload
   };
   const handleNextChap = (next) => {
-    let nextChapNumber
+    let nextChapNumber;
     if (next) {
       nextChapNumber = chapNumber + 1;
-      
     } else {
       nextChapNumber = chapNumber - 1;
     }
     const nextChapter = listChapters.find(
       (item) => item.chapNumber === nextChapNumber
     )?._id;
-    if(nextChapter) {
+    if (nextChapter) {
       navigate(`/comic/chapter/${slug}/${nextChapter}`);
       navigate(0); //reload
-
     } else {
       Swal.fire({
-        title: 'Đã hết chapter rồi bạn ơi!',
-        icon: 'info'
-      })
+        title: "Đã hết chapter rồi bạn ơi!",
+        icon: "info",
+      });
     }
   };
   return (
     <div className="py-3 bg-color-float fixed left-0 right-0 bottom-0 z-10">
-      <div className="w-main flex items-center text-[17px] mx-auto justify-between px-2">
+      <div className="max-w-main flex items-center text-[17px] mx-auto justify-between px-2">
         <div className="flex gap-5">
-          <NavLink to={"/"} className="flex items-center">
+          {/* <NavLink to={"/"} className="flex items-center">
             <TiHome className="mr-1" size={20} />
             Trang chủ
-          </NavLink>
+          </NavLink> */}
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => {
+              document.body.scrollTop +=100000; // For Safari
+              document.documentElement.scrollTop +=100000 // For Chrome, Firefox, IE and Opera
+            }}
+          >
+            <FaCircleArrowUp className="mr-1" size={20} />
+            Lên đầu
+          </div>
 
-          <div className="flex items-center cursor-pointer" onClick={() => {setShowReport(true)}}>
+          <div
+            className="md:flex items-center cursor-pointer hidden"
+            onClick={() => {
+              setShowReport(true);
+            }}
+          >
             <IoMdWarning className="mr-1" size={20} />
             Báo lỗi
           </div>
@@ -112,7 +125,7 @@ const ChapterController = ({ chapNumber, setShowReport }) => {
           </div>
         </div>
         <div className="flex gap-5">
-          <NavLink to={"/"} className="flex items-center">
+          <NavLink to={"/"} className="md:flex items-center hidden">
             <IoBookmark className="mr-1" size={20} />
             Theo dõi
           </NavLink>

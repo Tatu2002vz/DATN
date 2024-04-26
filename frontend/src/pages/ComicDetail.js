@@ -5,6 +5,7 @@ import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
 import { RateArea, ChapterList, Report, Comment } from "../components";
 import { comicError } from "../enum/listError";
+import calculateTime from '../utils/calculateTime'
 const {
   HiStatusOnline,
   GrUpdate,
@@ -17,38 +18,48 @@ const {
   TfiMenuAlt,
   RiMoneyDollarCircleFill,
 } = icons;
-
+// const socket = io('http://localhost:8888') // khởi tạo 1 lần
 const ComicDetail = () => {
+  // const socket = useRef(io('http://localhost:8888'))
+  console.log("render");
   const { id, slug } = useParams();
-  const [comic, setComic] = useState(null);
-  const [chapters, setChapters] = useState(null);
+  // const [comic, setComic] = useState(null);
+  // const [chapters, setChapters] = useState(null);
+  // const [comments, setComments] = useState(null);
   const [showReport, setShowReport] = useState(false);
-  const [comments, setComments] = useState(null);
-  console.log(comments);
+  const [data, setData] = useState({
+    comic: null,
+    chapters: null,
+    comments: null,
+  });
+
   const fetchComic = async () => {
     const comicApi = await apiGetComic(id);
     const chaptersApi = await apiGetChapters(id);
     const getComments = await apiGetCommentWithComic(id);
-    if (comicApi?.success) {
-      setComic(comicApi?.mes);
+    if (comicApi?.success && chaptersApi?.success && getComments?.success) {
+      setData((prev) => ({
+        ...prev,
+        comic: comicApi?.mes,
+        chapters: chaptersApi?.mes,
+        comments: getComments?.mes,
+      }));
     } else {
-      console.log(comicApi?.mes);
-    }
-    if (chaptersApi?.success) {
-      setChapters(chaptersApi?.mes);
-    } else {
-      console.log(chaptersApi?.mes);
-    }
-    if (getComments?.success) {
-      setComments(getComments?.mes);
-    } else {
-      console.log(getComments?.mes);
+      console.log(comicApi?.success);
+      console.log(chaptersApi?.success);
+      console.log(getComments?.success);
     }
   };
+  const { comic, chapters, comments } = data;
   useEffect(() => {
     fetchComic();
+    // const handleSubmit = () => {
+
+    // }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [id, slug]);
+
   return (
     <div className="bg-mainBg relative pb-6">
       <div className="h-[350px] overflow-hidden absolute top-0 left-0 w-full z-0">
@@ -58,18 +69,18 @@ const ComicDetail = () => {
           className="w-full object-cover blur-xl opacity-50"
         />
       </div>
-      <p className="text-base pt-7 mb-5 w-main mx-auto text-white z-10">
+      <p className="text-base pt-7 mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0">
         BreadCrumb
       </p>
-      <div className="p-[25px] bg-color-float w-main mx-auto z-1 relative text-sm rounded-b-md">
-        <div className="flex mb-10">
+      <div className="p-[25px] bg-color-float max-w-main mx-auto z-1 relative text-sm rounded-b-md">
+        <div className="flex mb-10 flex-col md:flex-row gap-4 items-center">
           <img
             src={comic?.coverImage}
             alt="avatar"
             className="w-[190px] mr-[25px]"
           />
           <div className="w-full">
-            <h1 className="text-2xl">{comic?.title}</h1>
+            <h1 className="text-2xl text-center">{comic?.title}</h1>
             <div className="my-3">
               {comic?.genre?.map((item, index) => {
                 return (
@@ -91,7 +102,7 @@ const ComicDetail = () => {
                 <GrUpdate className="mr-1" />
                 Cập nhật
               </p>
-              <p className="">0 phút trước</p>
+              {/* <p className="">{chapters[chapters[0]].createdAt}</p> */}
             </div>
             <div className="flex my-3 flex-row w-full">
               <p className="mr-6 basis-1/6 flex items-center">
@@ -112,7 +123,7 @@ const ComicDetail = () => {
                 to={
                   comic
                     ? `/comic/chapter/${slug}/${
-                        chapters[chapters.length - 1]._id
+                        chapters[chapters.length - 1]?._id
                       }`
                     : ""
                 }
@@ -134,7 +145,7 @@ const ComicDetail = () => {
                 <IoMdWarning className="mr-1" />
                 Báo lỗi
               </div>
-              <div className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex  items-center">
+              <div className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2  items-center hidden md:flex">
                 <IoLogoFacebook className="mr-1" />
                 Share
               </div>

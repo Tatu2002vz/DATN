@@ -21,7 +21,7 @@ const DefaultLayout = ({ children }) => {
     <div className="relative">
       <Header />
       <div className="bg-mainBg pt-[70px] pb-16 relative">
-        <div className="mx-auto w-main">{children}</div>
+        <div className="max-w-main mx-auto">{children}</div>
         {showReport && (
           <Report
             setShowReport={setShowReport}

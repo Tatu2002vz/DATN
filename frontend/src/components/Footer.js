@@ -4,7 +4,7 @@ import { memo } from "react";
 const Footer = () => {
   return (
     <div className="bg-headerBg">
-      <div className="flex gap-32 w-main mx-auto py-10">
+      <div className="flex flex-col gap-10 md:flex-row lg:gap-32 max-w-main mx-auto py-10">
       <div className="basis-1/2">
         <img src={logo} alt="logo" className="h-[30px] mb-4" />
         <p>

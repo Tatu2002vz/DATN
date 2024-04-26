@@ -43,8 +43,8 @@ const ResetPassword = () => {
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-[400px]">
+    <div className="min-h-screen flex items-center justify-center ">
+      <div className="sm:w-[400px] w-full p-4">
         <InputField
           label={"Mật khẩu mới"}
           namekey={"password"}

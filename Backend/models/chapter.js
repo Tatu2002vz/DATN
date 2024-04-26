@@ -27,6 +27,8 @@ var chapterSchema = new mongoose.Schema({
       ref: 'Comment'
     },
   ],
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model("Chapter", chapterSchema);

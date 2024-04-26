@@ -24,7 +24,7 @@ const Comic = ({ comic, isResult }) => {
               <img
                 src={comic?.coverImage}
                 alt={comic?.title}
-                className="rounded-md object-cover hover:scale-110 duration-300 ease-linear"
+                className="rounded-md object-cover hover:scale-110 duration-300 ease-linear w-full h-full"
               />
             </div>
             <p className="text-sm mt-2">{comic?.title}</p>
@@ -37,11 +37,11 @@ const Comic = ({ comic, isResult }) => {
           to={`/comic/${comic?.slug}/${comic?._id}`}
         >
           <div>
-            <div className="w-full rounded-md overflow-hidden">
+            <div className="w-[65px] h-[86px] rounded-md overflow-hidden">
               <img
                 src={comic?.coverImage}
                 alt={comic?.title}
-                className="rounded-md object-cover w-[65px] h-[86px]"
+                className="rounded-md object-cover w-full"
               />
             </div>
           </div>

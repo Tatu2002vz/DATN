@@ -6,6 +6,7 @@ import { apiGetAllComic } from "../apis";
 export const comicContext = createContext();
 const Home = () => {
   const [comics, setComics] = useState([]);
+  
   const fetchComic = async () => {
     const response = await apiGetAllComic();
     setComics([...response?.mes]);
@@ -15,7 +16,7 @@ const Home = () => {
   }, []);
   return (
     <comicContext.Provider value={{ comics, setComics }}>
-      <div className="h-[1000px]">
+      <div className="p-[10px] min-[1300px]:p-0">
         <Link to={"https://www.facebook.com/vantu2002"} target="_blank">
           <img src={slider} alt="" className="w-full object-cover" />
         </Link>
@@ -41,7 +42,7 @@ const Home = () => {
             Gợi ý thông minh
           </div>
         </div>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-6">
           {comics?.map((item, index) => {
             return <Comic key={index} comic={item} />;
           })}

@@ -3,14 +3,20 @@ import icons from "../utils/icons";
 import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { apiCreateComment } from "../apis";
+
 const { IoChatbubblesSharp, BsFillSendFill } = icons;
+
+
+
 const RateArea = ({ amount, isComic, id }) => {
   const { isLoggingIn } = useSelector((state) => state.user);
   const [comment, setComment] = useState("");
   const handleChange = (event) => {
     setComment(event.target.value);
   };
+
   const handleSubmit = async () => {
+    
     if (!isLoggingIn) {
       Swal.fire({
         title: "Bạn cần đăng nhập để thực hiện chức năng này!",
@@ -23,7 +29,7 @@ const RateArea = ({ amount, isComic, id }) => {
           title: "Thành công!",
           showConfirmButton: false,
           icon: "success",
-          timer: 2000,
+          timer: 1000,
           position: "top-right",
         }).then(() => {
           setComment("");

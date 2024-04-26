@@ -117,7 +117,7 @@ const Login = ({ setIsShow, active, setActive }) => {
   };
   return (
     <div className="fixed w-full h-full flex items-center justify-center bg-mainBg/25 z-50 duration-300">
-      <div className="rounded-[10px] login-popup p-5 animate-login-animation relative w-[400px]">
+      <div className="rounded-[10px] login-popup p-5 animate-login-animation relative sm:w-[400px] max-w-[400px] w-full mr-6 ml-2">
         <IoIosCloseCircle
           className="absolute top-[-10px] right-[-10px] text-main bg-white rounded-full border-none cursor-pointer"
           size={30}

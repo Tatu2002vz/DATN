@@ -1,26 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import icons from "../utils/icons";
 import { ListFilter } from "../components";
 import { useSelector } from "react-redux";
+import { comicContext } from "../pages/Home";
+import { useContext } from "react";
+import { apiGetAllComic, apiGetComicFilter } from "../apis";
+
 const { FaCaretDown } = icons;
 const FilterTag = () => {
   const [tabActive, setTabActive] = useState();
   const genres = useSelector((state) => state.app.genres);
   const [genreFilter, setGenreFilter] = useState("Tất cả")
   const [sortFilter, setSortFilter] = useState("Tất cả")
-  const [chapFilter, setChapFilter] = useState("Tất cả")
-  const title = [
+  const { setComics } = useContext(comicContext);
+  const [filter, setFilter] = useState({
+    genre: null,
+    sort: ''
+  })
+  const fetchComicFilter= async() => {
+
+    let check
+    if(filter.genre === '')  {
+      let {genre, ...check} = filter;
+    }
+    else {
+      check = filter
+    }
+    const comicApi = await apiGetComicFilter(check)
+    setComics(comicApi?.mes)
+  }
+  useEffect(() => {
+    fetchComicFilter();
+  }, [filter])
+  const sortBy = [
     {
-      name: "ttitle",
+      id: 1,
+      name: "Lượt xem",
     },
     {
-      name: "ttitle",
+      id: 2,
+      name: "Truyện hot",
     },
     {
-      name: "ttitle",
+      id: 3,
+      name: "Số chapter",
     },
     {
-      name: "ttitle",
+      id: 4,
+      name: "Theo dõi",
     },
   ];
   const test = [
@@ -54,27 +81,27 @@ const FilterTag = () => {
       value: sortFilter,
       setValue: setSortFilter,
       options: [
-        ...title
+        ...sortBy
       ]
     },
-    {
-      id: 3,
-      label: "Chapter tối thiểu",
-      value: chapFilter,
-      setValue: setChapFilter,
-      options: [
-        ...test
-      ]
-    },
-    {
-      id: 4,
-      label: "Truyện hot",
-      value: "Tất cả",
-      setValue: setGenreFilter,
-      options: [
-        ...genres
-      ]
-    },
+    // {
+    //   id: 3,
+    //   label: "Chapter tối thiểu",
+    //   value: chapFilter,
+    //   setValue: setChapFilter,
+    //   options: [
+    //     ...test
+    //   ]
+    // },
+    // {
+    //   id: 4,
+    //   label: "Truyện hot",
+    //   value: "Tất cả",
+    //   setValue: setGenreFilter,
+    //   options: [
+    //     ...genres
+    //   ]
+    // },
   ];
   
   return (
@@ -96,7 +123,7 @@ const FilterTag = () => {
               <FaCaretDown className="ml-1" />
             </p>
             {
-                tabActive === item.id && <ListFilter list={item.options} setValue={item.setValue}/>
+                tabActive === item.id && <ListFilter list={item.options} setValue={item.setValue} id={item.id} setFilter={setFilter}/>
             }
           </div>
         );

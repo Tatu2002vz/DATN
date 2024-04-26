@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState, memo } from "react";
-import logo from "../assets/logo.png";
+import { useEffect, useState, memo, useRef } from "react";
+import logo_desktop from "../assets/logo.png";
+import logo_mobile from "../assets/logo-mobile.png";
 import bee_chibi from "../assets/bee_chibi.png";
 import { Button, Login, SearchResult } from "../components/";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,9 +17,12 @@ const {
   CgLogOut,
   RiMoneyDollarCircleFill,
   FiSearch,
+  IoClose,
 } = icons;
 const Header = () => {
+  const inputSearch = useRef(null);
   const navigate = useNavigate();
+  const [logo, setLogo] = useState(logo_desktop);
   const [isShow, setIsShow] = useState(false);
   const [active, setActive] = useState();
   const [isShowOption, setIsShowOption] = useState(false);
@@ -28,7 +32,7 @@ const Header = () => {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const { isLoggingIn, userData } = useSelector((state) => state.user);
-
+  const [showInputMobile, setShowInputMobile] = useState(false);
   const showForm = () => {
     setIsShow(true);
   };
@@ -58,48 +62,96 @@ const Header = () => {
       setIsLoading(false);
     }
   }, [search]);
+  const handleResize = () => {
+    if (window.innerWidth < 1024) setLogo(logo_mobile);
+    else setLogo(logo_desktop);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("reset", handleResize);
+    };
+  }, []);
   return (
-    <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10">
+    <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-10 w-full px-[10px] min-[1300px]:p-0">
       {isShow && (
         <Login setIsShow={setIsShow} active={active} setActive={setActive} />
       )}
-      <div className="max-w-screen-xl mx-auto flex items-center h-full justify-between">
-        <div className="flex justify-center items-center">
+      <div className=" flex items-center h-full justify-between max-w-main mx-auto">
+        <div
+          className={`flex justify-center items-center ${
+            showInputMobile ? "w-full" : ""
+          }`}
+        >
           <Link to={"/"}>
-            <img src={logo} alt="" className="h-[30px] w-auto" />
+            <img
+              src={logo}
+              alt=""
+              className={`h-[30px] w-auto ${showInputMobile ? "hidden" : ""}`}
+            />
           </Link>
-          <div className="rounded-full w-[400px] h-[44px] relative ml-5">
+          <div
+            className={`rounded-full relative ml-5 min-w-6 min-h-6 border lg:p-0 lg:border-none ${
+              showInputMobile ? "border-none p-0 w-full mr-5" : "p-5"
+            }`}
+          >
             <input
               type="text"
+              ref={inputSearch}
               placeholder="Bạn muốn tìm truyện gì"
-              className="rounded-full w-full h-full bg-inputBg pl-5 focus:outline-none "
+              className={`rounded-full w-[400px] h-[44px] bg-inputBg pl-5 focus:outline-none lg:block ${
+                showInputMobile ? "block w-full" : "hidden"
+              }`}
               value={search}
               onChange={(event) => {
                 setSearch(event.target.value);
               }}
-              onBlur={() => {
-                setSearch("");
-              }}
             />
             {isLoading ? (
-              <div className="text-main-text-color absolute right-3 top-1/2 translate-y-[-50%] cursor-pointer w-6 h-6">
+              <div
+                className={`text-main-text-color w-6 h-6 absolute top-1/2 right-1/2 lg:right-3 lg:top-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-0 cursor-pointer ${
+                  showInputMobile ? "right-5 translate-x-0" : ""
+                }`}
+              >
                 <span className="loader-search"></span>
               </div>
             ) : (
               <FiSearch
                 size={24}
-                className="text-main-text-color absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+                className={`text-main-text-color absolute top-1/2 right-1/2 lg:right-3 lg:top-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-0 cursor-pointer ${
+                  showInputMobile ? "right-5 translate-x-0" : ""
+                }`}
+                onClick={() => {
+                  const width = window.innerWidth;
+                  if (width < 1024) {
+                    setShowInputMobile(true);
+                  }
+                }}
               />
             )}
             {search !== "" && <SearchResult data={comics} />}
           </div>
+          {showInputMobile ? (
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                setShowInputMobile(false);
+                setSearch("");
+                inputSearch.current.focus();
+              }}
+            >
+              <IoClose size={30} />
+            </div>
+          ) : null}
         </div>
 
         {!isLoggingIn ? (
-          <div className="flex items-center">
+          <div
+            className={`flex items-center ${showInputMobile ? "hidden" : ""}`}
+          >
             <Button
               text={"Đăng ký"}
-              css={"border-main"}
+              css={"border-main hidden sm:block"}
               onClick={() => {
                 showForm();
                 setActive(true);
@@ -115,7 +167,11 @@ const Header = () => {
             ></Button>
           </div>
         ) : (
-          <div className="flex items-center h-full">
+          <div
+            className={`flex items-center h-full ${
+              showInputMobile ? "hidden" : ""
+            }`}
+          >
             <div className="relative">
               <IoNotifications
                 className="mr-5 cursor-pointer"

@@ -31,13 +31,14 @@ const Chapter = () => {
         return (
           <img
             key={index}
-            src={`${process.env.REACT_APP_API_IMAGE}${item}`}
+            // src={`${process.env.REACT_APP_API_IMAGE}${item}`}
+            src={item}
             alt=""
-            className="max-w-3xl mx-auto"
+            className="px-1 md:max-w-3xl mx-auto"
           />
         );
       })}
-      <RateArea data={comments.length} isComic={false} id={id}/>
+      <div className="p-4 min-[1300px]:p-0"><RateArea data={comments.length} isComic={false} id={id}/></div>
       {comments.length > 0 && <div className="py-4">
           {comments?.map((item, index) => {
             return <Comment key={index} data={item} />;

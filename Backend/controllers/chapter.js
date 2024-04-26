@@ -10,7 +10,7 @@ const multipleUploadMiddleware = require("../middlewares/uploadImg");
 const getListChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const chapter = await Chapter.find({ comic: id })
-    .select("chapNumber price")
+    .select("chapNumber price createdAt")
     .sort("-chapNumber");
   return res.status(sttCode.Ok).json({
     success: chapter ? true : false,
