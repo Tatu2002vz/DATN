@@ -3,12 +3,13 @@ import icons from "../utils/icons";
 import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { apiCreateComment } from "../apis";
-
+// import io from "socket.io-client";
 const { IoChatbubblesSharp, BsFillSendFill } = icons;
 
+// const socket = io("http://192.168.0.103:8888"); // khởi tạo 1 lần
+// const socket = io("http://localhost:8888"); // khởi tạo 1 lần
 
-
-const RateArea = ({ amount, isComic, id }) => {
+const RateArea = ({ amount, isComic, id, socket }) => {
   const { isLoggingIn } = useSelector((state) => state.user);
   const [comment, setComment] = useState("");
   const handleChange = (event) => {
@@ -16,7 +17,6 @@ const RateArea = ({ amount, isComic, id }) => {
   };
 
   const handleSubmit = async () => {
-    
     if (!isLoggingIn) {
       Swal.fire({
         title: "Bạn cần đăng nhập để thực hiện chức năng này!",
@@ -25,12 +25,15 @@ const RateArea = ({ amount, isComic, id }) => {
     } else {
       const resp = await apiCreateComment({ content: comment, isComic, id });
       if (resp?.success) {
+        socket.emit("submit", { id: id });
         Swal.fire({
           title: "Thành công!",
           showConfirmButton: false,
           icon: "success",
           timer: 1000,
           position: "top-right",
+          width: "50vw",
+          heightAuto: true
         }).then(() => {
           setComment("");
         });

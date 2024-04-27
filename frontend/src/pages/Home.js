@@ -6,7 +6,7 @@ import { apiGetAllComic } from "../apis";
 export const comicContext = createContext();
 const Home = () => {
   const [comics, setComics] = useState([]);
-  
+
   const fetchComic = async () => {
     const response = await apiGetAllComic();
     setComics([...response?.mes]);

@@ -60,3 +60,6 @@ body {
 }
 
 /* loading animation */
+div:where(.swal2-container) div:where(.swal2-popup) {
+  
+}

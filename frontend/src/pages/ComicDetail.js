@@ -5,7 +5,8 @@ import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
 import { RateArea, ChapterList, Report, Comment } from "../components";
 import { comicError } from "../enum/listError";
-import calculateTime from '../utils/calculateTime'
+import calculateTime from "../utils/calculateTime";
+import io from "socket.io-client";
 const {
   HiStatusOnline,
   GrUpdate,
@@ -18,10 +19,12 @@ const {
   TfiMenuAlt,
   RiMoneyDollarCircleFill,
 } = icons;
-// const socket = io('http://localhost:8888') // khởi tạo 1 lần
+// const socket = io("http://localhost:8888"); // khởi tạo 1 lần
+const socket = io("http://192.168.0.103:8888", {
+  query: { isComic: true },
+}); // khởi tạo 1 lần
 const ComicDetail = () => {
   // const socket = useRef(io('http://localhost:8888'))
-  console.log("render");
   const { id, slug } = useParams();
   // const [comic, setComic] = useState(null);
   // const [chapters, setChapters] = useState(null);
@@ -50,12 +53,20 @@ const ComicDetail = () => {
       console.log(getComments?.success);
     }
   };
+
   const { comic, chapters, comments } = data;
   useEffect(() => {
     fetchComic();
-    // const handleSubmit = () => {
 
-    // }
+    socket.on("refreshCmt", (data) => {
+      setData((prev) => ({
+        ...prev,
+        comments: data?.mes,
+      }));
+    });
+    return () => {
+      socket.disconnect();
+    };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, slug]);
@@ -73,50 +84,62 @@ const ComicDetail = () => {
         BreadCrumb
       </p>
       <div className="p-[25px] bg-color-float max-w-main mx-auto z-1 relative text-sm rounded-b-md">
-        <div className="flex mb-10 flex-col md:flex-row gap-4 items-center">
+        <div className="flex mb-10 flex-col md:flex-row gap-4 items-center md:items-start">
           <img
             src={comic?.coverImage}
             alt="avatar"
             className="w-[190px] mr-[25px]"
           />
           <div className="w-full">
-            <h1 className="text-2xl text-center">{comic?.title}</h1>
-            <div className="my-3">
+            <h1 className="text-2xl text-center md:text-left">
+              {comic?.title}
+            </h1>
+            <div className="my-3 flex flex-wrap">
               {comic?.genre?.map((item, index) => {
                 return (
-                  <span key={index} className="px-2 py-1 bg-[#4A5693] mr-2">
+                  <span
+                    key={index}
+                    className="px-2 py-1 my-1 bg-[#4A5693] mr-2"
+                  >
                     {item?.name}
                   </span>
                 );
               })}
             </div>
             <div className="flex my-3 flex-row w-full">
-              <p className="mr-6 basis-1/6 flex items-center">
-                <HiStatusOnline className="mr-1" />
+              <p className="mr-6 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 flex items-center">
+                <HiStatusOnline className="mr-1" size={18} />
                 Tình trạng
               </p>
-              <p className="">Đang cập nhật</p>
+              <p className="flex-1">Đang cập nhật</p>
             </div>
             <div className="flex my-3 flex-row w-full">
-              <p className="mr-6 basis-1/6 flex items-center">
-                <GrUpdate className="mr-1" />
+              <p className="mr-6 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 flex items-center">
+                <GrUpdate className="mr-1" size={18} />
                 Cập nhật
               </p>
-              {/* <p className="">{chapters[chapters[0]].createdAt}</p> */}
+              <p className="">
+                {chapters &&
+                  (chapters[0]?.createdAt ? (
+                    calculateTime(chapters[0]?.createdAt)
+                  ) : (
+                    <span>0 phút trước</span>
+                  ))}
+              </p>
             </div>
             <div className="flex my-3 flex-row w-full">
-              <p className="mr-6 basis-1/6 flex items-center">
-                <IoEye className="mr-1" />
+              <p className="mr-6 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 flex items-center">
+                <IoEye className="mr-1" size={18} />
                 Lượt xem
               </p>
-              <p className="">{comic?.viewCount}</p>
+              <p className="flex-1">{comic?.viewCount}</p>
             </div>
             <div className="flex my-3 flex-row w-full">
-              <p className="mr-6 basis-1/6 flex items-center">
-                <IoBookmark className="mr-1" />
+              <p className="mr-6 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 flex items-center">
+                <IoBookmark className="mr-1" size={18} />
                 Lượt theo dõi
               </p>
-              <p className="">178</p>
+              <p className="flex-1">178</p>
             </div>
             <div className="flex my-4">
               <NavLink
@@ -153,7 +176,7 @@ const ComicDetail = () => {
           </div>
         </div>
         <div className="mb-10">
-          <div className="mt-5 mb-3 text-[19px] flex items-center">
+          <div className="mt-5 mb-3 text-[19px] flex items-center cursor-pointer">
             <RiInformationFill className="mr-2" />
             Giới thiệu
           </div>
@@ -185,8 +208,13 @@ const ComicDetail = () => {
             ))}
           </div>
         </div>
-        <RateArea amount={comments?.length} isComic={true} id={id} />
-        <div className="py-4">
+        <RateArea
+          amount={comments?.length}
+          isComic={true}
+          id={id}
+          socket={socket}
+        />
+        <div className="py-4 px-[10px] min-[1300px]:px-0">
           {comments?.map((item, index) => {
             return <Comment key={index} data={item} />;
           })}

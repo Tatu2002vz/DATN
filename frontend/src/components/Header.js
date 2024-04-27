@@ -67,6 +67,8 @@ const Header = () => {
     else setLogo(logo_desktop);
   };
   useEffect(() => {
+    if (window.innerWidth < 1024) setLogo(logo_mobile);
+    else setLogo(logo_desktop);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("reset", handleResize);

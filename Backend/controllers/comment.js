@@ -11,7 +11,7 @@ const getCommentWithIdChapter = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const comments = await Comment.find({ chapter: id }).populate(
     "comic chapter user"
-  );
+  ).sort('-createdAt');
   const count = comments.length;
   const data = Array.from(comments).map((item) => {
     return {

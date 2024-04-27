@@ -53,11 +53,11 @@ const ChapterController = ({ chapNumber, setShowReport }) => {
     <div className="py-3 bg-color-float fixed left-0 right-0 bottom-0 z-10">
       <div className="max-w-main flex items-center text-[17px] mx-auto justify-between px-2">
         <div className="flex gap-5">
-          {/* <NavLink to={"/"} className="flex items-center">
-            <TiHome className="mr-1" size={20} />
-            Trang chủ
-          </NavLink> */}
-          <div
+          <NavLink to={"/"} className="flex items-center justify-center">
+            <TiHome className="mr-1" size={30} />
+            <span className="hidden md:block">Trang chủ</span>
+          </NavLink>
+          {/* <div
             className="flex items-center cursor-pointer"
             onClick={() => {
               document.body.scrollTop +=100000; // For Safari
@@ -66,7 +66,7 @@ const ChapterController = ({ chapNumber, setShowReport }) => {
           >
             <FaCircleArrowUp className="mr-1" size={20} />
             Lên đầu
-          </div>
+          </div> */}
 
           <div
             className="md:flex items-center cursor-pointer hidden"
@@ -130,16 +130,16 @@ const ChapterController = ({ chapNumber, setShowReport }) => {
             Theo dõi
           </NavLink>
 
-          <div
+          <button
             className="flex items-center cursor-pointer"
             onClick={() => {
               document.body.scrollTop = 0; // For Safari
               document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }}
           >
-            <FaCircleArrowUp className="mr-1" size={20} />
-            Lên đầu
-          </div>
+            <FaCircleArrowUp className="md:mr-1" size={30} />
+            <span className="hidden md:block">Lên đầu</span>
+          </button>
         </div>
       </div>
     </div>

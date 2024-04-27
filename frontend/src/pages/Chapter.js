@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { apiGetChapter, apiGetCommentWithChapter } from "../apis";
 import { useNavigate, useParams } from "react-router-dom";
 import {Comment, RateArea} from '../components'
+import io from 'socket.io-client'
+
+const socket = io("http://192.168.0.103:8888", {
+  query: { isComic: false },
+}); // khởi tạo 1 lần
 const Chapter = () => {
   const [chapter, setChapter] = useState(null);
   const [comments, setComments] = useState('');
@@ -20,6 +25,12 @@ const Chapter = () => {
   };
   useEffect(() => {
     fetchChapter();
+    socket.on("refreshCmt", (data) => {
+      setComments(data?.mes);
+    });
+    return () => {
+      socket.disconnect();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -38,8 +49,8 @@ const Chapter = () => {
           />
         );
       })}
-      <div className="p-4 min-[1300px]:p-0"><RateArea data={comments.length} isComic={false} id={id}/></div>
-      {comments.length > 0 && <div className="py-4">
+      <div className="p-4 px-[10px] min-[1300px]:px-0"><RateArea data={comments.length} isComic={false} id={id} socket={socket}/></div>
+      {comments.length > 0 && <div className="py-4 px-[10px] min-[1300px]:px-0">
           {comments?.map((item, index) => {
             return <Comment key={index} data={item} />;
           })}
