@@ -150,10 +150,19 @@ const getListChapterWithSlug = asyncHandler(async (req, res) => {
   });
 });
 
+const getAllChapter = asyncHandler(async (req, res) => {
+  const chapter = await Chapter.find().countDocuments();
+  return res.status(sttCode.Ok).json({
+    success: chapter ? true : false,
+    mes: chapter ? chapter : "Something went wrong!",
+  });
+});
+
 module.exports = {
   createChapter,
   getListChapter,
   deleteChapter,
   getChapter,
   getListChapterWithSlug,
+  getAllChapter
 };

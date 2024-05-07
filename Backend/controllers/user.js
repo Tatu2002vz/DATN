@@ -65,7 +65,9 @@ const login = asyncHandler(async (req, res) => {
 
 const getCurrent = asyncHandler(async (req, res) => {
   const { _id } = req.user;
-  const user = await User.findById(_id).select("-password -role -refreshToken -passwordToken -passwordTokenExpiration");
+  const user = await User.findById(_id).select(
+    "-password -refreshToken -passwordToken -passwordTokenExpiration"
+  );
   return res.status(sttCode.Ok).json({
     success: user ? true : false,
     mes: user ? user : "User not found",
@@ -153,24 +155,62 @@ const getAllUsers = asyncHandler(async (req, res) => {
 });
 
 const deleteUser = asyncHandler(async (req, res) => {
-  const { id } = req.query;
-  const user = await User.findByIdAndDelete(id);
-  return res.status(sttCode.Ok).json({
-    success: user ? true : false,
-    mes: user ? "Deleted successfully" : "Something went wrong",
-  });
+  const { _id } = req.user;
+  const { id } = req.params;
+  if (!id || !_id) throw new Error("Invalid id");
+  if (id === _id) {
+    const user = await User.findByIdAndDelete(id);
+    return res.status(sttCode.Ok).json({
+      success: user ? true : false,
+      mes: user ? "Deleted successfully" : "Something went wrong",
+    });
+  } else {
+    const admin = await User.findById(_id);
+    if (admin.role === "admin") {
+      const user = await User.findByIdAndDelete(id);
+      return res.status(sttCode.Ok).json({
+        success: user ? true : false,
+        mes: user ? "Deleted successfully" : "Something went wrong",
+      });
+    } else {
+      throw new Error("You do not have permission to delete this user")
+    }
+  }
 });
 
 const updateUser = asyncHandler(async (req, res) => {
-  const { id } = req.query;
+  const { _id } = req.user;
+  const { id_update } = req.params;
   if (Object.keys(req.body) === 0) throw new Error("Missing input!");
-  const user = await User.findByIdAndUpdate(id, req.body, { new: true });
-  return res.status(sttCode.Ok).json({
-    success: user ? true : false,
-    mes: user ? "Updated successfully" : "Something went wrong",
-  });
+  if (_id === id_update) {
+    const user = await User.findByIdAndUpdate(_id, req.body, { new: true });
+    return res.status(sttCode.Ok).json({
+      success: user ? true : false,
+      mes: user ? "Updated successfully" : "Something went wrong",
+    });
+  } else {
+    const user_admin = await User.findById(_id);
+    if (user_admin.role === "admin") {
+      const user_update = await User.findByIdAndUpdate(id_update, req.body, {
+        new: true,
+      });
+      return res.status(sttCode.Ok).json({
+        success: user_update ? true : false,
+        mes: user_update ? "Updated successfully" : "Something went wrong",
+      });
+    } else throw new Error("You do not have permission to update this user");
+  }
 });
 
+const getUser = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  if (!id) throw new Error("Missing input!");
+  const user = await User.findById(id).select("-password");
+  return res.status(sttCode.Ok).json({
+    success: user ? true : false,
+    mes: user ? user : "Something went wrong",
+  });
+});
 module.exports = {
   register,
   login,
@@ -181,4 +221,5 @@ module.exports = {
   getAllUsers,
   deleteUser,
   updateUser,
+  getUser,
 };

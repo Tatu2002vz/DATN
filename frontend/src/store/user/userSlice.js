@@ -31,14 +31,22 @@ export const userSlice = createSlice({
     // Khi thực hiện action login thành công (Promise fulfilled)
     builder.addCase(actions.getCurrent.fulfilled, (state, action) => {
       // Tắt trạng thái loading, lưu thông tin user vào store
-      state.isLoading = false;
-      state.userData = action.payload;
-      // state.isLoggingIn = true;
+      if(action.payload.success) {
+        state.isLoading = false;
+        state.userData = action.payload?.mes;
+        state.isLoggingIn = true;
+      } else {
+        state.isLoading = false;
+        state.userData = null;
+        state.isLoggingIn = false;
+        state.token = null;
+      }
     });
 
     // // Khi thực hiện action login thất bại (Promise rejected)
     builder.addCase(actions.getCurrent.rejected, (state, action) => {
       // Tắt trạng thái loading, lưu thông báo lỗi vào store
+      console.log(state);
       state.isLoading = false;
       state.errorMessage = action.payload;
       state.isLoggingIn = false;

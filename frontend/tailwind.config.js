@@ -9,9 +9,9 @@ module.exports = {
         main: "#6C74FC",
         inputBg: "#2A3254",
         "main-text-color": "#CCCEE3",
-        "color-float": '#151D35',
-        "label-text-color" : "#CCCEE3",
-        'chapter-border-color' : "#222F5C"
+        "color-float": "#151D35",
+        "label-text-color": "#CCCEE3",
+        "chapter-border-color": "#222F5C",
       },
       width: {
         main: "1300px",
@@ -27,13 +27,33 @@ module.exports = {
             transform: "translateY(0);",
           },
         },
+
+        "slide-in-left": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        "fade-out": {
+          to: {
+            opacity: 0,
+            }
+        }
       },
       animation: {
         "login-animation":
           "login-animation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+        "slide-in-left": "slide-in-left ease 0.5s, fade-out linear 3s 10000s forwards",//forwards: dừng lại ở điểm cuối animation
       },
       maxWidth: {
-        main: "1300px"
+        main: "1300px",
+      },
+      minHeight: {
+        'fs': '100vh'
       }
     },
   },

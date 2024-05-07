@@ -1,11 +1,12 @@
 const multer = require("multer");
-const { formidable } = require("formidable");
 const asyncHandler = require("express-async-handler");
 const fs = require("fs");
 const Comic = require('../models/comic')
 const Chapter = require('../models/chapter')
 const storage = multer.diskStorage({
   destination: asyncHandler(async function (req, file, cb) {
+    console.log(file);
+    console.log(req.C);
     let { comic, chapNumber } = req.body;
     // Get folder path 
     const folderPath = `public/${comic}/${chapNumber}/`;

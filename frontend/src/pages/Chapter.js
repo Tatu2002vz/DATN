@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import { apiGetChapter, apiGetCommentWithChapter } from "../apis";
+import { apiGetChapter, apiGetChapterWithSlug, apiGetComicFilter, apiGetCommentWithChapter } from "../apis";
 import { useNavigate, useParams } from "react-router-dom";
-import {Comment, RateArea} from '../components'
-import io from 'socket.io-client'
+import { Breadcrumbs, Comment, RateArea } from "../components";
+import io from "socket.io-client";
 
-const socket = io("http://192.168.0.103:8888", {
+const socket = io(process.env.REACT_APP_URL_SERVER, {
   query: { isComic: false },
 }); // khởi tạo 1 lần
 const Chapter = () => {
   const [chapter, setChapter] = useState(null);
-  const [comments, setComments] = useState('');
-  const { id } = useParams();
+  const [comments, setComments] = useState("");
+  const [comic, setComic] = useState(null)
+  const { id, slug } = useParams();
   const navigate = useNavigate();
   const fetchChapter = async () => {
     const res = await apiGetChapter(id);
@@ -18,10 +19,14 @@ const Chapter = () => {
       navigate("/");
     }
     if (res?.success === true) setChapter(res?.mes);
-    const getComments = await apiGetCommentWithChapter(id)
-    if(getComments?.success) {
-      setComments(getComments?.mes)
+    const getComments = await apiGetCommentWithChapter(id);
+    if (getComments?.success) {
+      setComments(getComments?.mes);
     }
+    
+
+    const getComic  = await apiGetComicFilter({slug: slug})
+    if(getComic?.success) setComic(getComic?.mes);
   };
   useEffect(() => {
     fetchChapter();
@@ -35,6 +40,9 @@ const Chapter = () => {
   }, []);
   return (
     <div className="relative pb-16">
+      <div className="flex mt-5">
+        <Breadcrumbs comic={comic && comic[0]} chapNumber={chapter?.chapNumber} />
+      </div>
       <h1 className="text-center text-xl py-[30px]">
         {chapter?.comic?.title} - Chapter {chapter?.chapNumber}
       </h1>
@@ -43,18 +51,31 @@ const Chapter = () => {
           <img
             key={index}
             // src={`${process.env.REACT_APP_API_IMAGE}${item}`}
-            src={item}
+            src={
+              item.includes("http")
+                ? item
+                : `${process.env.REACT_APP_API_IMAGE}${item}`
+            }
             alt=""
-            className="px-1 md:max-w-3xl mx-auto"
+            className="px-1 md:max-w-3xl mx-auto w-full object-cover"
           />
         );
       })}
-      <div className="p-4 px-[10px] min-[1300px]:px-0"><RateArea data={comments.length} isComic={false} id={id} socket={socket}/></div>
-      {comments.length > 0 && <div className="py-4 px-[10px] min-[1300px]:px-0">
+      <div className="p-4 px-[10px] min-[1300px]:px-0">
+        <RateArea
+          data={comments.length}
+          isComic={false}
+          id={id}
+          socket={socket}
+        />
+      </div>
+      {comments.length > 0 && (
+        <div className="py-4 px-[10px] min-[1300px]:px-0">
           {comments?.map((item, index) => {
             return <Comment key={index} data={item} />;
           })}
-        </div>}
+        </div>
+      )}
     </div>
   );
 };

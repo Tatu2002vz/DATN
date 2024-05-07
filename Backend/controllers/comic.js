@@ -14,8 +14,9 @@ const createComic = asyncHandler(async (req, res) => {
     }
 
     // Lấy giá trị từ trường comic và chapter
-    let { title, description, ...genres } = fields;
+    let { title, description, genres } = fields;
 
+    const genresConver = genres.toString().split(",");
     // Xử lý dữ liệu vào
     if (!title) throw new Error("Title must not be empty");
     // Chuyển các key từ Object thành String
@@ -23,17 +24,23 @@ const createComic = asyncHandler(async (req, res) => {
     description = JSON.parse(
       JSON.stringify(description).toString().replace(/\[|\]/g, "")
     );
-    let genre = Object.values(genres).map((el) => {
-      return JSON.parse(JSON.stringify(el).toString().replace(/\[|\]/g, ""));
-    });
+    // let genre = Object.values(genres).map((el) => {
+    //   return JSON.parse(JSON.stringify(el).toString().replace(/\[|\]/g, ""));
+    // });
     const { _id } = req.user;
     const data = {
       title,
       slug: slugify(title),
       description,
-      genre,
+      genre: [...genresConver],
       createdBy: _id,
     };
+    const checkExsist = await Comic.findOne({ slug: data.slug });
+    if (checkExsist)
+      return res.status(sttCode.Ok).json({
+        success: false,
+        mes: "Comic already in database",
+      });
     const newComic = await Comic.create(data);
     if (newComic) {
       try {
@@ -182,13 +189,93 @@ const getComics = asyncHandler(async (req, res) => {
 
 const updateComic = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  if (!req.params || !req.params.id) throw new Error("Invalid id");
-  if (Object.keys(req.body).length === 0) throw new Error("Missing inputs");
-  if (req.body.title) req.body.slug = slugify(req.body.title);
-  const comic = await Comic.findByIdAndUpdate(id, req.body, { new: true });
-  return res.status(sttCode.Ok).json({
-    success: comic ? true : false,
-    mes: comic ? comic : "Something went wrong",
+  if (!req.params.id) throw new Error("Invalid id");
+  const form = formidable({ multiples: true });
+  form.parse(req, async (err, fields, files) => {
+    if (err) {
+      // Xử lý lỗi nếu có
+      console.error(err);
+      return res.status(500).json({ error: "Something went wrong" });
+    }
+
+    // Lấy giá trị từ trường comic và chapter
+    let { title, description, genres } = fields;
+
+    const genresConver = genres.toString().split(",");
+    // Xử lý dữ liệu vào
+    if (!title) throw new Error("Title must not be empty");
+    // Chuyển các key từ Object thành String
+    title = JSON.parse(JSON.stringify(title).toString().replace(/\[|\]/g, ""));
+    description = JSON.parse(
+      JSON.stringify(description).toString().replace(/\[|\]/g, "")
+    );
+    // let genre = Object.values(genres).map((el) => {
+    //   return JSON.parse(JSON.stringify(el).toString().replace(/\[|\]/g, ""));
+    // });
+    const { _id } = req.user;
+    const data = {
+      title,
+      slug: slugify(title),
+      description,
+      genre: [...genresConver],
+      createdBy: _id,
+    };
+    const oldComic = await Comic.findById(id);
+
+    try {
+      // Lấy public ID từ đường dẫn công khai
+      const publicId = cloudinary
+        .url(oldComic.coverImage, { secure: true })
+        .split("/")
+        .pop()
+        .split(".")
+        .shift();
+
+      // Gọi phương thức xóa tệp tin từ Cloudinary SDK
+      const result = await cloudinary.uploader.destroy(publicId);
+
+      console.log("Delete successful:", result);
+      if (result) {
+        const newComic = await Comic.findByIdAndUpdate(
+          id,
+          { ...data },
+          { new: true }
+        );
+        if (newComic) {
+          try {
+            // Upload tệp tin img lên Cloudinary
+            const result = await cloudinary.uploader.upload(
+              files.coverImage[0].filepath,
+              {
+                folder: `comicMarket/`,
+              }
+            );
+            // Lấy đường dẫn công khai của tệp tin đã upload
+            const coverImage = result.secure_url;
+            const updateComic = await Comic.findByIdAndUpdate(
+              id,
+              { coverImage },
+              { new: true }
+            );
+            return res.status(sttCode.Ok).json({
+              success: updateComic ? true : false,
+              mes: updateComic
+                ? "Create a comic success"
+                : "Something went wrong",
+            });
+          } catch (error) {
+            // Xử lý lỗi nếu có
+            console.error(error);
+            return res.status(500).json({ error: "Something went wrong" });
+          }
+        }
+      }
+      // Xử lý khi xoá tệp tin thành công
+    } catch (error) {
+      console.error("Delete failed:", error);
+      // Xử lý khi xoá tệp tin thất bại
+    }
+    throw new Error("Error creating comic");
   });
 });
 

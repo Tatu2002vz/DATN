@@ -3,7 +3,7 @@ import { apiGetComic, apiGetCommentWithComic } from "../apis";
 import { useEffect, useState } from "react";
 import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
-import { RateArea, ChapterList, Report, Comment } from "../components";
+import { RateArea, ChapterList, Report, Comment, Breadcrumbs } from "../components";
 import { comicError } from "../enum/listError";
 import calculateTime from "../utils/calculateTime";
 import io from "socket.io-client";
@@ -19,16 +19,13 @@ const {
   TfiMenuAlt,
   RiMoneyDollarCircleFill,
 } = icons;
-// const socket = io("http://localhost:8888"); // khởi tạo 1 lần
-const socket = io("http://192.168.0.103:8888", {
+const socket = io(process.env.REACT_APP_URL_SERVER , {
   query: { isComic: true },
 }); // khởi tạo 1 lần
+
 const ComicDetail = () => {
-  // const socket = useRef(io('http://localhost:8888'))
   const { id, slug } = useParams();
-  // const [comic, setComic] = useState(null);
-  // const [chapters, setChapters] = useState(null);
-  // const [comments, setComments] = useState(null);
+
   const [showReport, setShowReport] = useState(false);
   const [data, setData] = useState({
     comic: null,
@@ -80,8 +77,8 @@ const ComicDetail = () => {
           className="w-full object-cover blur-xl opacity-50"
         />
       </div>
-      <p className="text-base pt-7 mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0">
-        BreadCrumb
+      <p className="text-base pt-[24px] mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0 min-[1300px]:pt-[24px] relative flex">
+        <Breadcrumbs comic={data.comic}/>
       </p>
       <div className="p-[25px] bg-color-float max-w-main mx-auto z-1 relative text-sm rounded-b-md">
         <div className="flex mb-10 flex-col md:flex-row gap-4 items-center md:items-start">

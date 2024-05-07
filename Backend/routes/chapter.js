@@ -7,6 +7,7 @@ const upload = require('../middlewares/uploadImg')
 
 // router.post('/', controller.createChapter)
 router.post('/', upload.array('files', 100), controller.createChapter);
+router.get('/', controller.getAllChapter)
 router.get('/:id', controller.getListChapter)
 router.delete('/:id', controller.deleteChapter)
 router.get('/chap/:id', [isFree], controller.getChapter)

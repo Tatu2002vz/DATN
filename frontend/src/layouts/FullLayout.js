@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { apiGetChapter } from "../apis";
-import { Header, ChapterController, Report } from "../components";
+import { Header, ChapterController } from "./components";
+import {Report} from '../components'
 import { useEffect, useState } from "react";
 import { chapterError } from "../enum/listError";
 const DefaultLayout = ({ children }) => {

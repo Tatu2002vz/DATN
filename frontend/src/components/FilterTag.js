@@ -29,6 +29,7 @@ const FilterTag = () => {
   };
   useEffect(() => {
     fetchComicFilter();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
   const sortBy = [
     {

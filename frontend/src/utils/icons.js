@@ -8,12 +8,23 @@ import { RiInformationFill, RiMoneyDollarCircleFill } from "react-icons/ri";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsFillSendFill } from "react-icons/bs";
 import { TiHome } from "react-icons/ti";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight  } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdManageAccounts  } from "react-icons/md";
 import { FaCircleArrowUp } from "react-icons/fa6";
 import { TbEye, TbEyeClosed } from "react-icons/tb";
 import { LuSwords } from "react-icons/lu";
 import { CgLogOut } from "react-icons/cg";
 import { FiSearch, FiPlus } from "react-icons/fi";
+import { TfiDashboard } from "react-icons/tfi";
+import { FaBookOpen } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { CgEreader } from "react-icons/cg";
+import { FaCheckCircle } from "react-icons/fa";
+import { FaCircleInfo } from "react-icons/fa6";
+import { BiSolidError } from "react-icons/bi";
+import { FaUserEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import { GiSecretBook } from "react-icons/gi";
+import { MdNavigateNext } from "react-icons/md";
 const icons = {
     IoIosCloseCircle,
     FaCaretDown,
@@ -42,6 +53,18 @@ const icons = {
     FiSearch,
     FiPlus,
     IoClose,
-    BiSolidLeftArrow
+    BiSolidLeftArrow,
+    MdManageAccounts,
+    TfiDashboard,
+    FaBookOpen,
+    FaUser,
+    CgEreader,
+    FaCheckCircle,
+    FaCircleInfo,
+    BiSolidError,
+    FaUserEdit,
+    MdDelete,
+    GiSecretBook,
+    MdNavigateNext
 }
 export default icons

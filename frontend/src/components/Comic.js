@@ -16,7 +16,7 @@ const Comic = ({ comic, isResult }) => {
     <div>
       {!isResult ? (
         <NavLink
-          className="flex flex-col justify-between"
+          className="flex flex-col justify-between h-full pb-8"
           to={`/comic/${comic?.slug}/${comic?._id}`}
         >
           <div>
@@ -27,7 +27,7 @@ const Comic = ({ comic, isResult }) => {
                 className="rounded-md object-cover hover:scale-110 duration-300 ease-linear w-full h-full"
               />
             </div>
-            <p className="text-sm mt-2">{comic?.title}</p>
+            <p className="text-sm mt-2 truncate">{comic?.title}</p>
           </div>
           <p className="text-[13px] mt-3">Chapter {numberChap}</p>
         </NavLink>

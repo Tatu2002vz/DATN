@@ -30,6 +30,7 @@ const fnComics = async (comic) => {
     return item?._id;
   });
   const exist = await Comic.findOne({title: comic.name})
+  console.log('exist');
   if(!exist) {
     await Comic.create({
       title: comic.name,

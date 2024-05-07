@@ -1,19 +1,34 @@
 import slider from "../assets/slider.png";
-import { Link } from "react-router-dom";
-import { FilterTag, Comic } from "../components";
-import { createContext, useEffect, useState } from "react";
-import { apiGetAllComic } from "../apis";
+import { Link, useLocation } from "react-router-dom";
+import { FilterTag, Comic, Pagination } from "../components";
+import { createContext, useEffect, useRef, useState } from "react";
+import { apiGetComicFilter } from "../apis";
 export const comicContext = createContext();
 const Home = () => {
   const [comics, setComics] = useState([]);
+  let totalPage = useRef();
 
+  const {search} = useLocation()
+  const filter = search.replace('?','').split('&').map((item) => {
+    return item.split('=')
+  })
+  const filterFinal = filter.reduce((acc, [key, value]) => {
+    acc[key] = value;
+    return acc;
+  }, {});
   const fetchComic = async () => {
-    const response = await apiGetAllComic();
-    setComics([...response?.mes]);
+    const response = await apiGetComicFilter({...filterFinal});
+
+    if (response?.success) {
+      totalPage.current = response?.counts / process.env.REACT_APP_LIMIT_COMIC;
+      setComics([...response?.mes]);
+    }
   };
+  console.log(totalPage.current);
   useEffect(() => {
     fetchComic();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
   return (
     <comicContext.Provider value={{ comics, setComics }}>
       <div className="p-[10px] min-[1300px]:p-0">
@@ -47,6 +62,7 @@ const Home = () => {
             return <Comic key={index} comic={item} />;
           })}
         </div>
+        <Pagination total={Math.ceil(totalPage.current)} />
       </div>
     </comicContext.Provider>
   );
