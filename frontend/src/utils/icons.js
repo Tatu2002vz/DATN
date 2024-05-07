@@ -25,6 +25,7 @@ import { FaUserEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { GiSecretBook } from "react-icons/gi";
 import { MdNavigateNext } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 const icons = {
     IoIosCloseCircle,
     FaCaretDown,
@@ -65,6 +66,7 @@ const icons = {
     FaUserEdit,
     MdDelete,
     GiSecretBook,
-    MdNavigateNext
+    MdNavigateNext,
+    MdEdit
 }
 export default icons

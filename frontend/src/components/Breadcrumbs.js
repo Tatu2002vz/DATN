@@ -7,7 +7,6 @@ const Breadcrumbs = ({ comic, chapNumber }) => {
   const getComic = ({ match }) => {
     return <span>{comic?.title}</span>;
   };
-  console.log(chapNumber);
   const getChapNumber = ({ match }) => {
     return <span>Chapter {chapNumber}</span>;
   };
@@ -15,8 +14,8 @@ const Breadcrumbs = ({ comic, chapNumber }) => {
   const routes = [
     { path: "/", breadcrumb: "Home" },
     { path: "/comic/chapter/", breadcrumb: null },
-    { path: "/comic/:slug", breadcrumb: null },
-    { path: "/comic/:slug/:id", breadcrumb: getComic },
+    { path: "/comic/:slug", breadcrumb: getComic },
+    { path: "/comic/:slug/:id", breadcrumb: null },
     { path: "/comic/chapter/:slug", breadcrumb: getComic },
     { path: "/comic/chapter/:slug/:id", breadcrumb: getChapNumber },
     { path: "/user/reset-password/:tokenPassword", breadcrumb: "1" },

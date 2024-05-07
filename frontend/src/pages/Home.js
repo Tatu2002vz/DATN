@@ -24,7 +24,6 @@ const Home = () => {
       setComics([...response?.mes]);
     }
   };
-  console.log(totalPage.current);
   useEffect(() => {
     fetchComic();
   // eslint-disable-next-line react-hooks/exhaustive-deps

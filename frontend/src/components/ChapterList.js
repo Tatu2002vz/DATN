@@ -6,9 +6,11 @@ import { useSelector } from "react-redux";
 import icons from "../utils/icons";
 import { apiGetPurchase } from "../apis";
 import FormBuy from "./FormBuy";
+import calculateTime from "../utils/calculateTime";
 const { RiMoneyDollarCircleFill } = icons;
 
 const ChapterList = ({ data, slug, coverImage }) => {
+  console.log(data);
   const navigate = useNavigate();
   const [isBought, setIsBought] = useState(false);
   const [isShowFormBuy, setIsShowFormBuy] = useState(false);
@@ -61,7 +63,7 @@ const ChapterList = ({ data, slug, coverImage }) => {
         </div>
       )}
       <div className="col-span-1 text-label-text-color py-3 pl-2">
-        0 phút trước
+        {calculateTime(data.createdAt)}
       </div>
       <div className="col-span-1 text-label-text-color py-3 pl-2">
         {data.viewCount || 0}

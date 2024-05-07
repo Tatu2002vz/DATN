@@ -63,3 +63,12 @@ export const apiDeleteUser = (id) =>
     method: "DELETE",
     url: `user/delete/${id}`,
   });
+export const apiChangePassword = ({payload}) => {
+  axios({
+    method: "PUT",
+    url: 'user/change-password',
+    data: {
+      ...payload
+    }
+  })
+}

@@ -11,7 +11,10 @@ const InputField = ({
   invalidField,
   setInvalidField,
   placeholder,
+  className,
+  onKeyDown,
 }) => {
+  console.log(onKeyDown);
   const [hide, setHide] = useState(true);
   const handleShowPassword = () => {
     setHide(!hide);
@@ -23,12 +26,15 @@ const InputField = ({
         <input
           type={hide && type ? "password" : "text"}
           placeholder={placeholder || ""}
-          className="h-[44px] w-full px-[15px] rounded-md bg-inputBg autofill:bg-inputBg focus:outline-none"
+          className={`h-[44px] px-[15px] rounded-md bg-inputBg autofill:bg-inputBg focus:outline-none ${
+            className ? className : "w-full"
+          }`}
           onChange={(event) =>
             setPayload((prev) => ({ ...prev, [namekey]: event.target.value }))
           }
           onFocus={() => setInvalidField([])}
           value={value}
+          onKeyDown={onKeyDown}
         />
         {type && (
           <div

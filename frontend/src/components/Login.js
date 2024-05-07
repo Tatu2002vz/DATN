@@ -15,7 +15,7 @@ const Login = ({ setIsShow, active, setActive }) => {
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [invalidField, setInvalidField] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const closeForm = () => {
     setIsShow(false);
   };
@@ -32,24 +32,29 @@ const Login = ({ setIsShow, active, setActive }) => {
     });
   };
   useEffect(() => {
-    resetPayload()
-    if(invalidField.length > 0) {
-      setInvalidField([])
+    resetPayload();
+    if (invalidField.length > 0) {
+      setInvalidField([]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active, isForgotPassword])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active, isForgotPassword]);
+  const onKeyDown = (event) => {
+    if(event.key === 'Enter') {
+      handleSubmit(payload);
+    }
+  };
   const handleSubmit = async (payload) => {
-    let invalid
+    let invalid;
     if (!active && !isForgotPassword) {
-      const {fullname, ...data} = payload
+      const { fullname, ...data } = payload;
       invalid = validate(data, setInvalidField);
     }
     if (active && !isForgotPassword) {
       invalid = validate(payload, setInvalidField);
     }
     if (isForgotPassword) {
-      const {email} = payload
-      invalid = validate({email: email}, setInvalidField)
+      const { email } = payload;
+      invalid = validate({ email: email }, setInvalidField);
     }
     if (invalid === 0) {
       if (!active && !isForgotPassword) {
@@ -62,7 +67,7 @@ const Login = ({ setIsShow, active, setActive }) => {
               token: res?.accessToken,
             })
           );
-          navigate(0)
+          navigate(0);
           setIsShow(false);
         } else {
           Swal.fire(
@@ -74,9 +79,9 @@ const Login = ({ setIsShow, active, setActive }) => {
         // navigate(0)
       }
       if (active && !isForgotPassword) {
-        setIsLoading(true)
+        setIsLoading(true);
         const res = await apiRegister(payload);
-        setIsLoading(false)
+        setIsLoading(false);
         console.log(res?.data);
         if (res?.success) {
           Swal.fire({
@@ -93,10 +98,7 @@ const Login = ({ setIsShow, active, setActive }) => {
         }
       }
       if (isForgotPassword) {
-        const { email } = payload;
-        console.log(email);
         const res = await apiForgotPassword(payload);
-        console.log(res?.data);
         if (res?.success) {
           Swal.fire({
             title: "Thành công!",
@@ -168,6 +170,7 @@ const Login = ({ setIsShow, active, setActive }) => {
                   value={payload.email}
                   invalidField={invalidField}
                   setInvalidField={setInvalidField}
+                  onKeyDown={onKeyDown}
                 />
                 <InputField
                   label={"Mật khẩu"}
@@ -178,6 +181,7 @@ const Login = ({ setIsShow, active, setActive }) => {
                   value={payload.password}
                   invalidField={invalidField}
                   setInvalidField={setInvalidField}
+                  onKeyDown={onKeyDown}
                 />
                 {/* <InputField label={"Nhập lại mật khẩu"} type={"password"} payload={payload} setPayload={setPayload}/> */}
                 <InputField
@@ -188,6 +192,7 @@ const Login = ({ setIsShow, active, setActive }) => {
                   value={payload.fullname}
                   invalidField={invalidField}
                   setInvalidField={setInvalidField}
+                  onKeyDown={onKeyDown}
                 />
               </div>
             </div>
@@ -204,6 +209,7 @@ const Login = ({ setIsShow, active, setActive }) => {
                   value={payload.email}
                   invalidField={invalidField}
                   setInvalidField={setInvalidField}
+                  onKeyDown={onKeyDown}
                 />
                 {!isForgotPassword && (
                   <InputField
@@ -215,6 +221,7 @@ const Login = ({ setIsShow, active, setActive }) => {
                     value={payload.password}
                     invalidField={invalidField}
                     setInvalidField={setInvalidField}
+                    onKeyDown={onKeyDown}
                   />
                 )}
               </div>
@@ -246,7 +253,7 @@ const Login = ({ setIsShow, active, setActive }) => {
           </button>
         </div>
       </div>
-      {isLoading && <Loading/>}
+      {isLoading && <Loading />}
     </div>
   );
 };

@@ -9,6 +9,7 @@ const publicRoute = [
   { pathRoute: path.HOME, component: Home, layout: DefaultLayout },
   { pathRoute: path.ALL_COMIC, component: Home, layout: DefaultLayout },
   { pathRoute: path.COMIC, component: ComicDetail, layout: HeaderOnly },
+  { pathRoute: path.COMIC_SLUG, component: ComicDetail, layout: HeaderOnly },
   { pathRoute: path.CHAPTER, component: Chapter, layout: FullLayout },
   { pathRoute: path.RESET_PASSWORD, component: ResetPassword, layout: DefaultLayout },
   {pathRoute: path.PROFILE, component: Profile, layout: DefaultLayout}

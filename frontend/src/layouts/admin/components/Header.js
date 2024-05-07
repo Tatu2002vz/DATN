@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { logout } from "../../../store/user/userSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const { IoNotifications, RiMoneyDollarCircleFill, IoPersonOutline, CgLogOut } = icons;
 
 const Header = () => {
@@ -13,6 +14,7 @@ const Header = () => {
   const [isShowNotification, setIsShowNotification] = useState(false);
   const [isShowOption, setIsShowOption] = useState(false);
   const {userData} = useSelector(state => state.user)
+  
   return (
     <div className="flex px-6 justify-between border-b h-[65px]">
       <p className="leading-[65px] flex">
@@ -62,8 +64,7 @@ const Header = () => {
                   </div>
                   <div
                     className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
-                    onClick={(event) => {
-                      // dispatch(logout());
+                    onClick={() => {
                       Swal.fire({
                         icon: "question",
                         title: "Bạn chắc chắn đăng xuất ?",
@@ -79,7 +80,7 @@ const Header = () => {
                           dispatch(logout());
                           navigate(0);
                         }
-                      });
+                      })
                     }}
                   >
                     <CgLogOut className="mr-2" size={20} />

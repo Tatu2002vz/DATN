@@ -9,8 +9,8 @@ router.post('/refreshtoken', controller.refreshToken)
 router.post('/forgotpassword', controller.forgotPassword)
 router.put('/reset-password/:token', controller.resetPassword)
 router.get('/', [verifyAccessToken, isAdmin] ,controller.getAllUsers)
+router.put('/change-password', [verifyAccessToken], controller.changePassword)
 router.put('/:id_update', verifyAccessToken, controller.updateUser)
 router.delete('/delete/:id', [verifyAccessToken] ,controller.deleteUser)
 router.get('/:id', controller.getUser)
-
 module.exports = router

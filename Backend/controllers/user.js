@@ -173,7 +173,7 @@ const deleteUser = asyncHandler(async (req, res) => {
         mes: user ? "Deleted successfully" : "Something went wrong",
       });
     } else {
-      throw new Error("You do not have permission to delete this user")
+      throw new Error("You do not have permission to delete this user");
     }
   }
 });
@@ -211,6 +211,27 @@ const getUser = asyncHandler(async (req, res) => {
     mes: user ? user : "Something went wrong",
   });
 });
+
+const changePassword = asyncHandler(async (req, res) => {
+  const { _id } = req.user;
+  if (!_id) throw new Error("Authentication failed");
+  const { password, oldPassword } = req.body;
+  if (!password) throw new Error("Missing input!");
+  const user = await User.findById(_id);
+  if (await user.isCorrectPassword(oldPassword)) {
+    user.password = password;
+    user.save()
+    return res.status(sttCode.Ok).json({
+      success: true,
+      mes: "Change password successfully",
+    });
+  } else {
+    return res.status(sttCode.Ok).json({
+      success: false,
+      mes: "Password incorrect!",
+    });
+  }
+});
 module.exports = {
   register,
   login,
@@ -222,4 +243,5 @@ module.exports = {
   deleteUser,
   updateUser,
   getUser,
+  changePassword,
 };

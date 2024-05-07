@@ -4,6 +4,7 @@ export const getCurrent = createAsyncThunk(
   "app/user",
   async (data, { rejectWithValue }) => {
     const response = await apis.apiGetCurrent();
+    if (!response.success) return rejectWithValue(response);
     return response;
   }
 );

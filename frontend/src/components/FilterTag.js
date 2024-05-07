@@ -38,14 +38,10 @@ const FilterTag = () => {
     },
     {
       id: 2,
-      name: "Truyện hot",
+      name: "Theo tên A-Z",
     },
     {
       id: 3,
-      name: "Số chapter",
-    },
-    {
-      id: 4,
       name: "Theo dõi",
     },
   ];

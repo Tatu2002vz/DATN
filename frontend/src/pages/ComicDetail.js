@@ -1,9 +1,19 @@
-import { NavLink, useParams } from "react-router-dom";
-import { apiGetComic, apiGetCommentWithComic } from "../apis";
-import { useEffect, useState } from "react";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+import {
+  apiGetComic,
+  apiGetComicWithTitle,
+  apiGetCommentWithComic,
+} from "../apis";
+import { useEffect, useMemo, useState } from "react";
 import icons from "../utils/icons";
 import { apiGetChapters } from "../apis/chapter";
-import { RateArea, ChapterList, Report, Comment, Breadcrumbs } from "../components";
+import {
+  RateArea,
+  ChapterList,
+  Report,
+  Comment,
+  Breadcrumbs,
+} from "../components";
 import { comicError } from "../enum/listError";
 import calculateTime from "../utils/calculateTime";
 import io from "socket.io-client";
@@ -19,13 +29,13 @@ const {
   TfiMenuAlt,
   RiMoneyDollarCircleFill,
 } = icons;
-const socket = io(process.env.REACT_APP_URL_SERVER , {
-  query: { isComic: true },
-}); // khởi tạo 1 lần
+// const socket = io(process.env.REACT_APP_URL_SERVER, {
+//   query: { isComic: true },
+// }); // khởi tạo 1 lần
 
 const ComicDetail = () => {
   const { id, slug } = useParams();
-
+  const navigate = useNavigate();
   const [showReport, setShowReport] = useState(false);
   const [data, setData] = useState({
     comic: null,
@@ -34,9 +44,16 @@ const ComicDetail = () => {
   });
 
   const fetchComic = async () => {
-    const comicApi = await apiGetComic(id);
-    const chaptersApi = await apiGetChapters(id);
-    const getComments = await apiGetCommentWithComic(id);
+    if (slug === "chapter") navigate(`/comic/${id}`);
+    let userID = null;
+    if (!id) {
+      const comicApi = await apiGetComicWithTitle(slug);
+      if (comicApi?.success) userID = comicApi?.mes[0]._id;
+    }
+    const idFinal = id ? id : userID;
+    const comicApi = await apiGetComic(idFinal);
+    const chaptersApi = await apiGetChapters(idFinal);
+    const getComments = await apiGetCommentWithComic(idFinal);
     if (comicApi?.success && chaptersApi?.success && getComments?.success) {
       setData((prev) => ({
         ...prev,
@@ -45,12 +62,16 @@ const ComicDetail = () => {
         comments: getComments?.mes,
       }));
     } else {
-      console.log(comicApi?.success);
-      console.log(chaptersApi?.success);
-      console.log(getComments?.success);
+      console.log(comicApi);
+      console.log(chaptersApi);
+      console.log(getComments);
     }
   };
-
+  const socket = useMemo(() => {
+    return io(process.env.REACT_APP_URL_SERVER, {
+      query: { isComic: true },
+    });
+  }, []); // Chỉ khởi tạo socket một lần
   const { comic, chapters, comments } = data;
   useEffect(() => {
     fetchComic();
@@ -78,7 +99,7 @@ const ComicDetail = () => {
         />
       </div>
       <p className="text-base pt-[24px] mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0 min-[1300px]:pt-[24px] relative flex">
-        <Breadcrumbs comic={data.comic}/>
+        <Breadcrumbs comic={data.comic} />
       </p>
       <div className="p-[25px] bg-color-float max-w-main mx-auto z-1 relative text-sm rounded-b-md">
         <div className="flex mb-10 flex-col md:flex-row gap-4 items-center md:items-start">

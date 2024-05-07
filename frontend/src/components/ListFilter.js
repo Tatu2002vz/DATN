@@ -9,9 +9,8 @@ const ListFilter = ({ list, setValue, id, setFilter }) => {
     if (id === 2) {
       let sortBy = "";
       if (data.id === 1) sortBy = "viewCount";
-      if (data.id === 2) sortBy = "viewCount";
-      if (data.id === 3) sortBy = "viewCount";
-      if (data.id === 4) sortBy = "follow";
+      if (data.id === 2) sortBy = "title";
+      if (data.id === 3) sortBy = "follow";
       setFilter((prev) => {
         return { ...prev, sort: `-${sortBy}` };
       });

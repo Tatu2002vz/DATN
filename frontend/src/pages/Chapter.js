@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { apiGetChapter, apiGetChapterWithSlug, apiGetComicFilter, apiGetCommentWithChapter } from "../apis";
+import { useEffect, useMemo, useState } from "react";
+import { apiGetChapter, apiGetComicFilter, apiGetCommentWithChapter } from "../apis";
 import { useNavigate, useParams } from "react-router-dom";
 import { Breadcrumbs, Comment, RateArea } from "../components";
 import io from "socket.io-client";
 
-const socket = io(process.env.REACT_APP_URL_SERVER, {
-  query: { isComic: false },
-}); // khởi tạo 1 lần
+// const socket = io(process.env.REACT_APP_URL_SERVER, {
+//   query: { isComic: false },
+// }); // khởi tạo 1 lần
 const Chapter = () => {
   const [chapter, setChapter] = useState(null);
   const [comments, setComments] = useState("");
@@ -28,7 +28,15 @@ const Chapter = () => {
     const getComic  = await apiGetComicFilter({slug: slug})
     if(getComic?.success) setComic(getComic?.mes);
   };
-  useEffect(() => {
+  const socket = useMemo(() => {
+    return io(process.env.REACT_APP_URL_SERVER, {
+      query: { isComic: false },
+    });
+  }, []); // Chỉ khởi tạo socket một lần
+
+
+
+  useEffect(() => { 
     fetchChapter();
     socket.on("refreshCmt", (data) => {
       setComments(data?.mes);

@@ -4,12 +4,13 @@ import logo_desktop from "../../assets/logo.png";
 import logo_mobile from "../../assets/logo-mobile.png";
 import { Button, Login, Notification, SearchResult } from "../../components";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { logout } from "../../store/user/userSlice";
+import { logout, clearMessage } from "../../store/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import icons from "../../utils/icons";
 import Swal from "sweetalert2";
 import { getCurrent } from "../../store/user/asyncAction";
 import { apiGetComicWithTitle } from "../../apis";
+import { toast } from "react-toastify";
 const {
   IoNotifications,
   IoPersonOutline,
@@ -30,7 +31,7 @@ const Header = () => {
   const [isShowNotification, setIsShowNotification] = useState(false);
   const [comics, setComics] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { isLoggingIn, userData } = useSelector((state) => state.user);
+  const { isLoggingIn, userData, errorMessage } = useSelector((state) => state.user);
   const [showInputMobile, setShowInputMobile] = useState(false);
   const showForm = () => {
     setIsShow(true);
@@ -45,10 +46,20 @@ const Header = () => {
       setIsLoading(false);
     }
   };
+  if(errorMessage) {
+    toast.error(errorMessage);
+    dispatch(clearMessage())
+  }
   useEffect(() => {
     if (isLoggingIn) {
       dispatch(getCurrent());
     }
+    if (window.innerWidth < 1024) setLogo(logo_mobile);
+    else setLogo(logo_desktop);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("reset", handleResize);
+    };
   }, []);
   useEffect(() => {
     if (search !== "") {
@@ -65,14 +76,6 @@ const Header = () => {
     if (window.innerWidth < 1024) setLogo(logo_mobile);
     else setLogo(logo_desktop);
   };
-  useEffect(() => {
-    if (window.innerWidth < 1024) setLogo(logo_mobile);
-    else setLogo(logo_desktop);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("reset", handleResize);
-    };
-  }, []);
   return (
     <header className="bg-headerBg h-[70px] text-[15px] fixed left-0 right-0 top-0 z-50 w-full px-[10px] min-[1300px]:p-0 ">
       {isShow && (
@@ -229,7 +232,6 @@ const Header = () => {
                   <div
                     className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
                     onClick={(event) => {
-                      dispatch(logout());
                       Swal.fire({
                         icon: "question",
                         title: "Bạn chắc chắn đăng xuất ?",
