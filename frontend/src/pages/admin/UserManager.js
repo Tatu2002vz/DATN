@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
-import {Pagination} from '../../components/'
+import { Pagination } from "../../components/";
 import icons from "../../utils/icons";
 const { MdDelete, FaUserEdit } = icons;
 const UserManager = () => {
@@ -63,54 +63,60 @@ const UserManager = () => {
       >
         + Thêm mới
       </button>
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Email</th>
-            <th>Họ và tên</th>
-            <th>Role</th>
-            <th>Số dư ví</th>
-            <th>Trạng thái</th>
-            <th>Hành động</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users?.map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{item?.email}</td>
-                <td>{item?.fullname}</td>
-                <td>{item?.role}</td>
-                <td>{item?.walletBalance}</td>
-                <td>{item?.status ? item?.status : "Active"}</td>
-                <td className="text-center">
-                  <button className="px-2 mr-3">
-                    <FaUserEdit
-                      className="text-white"
-                      onClick={() => {
-                        navigate("/admin/manage-user/" + item._id);
-                      }}
-                    />
-                  </button>
-                  <button
-                    className="px-2"
-                    data-id={item?._id}
-                    onClick={() => {
-                      handleDelete(item?._id);
-                    }}
-                  >
-                    <MdDelete className="text-red-500" />
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-        <tfoot></tfoot>
-      </table>
-      <div><Pagination/></div>
+      <div className="overflow-auto">
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Email</th>
+              <th>Họ và tên</th>
+              <th>Role</th>
+              <th>Số dư ví</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users?.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{item?.email}</td>
+                  <td>{item?.fullname}</td>
+                  <td>{item?.role}</td>
+                  <td>{item?.walletBalance}</td>
+                  <td>{item?.status ? item?.status : "Active"}</td>
+                  <td className="text-center">
+                    <div className="flex">
+                      <button className="px-2 mr-3">
+                        <FaUserEdit
+                          className="text-white"
+                          onClick={() => {
+                            navigate("/admin/manage-user/" + item._id);
+                          }}
+                        />
+                      </button>
+                      <button
+                        className="px-2"
+                        data-id={item?._id}
+                        onClick={() => {
+                          handleDelete(item?._id);
+                        }}
+                      >
+                        <MdDelete className="text-red-500" />
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+      <div>
+        <Pagination />
+      </div>
     </div>
   );
 };

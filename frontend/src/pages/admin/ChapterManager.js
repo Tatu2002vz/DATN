@@ -109,7 +109,9 @@ const ChapterManger = () => {
                           <button
                             className="px-2 mr-3"
                             onClick={() => {
-                              navigate(`/admin/manage-chapter/${item?.slug}/` + el._id);
+                              navigate(
+                                `/admin/manage-chapter/${item?.slug}/` + el._id
+                              );
                             }}
                           >
                             <FaUserEdit className="text-main" />

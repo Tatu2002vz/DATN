@@ -20,7 +20,7 @@ export const appSlice = createSlice({
     builder.addCase(actions.getGenres.fulfilled, (state, action) => {
       // Tắt trạng thái loading, lưu thông tin user vào store
       state.isLoading = false;
-      state.genres = action.payload.mes;
+      state.genres = action.payload?.mes;
     });
 
     // Khi thực hiện action login thất bại (Promise rejected)

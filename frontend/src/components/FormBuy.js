@@ -13,6 +13,7 @@ const FormBuy = ({
   coverImage,
   setIsShowFormBuy,
   slug,
+  comic,
 }) => {
   const navigate = useNavigate();
   const { userData } = useSelector((state) => state.user);
@@ -23,7 +24,8 @@ const FormBuy = ({
         icon: "info",
       });
     } else {
-      const buyPurchase = await apiBuyChapter({ id });
+      console.log(typeof comic);
+      const buyPurchase = await apiBuyChapter({ payload: comic, id });
       if (buyPurchase?.success === true) {
         Swal.fire({
           title: "Mua thành công!",
@@ -42,7 +44,7 @@ const FormBuy = ({
     }
   };
   return (
-    <div className="fixed w-[600px] bg-mainBg rounded-md z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10">
+    <div className="fixed w-full md:w-[600px] bg-mainBg rounded-md z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 md:p-10">
       <div className="flex gap-[2px]">
         <span className="bg-color-float flex items-center pl-4 py-2 pr-2 rounded-l-full">
           <RiMoneyDollarCircleFill className="mr-2" color="yellow" />

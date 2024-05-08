@@ -64,7 +64,7 @@ export const apiDeleteUser = (id) =>
     url: `user/delete/${id}`,
   });
 export const apiChangePassword = ({payload}) => {
-  axios({
+  return axios({
     method: "PUT",
     url: 'user/change-password',
     data: {
@@ -72,3 +72,10 @@ export const apiChangePassword = ({payload}) => {
     }
   })
 }
+export const apiDeposit = ({payload}) => axios({
+  method: "PUT",
+  url: 'user/deposit',
+  data: {
+    ...payload
+  }
+})

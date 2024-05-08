@@ -14,5 +14,7 @@ const path = {
   UPDATE_COMIC: "/admin/manage-comic/:id",
   UPDATE_CHAPTER: "/admin/manage-chapter/:slug/:id",
   PROFILE: "/profile",
+  MANAGE_INCOME: '/admin/manage-income',
+  PAYMENT: '/payment'
 };
 export default path;

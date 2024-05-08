@@ -232,6 +232,23 @@ const changePassword = asyncHandler(async (req, res) => {
     });
   }
 });
+
+const depositAccount = asyncHandler(async (req, res) => {
+  const {_id} = req.user
+  if (!_id) throw new Error("Authentication failed");
+  const {amount} = req.body;
+  if(!amount) throw new Error("Missing input");
+  const user = await User.findById(_id);
+  if(user) {
+    user.walletBalance = user.walletBalance + amount;
+    user.save();
+    return res.status(sttCode.Ok).json({
+      success: true,
+      mes: 'Wallet balance updated successfully'
+    })
+  }
+  throw new Error("Authentication failed");
+})
 module.exports = {
   register,
   login,
@@ -244,4 +261,5 @@ module.exports = {
   updateUser,
   getUser,
   changePassword,
+  depositAccount
 };

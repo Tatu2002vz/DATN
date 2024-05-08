@@ -3,7 +3,7 @@ import bee_chibi from "../assets/bee_chibi.png";
 
 const Notification = ({data, className}) => {
   return (
-    <div className={`absolute top-full right-0 py-2 bg-chapter-border-color flex flex-col justify-center translate-y-2 rounded-lg w-[450px] ${className}`}>
+    <div className={`md:absolute fixed top-[70px] w-full md:top-full right-0 py-2 bg-chapter-border-color flex flex-col justify-center translate-y-2 rounded-lg md:w-[450px] ${className}`}>
       <div className="border-b-[#3b4c89] border-b px-4 py-2">Thông báo</div>
       <div className="h-[500px]">
         <div className="py-[100px] flex flex-col items-center justify-center">

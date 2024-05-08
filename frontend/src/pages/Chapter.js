@@ -1,8 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
-import { apiGetChapter, apiGetComicFilter, apiGetCommentWithChapter } from "../apis";
+import {
+  apiGetChapter,
+  apiGetComicFilter,
+  apiGetCommentWithChapter,
+} from "../apis";
 import { useNavigate, useParams } from "react-router-dom";
 import { Breadcrumbs, Comment, RateArea } from "../components";
 import io from "socket.io-client";
+import { apiCreateHistory } from "../apis/history";
+import { useSelector } from "react-redux";
 
 // const socket = io(process.env.REACT_APP_URL_SERVER, {
 //   query: { isComic: false },
@@ -10,8 +16,9 @@ import io from "socket.io-client";
 const Chapter = () => {
   const [chapter, setChapter] = useState(null);
   const [comments, setComments] = useState("");
-  const [comic, setComic] = useState(null)
+  const [comic, setComic] = useState(null);
   const { id, slug } = useParams();
+  const { isLoggingIn } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const fetchChapter = async () => {
     const res = await apiGetChapter(id);
@@ -23,10 +30,16 @@ const Chapter = () => {
     if (getComments?.success) {
       setComments(getComments?.mes);
     }
-    
-
-    const getComic  = await apiGetComicFilter({slug: slug})
-    if(getComic?.success) setComic(getComic?.mes);
+    const getComic = await apiGetComicFilter({ slug: slug });
+    if (getComic?.success) setComic(getComic?.mes);
+    // Lưu lịch sử xem
+    const historyData = {
+      comicID: getComic?.mes[0]._id,
+      chapterID: id,
+    };
+    if (isLoggingIn) {
+      await apiCreateHistory(historyData);
+    }
   };
   const socket = useMemo(() => {
     return io(process.env.REACT_APP_URL_SERVER, {
@@ -34,9 +47,7 @@ const Chapter = () => {
     });
   }, []); // Chỉ khởi tạo socket một lần
 
-
-
-  useEffect(() => { 
+  useEffect(() => {
     fetchChapter();
     socket.on("refreshCmt", (data) => {
       setComments(data?.mes);
@@ -49,7 +60,10 @@ const Chapter = () => {
   return (
     <div className="relative pb-16">
       <div className="flex mt-5">
-        <Breadcrumbs comic={comic && comic[0]} chapNumber={chapter?.chapNumber} />
+        <Breadcrumbs
+          comic={comic && comic[0]}
+          chapNumber={chapter?.chapNumber}
+        />
       </div>
       <h1 className="text-center text-xl py-[30px]">
         {chapter?.comic?.title} - Chapter {chapter?.chapNumber}

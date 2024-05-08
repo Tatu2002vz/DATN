@@ -32,7 +32,6 @@ const UpdateChapter = () => {
     }
     const chapters = await apiGetChapterWithSlug(slug);
     if (chapters.success) {
-      console.log(chapters.mes[0].chapNumber);
       setPayload((prev) => ({
         ...prev,
         chapNumber:

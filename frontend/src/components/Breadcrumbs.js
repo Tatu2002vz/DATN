@@ -69,7 +69,7 @@ const Breadcrumbs = ({ comic, chapNumber }) => {
         <div key={match.pathname} className="flex items-center">
           <NavLink
             to={match.pathname}
-            className={"hover:text-main text-[18px]"}
+            className={"hover:text-main text-[12px] md:text-base"}
           >
             {breadcrumb}
           </NavLink>

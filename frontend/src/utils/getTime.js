@@ -1,8 +1,8 @@
 const getTime = (time) => {
   const utcDate = new Date(time);
   // Chuyển đổi sang múi giờ VNT (UTC+7)
-  const vntOffset = 7 * 60; // Độ lệch múi giờ VNT tính bằng phút
-  const vntTime = new Date(utcDate.getTime() + vntOffset * 60 * 1000);
+  // const vntOffset = 7 * 60; // Độ lệch múi giờ VNT tính bằng phút
+  const vntTime = new Date(utcDate.getTime());
 
   // Lấy thông tin ngày và giờ trong múi giờ VNT
   const vntYear = vntTime.getFullYear();

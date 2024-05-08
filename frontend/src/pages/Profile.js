@@ -1,18 +1,22 @@
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import cover_profile from "../assets/cover_profile.png";
 import icons from "../utils/icons";
-import { InputField } from "../components";
+import { Comic, InputField } from "../components";
 import { useEffect, useState } from "react";
 import { apiChangePassword, apiGetUser, apiUpdateUser } from "../apis";
 import validate from "../utils/validate";
 import { toast } from "react-toastify";
+import { apiGetHistory } from "../apis/history";
+import { apiGetAllFollow, apiGetFollow } from "../apis/follow";
 const { MdEdit } = icons;
 const Profile = () => {
   const { userData, isLoggingIn } = useSelector((state) => state.user);
   console.log(isLoggingIn);
   const id = userData?._id;
   const [invalidField, setInvalidField] = useState([]);
+  const [history, setHistory] = useState(null);
+  const [follow, setFollow] = useState(null);
   const navigate = useNavigate();
   const [payload, setPayload] = useState(() => {
     return {
@@ -48,10 +52,13 @@ const Profile = () => {
     if (payload.password !== payload.rePassword)
       toast.info("Nhập lại mật khẩu không chính xác!");
     const invalid = validate(updateData, setInvalidField);
-    if(invalid === 0) {
-      const changePasswordApi = await apiChangePassword({payload: updateData})
-      if(changePasswordApi?.success) toast.success("Thay đổi mật khẩu thành công!")
-      else toast.error(changePasswordApi?.mes)
+    if (invalid === 0) {
+      const changePasswordApi = await apiChangePassword({
+        payload: updateData,
+      });
+      if (changePasswordApi?.success)
+        toast.success("Thay đổi mật khẩu thành công!");
+      else toast.error(changePasswordApi?.mes);
     }
   };
   if (!isLoggingIn) navigate("/");
@@ -66,12 +73,25 @@ const Profile = () => {
       }));
     }
   };
-  useEffect(() => {
-    if (id !== "new-user") {
-      fetchUser();
+  const fetchHistory = async () => {
+    const historyApi = await apiGetHistory();
+    if (historyApi?.success) {
+      setHistory(historyApi?.mes);
     }
+  };
+  const fetchFollow = async () => {
+    const followApi = await apiGetAllFollow();
+    if (followApi?.success) {
+      setFollow(followApi?.mes);
+    }
+  };
+  useEffect(() => {
+    fetchUser();
+    fetchHistory();
+    fetchFollow();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  }, []);
+  console.log(follow);
   return (
     <div className="flex">
       <div className="px-4 w-full">
@@ -158,6 +178,59 @@ const Profile = () => {
           >
             Đổi mật khẩu
           </button>
+        </div>
+        <div className="my-4">
+          <h1 className="text-xl my-5">
+            Danh sách truyện đã đọc ({history && history.length})
+          </h1>
+          {history?.map((item, index) => {
+            return (
+              <NavLink
+                className="flex w-full p-[10px] bg-color-float comic-item"
+                to={`/comic/${item?.comic?.slug}/${item?.comic?._id}`}
+              >
+                <div>
+                  <div className="w-[65px] h-[86px] rounded-md overflow-hidden">
+                    <img
+                      src={item?.comic?.coverImage}
+                      alt={item?.comic?.title}
+                      className="rounded-md object-cover w-full"
+                    />
+                  </div>
+                </div>
+                <div className="pl-[10px]">
+                  <p className="text-base mt-2">{item?.comic?.title}</p>
+                  <p className="text-[13px] mt-3 text-[#999999]">
+                    Đang đọc chapter {item?.chapter?.chapNumber}
+                  </p>
+                </div>
+              </NavLink>
+            );
+          })}
+          <h1 className="text-xl my-5">
+            Danh sách truyện theo dõi ({follow && follow.length})
+          </h1>
+          {follow?.map((item, index) => {
+            return (
+              <NavLink
+                className="flex w-full p-[10px] bg-color-float comic-item"
+                to={`/comic/${item?.comic?.slug}/${item?.comic?._id}`}
+              >
+                <div>
+                  <div className="w-[65px] h-[86px] rounded-md overflow-hidden">
+                    <img
+                      src={item?.comic?.coverImage}
+                      alt={item?.comic?.title}
+                      className="rounded-md object-cover w-full"
+                    />
+                  </div>
+                </div>
+                <div className="pl-[10px] flex items-center">
+                  <p className="text-base mt-2">{item?.comic?.title}</p>
+                </div>
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </div>

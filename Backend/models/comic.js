@@ -41,8 +41,8 @@ var comicSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      default: "Đang cập nhật"
-    }
+      default: "Đang cập nhật",
+    },
   },
   { timestamp: true }
 );

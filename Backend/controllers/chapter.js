@@ -156,11 +156,16 @@ const getAllChapter = asyncHandler(async (req, res) => {
   });
 });
 
+const updateChapter = asyncHandler(async (req, res) => {
+  const chapter = await Chapter.updateMany({ chapNumber: { $gt: 3 } }, { price: 50 })
+  return res.json('oke')
+})
 module.exports = {
   createChapter,
   getListChapter,
   deleteChapter,
   getChapter,
   getListChapterWithSlug,
-  getAllChapter
+  getAllChapter,
+  updateChapter
 };

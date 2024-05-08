@@ -18,6 +18,8 @@ const {
   RiMoneyDollarCircleFill,
   FiSearch,
   IoClose,
+  LuSwords,
+  GiMoneyStack
 } = icons;
 const Header = () => {
   const inputSearch = useRef(null);
@@ -31,7 +33,9 @@ const Header = () => {
   const [isShowNotification, setIsShowNotification] = useState(false);
   const [comics, setComics] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { isLoggingIn, userData, errorMessage } = useSelector((state) => state.user);
+  const { isLoggingIn, userData, errorMessage } = useSelector(
+    (state) => state.user
+  );
   const [showInputMobile, setShowInputMobile] = useState(false);
   const showForm = () => {
     setIsShow(true);
@@ -46,9 +50,9 @@ const Header = () => {
       setIsLoading(false);
     }
   };
-  if(errorMessage) {
+  if (errorMessage) {
     toast.error(errorMessage);
-    dispatch(clearMessage())
+    dispatch(clearMessage());
   }
   useEffect(() => {
     if (isLoggingIn) {
@@ -176,11 +180,6 @@ const Header = () => {
               showInputMobile ? "hidden" : ""
             }`}
           >
-            {userData?.role === "admin" && (
-              <NavLink to={"/admin"} className="cursor-pointer hover:text-main">
-                Quản lý
-              </NavLink>
-            )}
             <div className="relative">
               <IoNotifications
                 className="mx-5 cursor-pointer"
@@ -216,19 +215,29 @@ const Header = () => {
                   className="absolute top-full right-0 py-2 bg-chapter-border-color flex flex-col justify-center translate-y-2 rounded-lg w-[250px] p-[10px]"
                   onClick={() => {}}
                 >
-                  {/* <div className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main">
-                    <LuSwords className="mr-2" />
-                    Tu luyện
-                  </div> */}
-                  <div
+                  <NavLink to={'/payment'} className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main">
+                    <GiMoneyStack className="mr-2" />
+                    Nạp tiền
+                  </NavLink>
+
+                  <NavLink
+                    to={"/profile"}
                     className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
-                    onClick={() => {
-                      navigate("/profile");
-                    }}
                   >
                     <IoPersonOutline className="mr-2" size={20} />
                     Trang cá nhân
-                  </div>
+                  </NavLink>
+
+                  {userData?.role === "admin" && (
+                    <NavLink
+                      to={"/admin"}
+                      className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
+                    >
+                      <LuSwords className="mr-2" size={20} />
+                      Quản lý
+                    </NavLink>
+                  )}
+
                   <div
                     className="flex px-4 py-2 items-center cursor-pointer rounded-full hover:bg-main"
                     onClick={(event) => {

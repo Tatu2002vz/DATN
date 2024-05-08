@@ -27,7 +27,8 @@ tr:hover {
 th {
   background: #6C74FC;
 }
-tbody tr:nth-child(even) {
+a.comic-item + a.comic-item {
+  border-top: 1px solid #ccc;
 }
 .login-popup {
   background: url(./assets/image_login.png) no-repeat #131a33;

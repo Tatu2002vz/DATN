@@ -12,5 +12,6 @@ router.get('/:id', controller.getListChapter)
 router.delete('/:id', controller.deleteChapter)
 router.get('/chap/:id', [isFree], controller.getChapter)
 router.get('/chapwithslug/:slug', controller.getListChapterWithSlug)
+router.put('/updatePrice', controller.updateChapter)
 
 module.exports = router

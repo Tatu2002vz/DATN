@@ -10,11 +10,9 @@ import calculateTime from "../utils/calculateTime";
 const { RiMoneyDollarCircleFill } = icons;
 
 const ChapterList = ({ data, slug, coverImage }) => {
-  console.log(data);
   const navigate = useNavigate();
   const [isBought, setIsBought] = useState(false);
   const [isShowFormBuy, setIsShowFormBuy] = useState(false);
-
   const { isLoggingIn } = useSelector((state) => state.user);
   const handleClick = async ({ id }) => {
     if (!isLoggingIn) {
@@ -87,6 +85,7 @@ const ChapterList = ({ data, slug, coverImage }) => {
           chapNumber={data.chapNumber}
           price={data.price}
           coverImage={coverImage}
+          comic={data.comic}
           setIsShowFormBuy={setIsShowFormBuy}
         />
       )}

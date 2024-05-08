@@ -6,7 +6,7 @@ import { getGenres } from "./store/app/asyncAction";
 import { ToastContainer } from "react-toastify";
 function App() {
   const dispatch = useDispatch();
-  const {userData} = useSelector(state => state.user)
+  const { userData } = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(getGenres());
   }, [dispatch]);
@@ -29,7 +29,8 @@ function App() {
               />
             );
           })}
-          {userData?.role === 'admin' && privateRoute.map((item, index) => {
+          {/* {userData?.role === "admin" && */}
+          {privateRoute.map((item, index) => {
             const Page = item.component;
             const Layout = item.layout;
             return (
@@ -43,11 +44,11 @@ function App() {
                 }
               />
             );
-          })  }
+          })}
+          {/* } */}
           {/* <Route path="*" element={<Navigate to={path.HOME}/>}/> */}
         </Routes>
         <ToastContainer />
-
       </div>
     </BrowserRouter>
   );

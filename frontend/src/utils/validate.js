@@ -40,7 +40,8 @@ const validate = (payload, setInvalidField) => {
         }
         break;
 
-      case 'price':
+      case "price":
+      case "amount":
       case "walletBalance":
         regex = /^[0-9]\d*$/;
         if (!arr[1].toString().match(regex)) {

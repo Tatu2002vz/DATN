@@ -14,7 +14,6 @@ const InputField = ({
   className,
   onKeyDown,
 }) => {
-  console.log(onKeyDown);
   const [hide, setHide] = useState(true);
   const handleShowPassword = () => {
     setHide(!hide);

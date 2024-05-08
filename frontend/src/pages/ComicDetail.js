@@ -17,6 +17,9 @@ import {
 import { comicError } from "../enum/listError";
 import calculateTime from "../utils/calculateTime";
 import io from "socket.io-client";
+import { useSelector } from "react-redux";
+import { apiFollow, apiGetFollow, apiUnfollow } from "../apis/follow";
+import { toast } from "react-toastify";
 const {
   HiStatusOnline,
   GrUpdate,
@@ -37,23 +40,30 @@ const ComicDetail = () => {
   const { id, slug } = useParams();
   const navigate = useNavigate();
   const [showReport, setShowReport] = useState(false);
+  const [isFollow, setIsFollow] = useState(false);
+  const { isLoggingIn } = useSelector((state) => state.user);
   const [data, setData] = useState({
     comic: null,
     chapters: null,
     comments: null,
   });
-
   const fetchComic = async () => {
     if (slug === "chapter") navigate(`/comic/${id}`);
-    let userID = null;
+    let comicID = null;
     if (!id) {
       const comicApi = await apiGetComicWithTitle(slug);
-      if (comicApi?.success) userID = comicApi?.mes[0]._id;
+      if (comicApi?.success) comicID = comicApi?.mes[0]._id;
     }
-    const idFinal = id ? id : userID;
+    const idFinal = id ? id : comicID;
     const comicApi = await apiGetComic(idFinal);
     const chaptersApi = await apiGetChapters(idFinal);
     const getComments = await apiGetCommentWithComic(idFinal);
+    if (isLoggingIn) {
+      const follow = await apiGetFollow(idFinal);
+      if (follow.success) {
+        if (follow.mes.length > 0) setIsFollow(true);
+      }
+    }
     if (comicApi?.success && chaptersApi?.success && getComments?.success) {
       setData((prev) => ({
         ...prev,
@@ -67,6 +77,30 @@ const ComicDetail = () => {
       console.log(getComments);
     }
   };
+
+  const handleFollow = async () => {
+    if (!isLoggingIn) {
+      toast.info(`Vui lòng đăng nhập để thực hiện chức năng này!`);
+    } else {
+      if (!isFollow) {
+        const follow = await apiFollow({ comicID: id });
+        if (follow.success) {
+          setIsFollow(true);
+          toast.success("Theo dõi thành công!");
+        } else {
+          toast.error("Có lỗi xảy ra! Vui lòng thử lại sau!");
+        }
+      } else {
+        const unfollow = await apiUnfollow({ comicID: id });
+        if (unfollow.success) {
+          setIsFollow(false);
+          toast.success("Bỏ theo dõi thành công!");
+        } else {
+          toast.error("Có lỗi xảy ra! Vui lòng thử lại sau!");
+        }
+      }
+    }
+  };
   const socket = useMemo(() => {
     return io(process.env.REACT_APP_URL_SERVER, {
       query: { isComic: true },
@@ -75,7 +109,6 @@ const ComicDetail = () => {
   const { comic, chapters, comments } = data;
   useEffect(() => {
     fetchComic();
-
     socket.on("refreshCmt", (data) => {
       setData((prev) => ({
         ...prev,
@@ -98,7 +131,7 @@ const ComicDetail = () => {
           className="w-full object-cover blur-xl opacity-50"
         />
       </div>
-      <p className="text-base pt-[24px] mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0 min-[1300px]:pt-[24px] relative flex">
+      <p className="text-ellipsis md:pt-[24px] md:mb-5 max-w-main mx-auto text-white z-10 p-[10px] min-[1300px]:p-0 min-[1300px]:pt-[24px] relative flex">
         <Breadcrumbs comic={data.comic} />
       </p>
       <div className="p-[25px] bg-color-float max-w-main mx-auto z-1 relative text-sm rounded-b-md">
@@ -159,7 +192,7 @@ const ComicDetail = () => {
               </p>
               <p className="flex-1">178</p>
             </div>
-            <div className="flex my-4">
+            <div className="grid my-4 grid-cols-2 md:grid-cols-3 gap-4 md:w-1/2">
               <NavLink
                 to={
                   comic
@@ -168,17 +201,20 @@ const ComicDetail = () => {
                       }`
                     : ""
                 }
-                className="bg-main rounded-full px-5 flex items-center mr-2"
+                className="bg-main rounded-full px-5 flex items-center justify-center"
               >
                 <BiSolidBook className="mr-1" />
                 Đọc từ đầu
               </NavLink>
-              <div className="rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex items-center">
+              <div
+                className="rounded-full px-5 py-2 bg-[#222F5C] flex items-center justify-center cursor-pointer"
+                onClick={() => handleFollow()}
+              >
                 <IoBookmark className="mr-1" />
-                Theo dõi
+                {!isFollow ? `Theo dõi` : `Đang theo dõi`}
               </div>
               <div
-                className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2 flex cursor-pointer items-center"
+                className=" rounded-full px-5 py-2 bg-[#222F5C] flex cursor-pointer items-center justify-center"
                 onClick={() => {
                   setShowReport(true);
                 }}
@@ -186,7 +222,7 @@ const ComicDetail = () => {
                 <IoMdWarning className="mr-1" />
                 Báo lỗi
               </div>
-              <div className=" rounded-full px-5 py-2 bg-[#222F5C] mr-2  items-center hidden md:flex">
+              <div className=" rounded-full px-5 py-2 bg-[#222F5C] items-center justify-center hidden md:flex">
                 <IoLogoFacebook className="mr-1" />
                 Share
               </div>

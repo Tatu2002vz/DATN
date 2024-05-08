@@ -9,6 +9,10 @@ var purchaseSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Chapter'
     },
+    comic: {
+        type: mongoose.Types.ObjectId,
+        ref: 'Comic'
+    },
     purchaseDate: {
         type: Date,
         default: Date.now
