@@ -12,12 +12,12 @@ npm install
  
 Chạy cả 2 sử dụng lệnh: npm start
 - Chèn dữ liệu vào cơ sở dữ liệu sử dụng postman:
-•	Thêm các thể loại:
+-	Thêm các thể loại:
 method: Post - url: http://localhost:8888/api/insert/
 
-•	Thêm các truyện:
+-	Thêm các truyện:
 method: Post - url: http://localhost:8888/api/insert/comic
-•	Thêm các chương:
+-	Thêm các chương:
 
 method: Post - url: http://localhost:8888/api/insert/chapter
 
