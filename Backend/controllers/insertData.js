@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
-const data = require("../../Scraping data/cateGenres");
-const comics = require("../../Scraping data/comic");
-const chapters = require("../../Scraping data/chapter.json");
+const data = require("../../Data/cateGenres");
+const comics = require("../../Data/comic");
+const chapters = require("../../Data/chapter.json");
 const Genre = require("../models/genre");
 const Comic = require("../models/comic");
 const Chapter = require("../models/chapter");

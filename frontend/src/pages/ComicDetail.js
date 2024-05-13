@@ -192,7 +192,7 @@ const ComicDetail = () => {
               </p>
               <p className="flex-1">178</p>
             </div>
-            <div className="grid my-4 grid-cols-2 md:grid-cols-3 gap-4 md:w-1/2">
+            <div className="grid my-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:w-full lg:w-2/3">
               <NavLink
                 to={
                   comic

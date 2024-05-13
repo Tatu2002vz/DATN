@@ -1,0 +1,3469 @@
+[{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f1c"
+  },
+  "title": "Cạm Bẫy",
+  "slug": "cam-bay",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1064.png?v=1694770971",
+  "genre": [],
+  "viewCount": 11422,
+  "follow": 73,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.880Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f4b"
+  },
+  "title": "Thanh Xuân Của Chúng Ta",
+  "slug": "thanh-xuan-cua-chung-ta",
+  "description": "Choi Ah Ran là một tiểu thuyết gia và nhà xuất bản, cô mang trong mình nỗi nhục lớn nhất cuộc đời mang tên Jo Ah Han – đúng vậy cô chính là một nhà văn mang tên tuổi lớn trong giới tiểu thuyết mạng. Vào 20 năm trước cô đã viết một cuốn tiểu thuyết trên Internet về chuyện tình giữa một đại ca trùm trường và một học sinh trung học bình thường. Nhưng thế quái nào cô lại vô tình xuyên không vào cuốn tiểu thuyết teenfic mà mình đã viết năm 16 tuổi ấy!?!???",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2569.png?v=1694771849",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 1137,
+  "follow": 5,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.919Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f55"
+  },
+  "title": "Chiến Trận Người Máy",
+  "slug": "chien-tran-nguoi-may",
+  "description": "Bối cảnh truyện diễn ra trong 1 tương lai xa, khi mà mặt đất đã dần bị tàn phá nặng nề. Con người đã xây dựng nên những pháo đài di động khổng lồ được gọi là các \\\"Vườn ươm\\\". Đây là nơi họ đào tạo nên những \\\"đứa trẻ\\\" đặc biệt, những đứa bé không hề biết gì về thế giới rộng lớn bên ngoài kia ... Sự tồn tại của những đứa trẻ này là vì một mục đích, đó là tiêu diệt những sinh vật khổng lồ bí ẩn được gọi là các \\\"Kyoryuu\\\". Những đứa trẻ phải phối hợp với nhau từ khi còn bé để có thể điều khiển các chi",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6499.png?v=1694774379",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6f"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 2676,
+  "follow": 67,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f4f"
+  },
+  "title": "Ta Là Chúa Tể Trùng Độc",
+  "slug": "ta-la-chua-te-trung-djoc",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50077.png?v=1711810803",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef90"
+    }
+  ],
+  "viewCount": 11691,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.922Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f59"
+  },
+  "title": "Cô Dâu Thảo Nguyên",
+  "slug": "co-dau-thao-nguyen",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50402.png?v=1713418577",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef66"
+    }
+  ],
+  "viewCount": 538,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.935Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f5b"
+  },
+  "title": "Ta Dùng Sách Giải Trí Thành Thánh Nhân",
+  "slug": "ta-dung-sach-giai-tri-thanh-thanh-nhan",
+  "description": "Truyện tranh Ta Dùng Sách Giải Trí Thành Thánh Nhân được cập nhật nhanh và đầy đủ nhất tại NetTruyen. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ NetTruyen ra các chương mới nhất của truyện Ta Dùng Sách Giải Trí Thành Thánh Nhân.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2146.png?v=1694771603",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 163319,
+  "follow": 1172,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.936Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f53"
+  },
+  "title": "Những Nhân Vật Chính Chỉ Tôi Biết",
+  "slug": "nhung-nhan-vat-chinh-chi-toi-biet",
+  "description": "Những Nhân Vật Chính Mà Chỉ Tôi Biết là một trong những bộ truyện tranh nổi tiếng thuộc thể loại Action, Manhwa.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50467.png?v=1713779284",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef90"
+    },
+    null,
+    null
+  ],
+  "viewCount": 4,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f5f"
+  },
+  "title": "Phi Nhiên Hướng Phong",
+  "slug": "phi-nhien-huong-phong",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39036.png?v=1698217207",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef78"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7d"
+    }
+  ],
+  "viewCount": 333,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.941Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f61"
+  },
+  "title": "Làm Nông Dân Trong Tòa Tháp Thử Thách",
+  "slug": "lam-nong-dan-trong-toa-thap-thu-thach",
+  "description": "Một ngày nọ, một tòa tháp bí ẩn đột nhiên xuất hiện trong thành phố. Mọi người quyết định gọi nó là ngục tối, và mặc dù nó có địa hình hiểm trở và quái vật nguy hiểm, nhưng nó cũng là vùng đất của cơ hội, nơi có vô số kho báu đang chờ đợi. Khi Sejun, một chàng trai trẻ sống một cuộc sống bình thường, tình cờ được mời đến ngục tối, anh ấy rất phấn khích trước viễn cảnh trở nên giàu có, nhưng anh ấy lại bị mắc kẹt trong một khu vực ẩn giấu của tòa tháp bí ẩn. Tất cả những gì anh ta có là một vài hạt giống. Bây giờ Sejun phải trồng trọt, thu thập tài nguyên và tìm ra chiến lược sinh tồn của riêng mình!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/550.png?v=1694770715",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 32227,
+  "follow": 271,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f63"
+  },
+  "title": "Ta Nhận Được Vật Phẩm Thần Thoại",
+  "slug": "ta-nhan-djuoc-vat-pham-than-thoai",
+  "description": "Yggdrasil, cây thế giới trong thần thoại Bắc Âu, đột nhiên xuất hiện trên Trái Đất. Cùng với nó là các sinh vật hắc ám tàn phá toàn bộ thành phố. Dù vậy nhờ có Hệ thống một vài nhân loại có được, hy vọng vẫn chưa mất đi hoàn toàn. Ở thế giới chỉ kẻ mạnh tồn tại này, Min Jaehyun gục ngã do chìm trong hối hận bởi sai lầm trong quá khứ…nhưng bỗng một ngày, hắn có được vật phẩm Thần thoại duy nhất trên thế giới. Vật phẩm này sẽ giúp hắn ra sao? Và hắn sẽ thay đổi số phận khốn khổ của mình như thế nào?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/343.png?v=1694770630",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6d"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 109861,
+  "follow": 1001,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.944Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f65"
+  },
+  "title": "Người Chơi Mới Cấp Tối Đa",
+  "slug": "nguoi-choi-moi-cap-toi-dja",
+  "description": "Jinhyuk, một Nutuber chơi game, là người duy nhất nhìn thấy phần kết của trò chơi [Tower of Trials]. Tuy nhiên, khi mức độ phổ biến của trò chơi giảm sút, anh ấy trở nên khó khăn để tiếp tục kiếm sống bằng nghề chơi game Nutuber. Vì anh ấy đã nhìn thấy kết thúc trò chơi, anh ấy định nghỉ chơi. Nhưng ngày hôm đó, [Tower of Trials] đã trở thành hiện thực, và Jinhyuk, người biết về mọi thứ trong trò chơi, đã tiếp quản mọi thứ nhanh hơn bất kỳ ai có thể làm được! \\\"Tôi\\\" Tôi sẽ cho bạn thấy một người chuyên nghiệp thực sự là như thế nào. \\\"",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1045.png?v=1694770960",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 448652,
+  "follow": 3611,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f67"
+  },
+  "title": "Flying Witch",
+  "slug": "flying-witch",
+  "description": "Kowata Makoto một cô gái ngốc nghếch lại mắc thêm cái bệnh mù đường kinh niên, do hoàn cảnh cô vừa mới chuyển đến nhà họ hàng gần xa...nhưng chẳng lẽ câu chuyện của chúng ta chỉ có vậy?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/671.png?v=1694770772",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    },
+    null
+  ],
+  "viewCount": 1162,
+  "follow": 54,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.948Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f69"
+  },
+  "title": "A Trạch Hóa Ra Lại Là Đại Tiểu Thư ?",
+  "slug": "a-trach-hoa-ra-lai-la-djai-tieu-thu",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50163.png?v=1712171624",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 39,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f57"
+  },
+  "title": "Người Tình Hợp Đồng Của Tổng Tài",
+  "slug": "nguoi-tinh-hop-djong-cua-tong-tai",
+  "description": "Chủ tịch của cuộc hôn nhân chớp nhoáng đã lên kế hoạch cho cô từ lâu, nhưng cô gái độc ác đã bị anh ta lừa.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/44805.png?v=1704247276",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 486,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.933Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f6d"
+  },
+  "title": "Kiếm Đế Nguyệt Linh",
+  "slug": "kiem-dje-nguyet-linh",
+  "description": "Truyện tranh Kiếm Đế Nguyệt Linh được cập nhật sớm nhất và đầy đủ tại NhatTruyen. Bạn đọc đừng quên bình luận và chia sẻ, ủng hộ NhatTruyen ra các chương mới nhất của truyện Kiếm Đế Nguyệt Linh.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/710.png?v=1694770788",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 48855,
+  "follow": 337,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f6f"
+  },
+  "title": "Thất Hoàng Tử Quỷ Jilbagias",
+  "slug": "that-hoang-tu-quy-jilbagias",
+  "description": "Anh hùng chuyển sinh thành con trai ma vương và hành trình trả thù BPH",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/980.png?v=1694770921",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    }
+  ],
+  "viewCount": 641,
+  "follow": 10,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.954Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f5d"
+  },
+  "title": "Khởi Tạo Nhân Vật Phản Diện",
+  "slug": "khoi-tao-nhan-vat-phan-dien",
+  "description": "Vừa làm nhân vật phản diện Lăng Thần vừa làm anh hùng Diệp Tử Mộ, có đến mấy chục năm tình cảm gút mắc... Đương nhiên, là đều muốn đánh bại đối phương cái chủng loại kia cừu thị! Nhưng mà, ngoài ý muốn khởi động thiết lập lại khóa để Lăng Thần về tới mười bảy tuổi! Đây quả thực là cơ hội trời cho a! Thừa dịp anh hùng chưa lớn lên, đương nhiên là trước phải nhổ cỏ tận gốc!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/4763.png?v=1694773250",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 225433,
+  "follow": 1663,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.939Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f73"
+  },
+  "title": "Anh Hùng Mạnh Nhất Trở Lại",
+  "slug": "anh-hung-manh-nhat-tro-lai",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1237.png?v=1694771071",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    }
+  ],
+  "viewCount": 522833,
+  "follow": 4635,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.957Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f75"
+  },
+  "title": "Tôi Đã Nuôi Dạy Em Gái Mình Một Cách Hoàn Hảo",
+  "slug": "toi-dja-nuoi-day-em-gai-minh-mot-cach-hoan-hao",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50299.png?v=1712847619",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef78"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    }
+  ],
+  "viewCount": 106,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.960Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f77"
+  },
+  "title": "Bị Phản Bội Bởi Đồng Đội Và Sở Hữu [Gacha Không Giới Hạn] Lv.9999",
+  "slug": "bi-phan-boi-boi-djong-djoi-va-so-huu-gacha-khong-gioi-han-lv.9999",
+  "description": "Một thế giới mà loài người bị coi là một loài thấp kém. Wright, một cậu bé con người đang mang hành lý tại buổi thám hiểm các chủng tộc,cậu đã bị phản bội đày sâu bên trong ngục tối chết chóc nhất thế giới \\\"Naraku\\\" ,ba năm trôi qua kể từ đó. Bản thân Light cũng trở thành cấp 9999, cậu muốn sống để trả thù lũ đồng đội khốn nạn đã bỏ mặc cậu (Hikki Team)",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/464.png?v=1694770679",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    }
+  ],
+  "viewCount": 114383,
+  "follow": 1659,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.963Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f79"
+  },
+  "title": "Là Healer Nhưng Lại Có Mặt Trên Chiến Trường",
+  "slug": "la-healer-nhung-lai-co-mat-tren-chien-truong",
+  "description": "Vào một ngày bão bùng, cậu học sinh bình thường như bao người - Usato Ken bị triệu hồi tới thế giới khác cùng 2 người cực kì tài năng Inukami Suzune và Ryuusen Kazuki. Cả 2 người kia đều sở hữu sức mạnh khủng nhưng anh main nhà ta thì lại có hàng khủng hơn - trị liệu thuật ... Liệu anh main có thể dùng năng lực của mình tung hoành trong thế giới mới này hay không đây",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/5855.png?v=1694773952",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 36017,
+  "follow": 1113,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.964Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f7b"
+  },
+  "title": "Nhân Vật Phản Diện Đại Sư Huynh, Tất Cả Các Sư Muội Đều Là Bệnh Kiều",
+  "slug": "nhan-vat-phan-dien-djai-su-huynh-tat-ca-cac-su-muoi-djeu-la-benh-kieu",
+  "description": "Bộ truyện này đang được phát hành trên ứng dụng Beebook.Online.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/198.png?v=1694770585",
+  "genre": [
+    null,
+    null,
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 65342,
+  "follow": 240,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f7d"
+  },
+  "title": "Sát Thủ Thiên Tài Đơn Độc",
+  "slug": "sat-thu-thien-tai-djon-djoc",
+  "description": "Tôi xuyên không vào bộ tiểu thuyết mà tôi đã viết. Để thay đổi kết cục tận thế, tôi phải trở thành phản diện \\'Shin Kanghu\\' và trở nên mạnh mẽ hơn cả anh hùng!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39276.png?v=1700968206",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef89"
+    }
+  ],
+  "viewCount": 4641,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.970Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f7f"
+  },
+  "title": "Kiếp Này Tôi Nhất Định Trở Thành Gia Chủ!",
+  "slug": "kiep-nay-toi-nhat-djinh-tro-thanh-gia-chu!",
+  "description": "Firentia trùng sinh thành đứa con ngoài giá thú của Lombardi, gia tộc danh giá nhất của đế quốc. Sau khi cha qua đời, cô bị họ hàng xua đuổi, gia tộc bị hủy hoại. Quá đau buồn và tức giận, Tia đã uống khá nhiều rượu và bị xe ngựa đâm trúng trên đường về. Mở mắt ra cô lại trùng sinh thêm một lần nữa về thời điểm chưa tròn 8 tuổi. Lần này cô quyết sẽ thay đổi vận mệnh, bảo vệ gia tộc. Kiếp này, cô nhất định trở thành gia chủ.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/3289.png?v=1694772300",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef89"
+    }
+  ],
+  "viewCount": 146887,
+  "follow": 1978,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.974Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f6b"
+  },
+  "title": "Thần Hổ Jangsan",
+  "slug": "than-ho-jangsan",
+  "description": "Bộ truyện này đang được phát hành trên ứng dụng Beebook.Online.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1522.png?v=1694771241",
+  "genre": [
+    null,
+    null,
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    null,
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef90"
+    },
+    null
+  ],
+  "viewCount": 1308,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f71"
+  },
+  "title": "Tsuyoshi",
+  "slug": "tsuyoshi",
+  "description": "Một chàng trai siêu mạnh luôn đánh bại những người xung quanh mình, mặc dù anh ta chẳng thích đánh nhau chút nào",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49704.png?v=1711098764",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6d"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef80"
+    }
+  ],
+  "viewCount": 989,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.955Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f1e"
+  },
+  "title": "Công Tước Bạch Long",
+  "slug": "cong-tuoc-bach-long",
+  "description": "Sinh ra là người kế vị của một gia đình quý tộc hạng thấp, Raven Varte bị gán cho tội danh âm mưu nổi dậy chống lại hoàng gia. Để được ân xá, hắn được cử đi chiến đấu với lũ quái vật cùng với quân đoàn tồi tàn nhất trong vương quốc, quân đoàn quỷ. Hầu hết mọi người đều nói đó là nơi không ai có thể sống nổi đến 10 năm, nhưng bằng cách nào đó mà Raven đã cố gắng sống sót trong 10 năm. Khi sự tự do đang gần ngay trước mắt, trong trận chiến cuối cùng của mình, hắn gặp Người kế nhiệm của gia tộc - công tước Pendragon, Ellen Pendragon",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/333.png?v=1694770627",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 60511,
+  "follow": 542,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.882Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f20"
+  },
+  "title": "Quỷ Vương Hồi Quy Là Người Tốt",
+  "slug": "quy-vuong-hoi-quy-la-nguoi-tot",
+  "description": "Truyện tranh Quỷ Vương Hồi Quy Là Người Tốt được cập nhật nhanh và đầy đủ nhất tại NetTruyen. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ NetTruyen ra các chương mới nhất của truyện Quỷ Vương Hồi Quy Là Người Tốt.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49036.png?v=1707642114",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 2284,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f22"
+  },
+  "title": "Vua Thăng Cấp",
+  "slug": "vua-thang-cap",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2818.png?v=1694772003",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6d"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 404679,
+  "follow": 3464,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.885Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f41"
+  },
+  "title": "Sokushi Cheat Ga Saikyou Sugite, Isekai No Yatsura Ga Marude Aite Ni Naranai N Desu Ga",
+  "slug": "sokushi-cheat-ga-saikyou-sugite-isekai-no-yatsura-ga-marude-aite-ni-naranai-n-desu-ga",
+  "description": "Cheats tối thượng? Ma thuật vô hạn? Khả năng nắm giữ mọi nguyên mẫu? Anh đây cho một hit không phải cả đám cùng chết?   Học sinh cao trung Yogiri Takatou tham gia chuyến đi dã ngoại của trường nhưng vừa tỉnh dậy, trước mặt cậu đã là một con rồng đang cố làm \\\"tềnh\\\" với xe buýt tham quan của lớp, và những người duy nhất còn lại trên xe là Yogiri cùng cô bạn cùng lớp Tomochika Dannoura. Dường như các bạn học khác đã được Sion, một người phụ nữ tự nhận mình là nhà hiền triết ban tặng sức mạnh đặc bi",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/4567.png?v=1694773123",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef62"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    }
+  ],
+  "viewCount": 30336,
+  "follow": 717,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f27"
+  },
+  "title": "Vua Cần Sa",
+  "slug": "vua-can-sa",
+  "description": "Chito Morio, một người đàn ông 41 tuổi, chủ của một cửa hàng hoa đang chung sống cùng vợ và cô con gái hiện đang học cấp 3 của mình. Tuy nhiên tình hình kinh doanh của cửa hàng ngày càng trở nên ế ẩm đã khiến vợ anh buộc phải ra ngoài làm thêm để giảm bớt gánh nặng kinh tế cho gia đình. Đang trong cơn túng quẫn thì đột nhiên, Morio nhận được thông báo họp lớp đại học và rồi anh đã quyết định tham dự buổi hội mặt đáng nhớ ấy sau khi được vợ mình hết lòng động viên. Thế rồi cuộc đời Morio bắt đầu bước sang trang mới kể từ lúc anh đã gặp lại người bạn thân ngày ấy là Kagayama cũng đến tham dự buổi họp lớp. Trong khi cả hai đang ngồi hàn huyên lại chuyện xưa thì Kagayama bất ngờ giới thiệu cho anh một công việc béo bở có thể kiếm được bộn tiền.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39171.png?v=1700068206",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    }
+  ],
+  "viewCount": 430,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.888Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f29"
+  },
+  "title": "Lời Nguyền Vẫn Chưa Chấm Dứt",
+  "slug": "loi-nguyen-van-chua-cham-dut",
+  "description": "Carnephelia Healthdante, công chúa thứ hai của đế quốc Healthdante đã cướp mọi thứ của mối tình đầu mà mình thầm thương qua thủ đoạn của người anh trai cùng cha khác mẹ. Helis Spenbach, người đã mất đi tất cả mọi thứ đã nguyền rủa và căm ghét hoàng thất cùng cô công chúa nhỏ kia. Carnephelia đã hoàn toàn sụp đổ trước sự oán giận của một cậu bé khiến cho mối quan hệ trở nên méo mó đến nỗi không thể hàn gắn chỉ bằng một lời xin lỗi thông thường. Để chấm dứt sự bất hạnh này, Carnephelia đã giết Ianfleed Healthante, người anh trai cùng cha khác mẹ của mình. Cô không hề ngần ngại. Vào khoảnh khắc Ianfleed qua đời, ‘sự chúc phúc’ mà Healthdante nhận được đã trở thành ‘lời nguyền’ đối với Carnephelia. Và cuộc sống của cô cũng đổi mới. Carnephelia đã trở lại vào lúc trước sinh nhật lần thứ tám của mình, khi mọi việc sắp sửa bắt đầu và thề nguyện. Một lời nguyền không cho phép ta chết đi. “Tôi sẽ hủy diệt Healthdante” Cô sẽ trả lại cho Ianfleed như thế và sẽ bảo vệ Helis, người cô yêu. Nhưng tạ",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/703.png?v=1694770785",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 2234,
+  "follow": 20,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.889Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f2b"
+  },
+  "title": "Những Người Anh Nguy Hiểm Của Công Nương",
+  "slug": "nhung-nguoi-anh-nguy-hiem-cua-cong-nuong",
+  "description": "lestia, người lớn lên trong khu ổ chuột với người chú nát rượu của mình và kiếm sống bằng nghề bán hoa. một đêm khi chú của cô, người bị đám côn đồ đe dọa vì nợ nần, đã cố gắng bán đứng cô. “này, bỏ tay ra khỏi cô ấy.” trai đẹp không biết từ đâu xuất hiện. họ đánh bại lũ côn đồ và nói những điều khó tin với lestia. “thật vui khi cuối cùng cũng được gặp em, em gái của ta.” đáng ngạc nhiên, cô ấy là con gái của công tước verchester, một gia đình đã đào tạo ra các pháp sư qua nhiều thế hệ. nhưng thật khó tin những lời đó mà không có bất kỳ bằng chứng nào. “nào, lestia. về nhà thôi. ” nhưng cô ấy có muốn níu kéo chút hy vọng nào không? cô ấy nắm lấy bàn tay của họ, cảm thấy có chút…",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2385.png?v=1694771739",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    null
+  ],
+  "viewCount": 4304,
+  "follow": 78,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f2d"
+  },
+  "title": "Thánh Nữ, Xin Hãy Dừng Ngay Những Trò Quái Đản Của Cô Đi!!",
+  "slug": "thanh-nu-xin-hay-dung-ngay-nhung-tro-quai-djan-cua-co-dji!!",
+  "description": "Tôi,Thánh nữ, sẽ không bao giờ chịu khuất phục trước kẻ như ngươi đâu. Tôi sẽ không bao giờ chịu khuất phục trước ngươi, Quỷ Vương. Dù là hành hạ, chơi thuốc hay thôi miên, hãy cứ đến đi, ta sẽ không khuất phục đâu!Tôi, Lucius, Quỷ Vương, quyết tâm thay đổi số phận của mình với tư cách là một nhân vật phản diện bị dính death flag! Do đó mà các vị thánh nữ, Công chúa Drawf, Yêu tinh và Valkyrie cũng không cần phải chiến đấu chống lại tôi nữa!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1459.png?v=1694771200",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 20744,
+  "follow": 280,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.892Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f2f"
+  },
+  "title": "Nhịp Tim 300 Giây",
+  "slug": "nhip-tim-300-giay",
+  "description": "Thế giới rộng lớn, lại chứa đầy rẫy những điều bí ẩn. Thế giới loài người luôn luôn có nhiều điều kinh dị và bất bình thường xảy ra, có lẽ là quá khứ, hiện tại hay tương lai, những chuyện lạnh sống lưng này không bao giờ kết thúc.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50390.png?v=1713319923",
+  "genre": [
+    null
+  ],
+  "viewCount": 17,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.893Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f31"
+  },
+  "title": "Chào Mừng Cậu Đến Trường Iruma-Kun",
+  "slug": "chao-mung-cau-djen-truong-iruma-kun",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/38791.png?v=1695549612",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    }
+  ],
+  "viewCount": 1920,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.895Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f33"
+  },
+  "title": "Arika Của Tôi",
+  "slug": "arika-cua-toi",
+  "description": "Một tác phẩm với sự hợp tác từ tác giả Fujisawa Moyashi của bộ truyện ăn khách \\\"Mitaraike Enjousuru\\\" (Lửa Thiêu Nhà Mitarai) và cây cọ trẻ đã đoạt giải thưởng dành cho các mangaka tân binh Chiba Tetsuya, Kumakuzu! Mamiya Arika, nữ hát chính của nhóm nhạc thần tượng \\\"Lyrical Trick\\\" bỗng mất tích một cách bí ẩn. Và đầu mối duy nhất về dấu vết của cô chỉ đơn giản là một đoạn video camera an ninh. Liệu đây có đơn giản chỉ là hành vi của một fan hâm mộ quá khích, một idol otaku hay không...!?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/624.png?v=1694770750",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef73"
+    },
+    null
+  ],
+  "viewCount": 486,
+  "follow": 2,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f37"
+  },
+  "title": "Đứa Con Báo Thù",
+  "slug": "djua-con-bao-thu",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50412.png?v=1713455304",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 155,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.900Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f35"
+  },
+  "title": "Dị Giới Nơi Tỉ Lệ Nam Nữ Là 1:39 Được Coi Là Một Chuyện Bình Thường",
+  "slug": "di-gioi-noi-ti-le-nam-nu-la-1:39-djuoc-coi-la-mot-chuyen-binh-thuong",
+  "description": "Tiêu đề nói hết rồi.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/38771.png?v=1695430849",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 2473,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.899Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f39"
+  },
+  "title": "Phàm Nhân Tu Tiên",
+  "slug": "pham-nhan-tu-tien",
+  "description": "Một bộ truyện được chuyển thể từ tiểu thuyết tu tiên cùng tên rất đỉnh của tác giả Vong Ngữ, với tình tiết logic, Vong Ngữ đã cho ra đời một thế giới tu tiên giả đầy màu sắc và huyền ảo.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/504.png?v=1694770695",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6d"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 708648,
+  "follow": 2584,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f3b"
+  },
+  "title": "Mezametara Saikyou Soubi To Uchuusen-Mochi Datta No De, Ikkodate Mezashite Youhei Toshite Jiyuu",
+  "slug": "mezametara-saikyou-soubi-to-uchuusen-mochi-datta-no-de-ikkodate-mezashite-youhei-toshite-jiyuu",
+  "description": "Mezametara saikyou soubi to uchuusen-mochi datta no de, ikkodate mezashite youhei toshite jiyuu ni ikitai",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6698.png?v=1694774510",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6f"
+    },
+    null
+  ],
+  "viewCount": 11085,
+  "follow": 284,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f3d"
+  },
+  "title": "Chung Cực Đấu La",
+  "slug": "chung-cuc-djau-la",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/16.png?v=1694770524",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    null,
+    null
+  ],
+  "viewCount": 1210465,
+  "follow": 3789,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f3f"
+  },
+  "title": "Ta Không Muốn Trùng Sinh Đâu",
+  "slug": "ta-khong-muon-trung-sinh-djau",
+  "description": "Thật sự không nghĩ tới, xã hội tinh anh, Minh tinh độc thân Trần Hán thăng thế mà trùng sinh, tỉnh lại sau giấc ngủ quay lại thành học sinh tốt nghiệp cấp ba. Ngã tư đường Trần Hán thăng cũng tại do dự, bảo tàng nữ hài Thẩm Ấu Sở cùng Bạch Nguyệt Tiêu, hắn sẽ lựa chọn ai?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1832.png?v=1694771421",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 376193,
+  "follow": 1424,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.908Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f25"
+  },
+  "title": "Thây Ma",
+  "slug": "thay-ma",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6644.png?v=1694774474",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    }
+  ],
+  "viewCount": 10735,
+  "follow": 54,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.887Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f43"
+  },
+  "title": "Lời Thú Nhận Của Chúa Tể Bóng Tối",
+  "slug": "loi-thu-nhan-cua-chua-te-bong-toi",
+  "description": "Lapis là một cô bé mang trong mình lời nguyền của chúa tể bóng tối, nhưng lại khao khát trở thành một Thánh Hiệp Sĩ – là một điều vốn bất khả thi đối với những “kẻ bị nguyền”. Tuy vậy, thay vì đánh bại, cô lại lỡ tay triệu hồi Chúa Tể Bóng Tối.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49667.png?v=1710649594",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef89"
+    }
+  ],
+  "viewCount": 422,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.911Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f45"
+  },
+  "title": "The Reincarnation Magician Of The Inferior Eyes",
+  "slug": "the-reincarnation-magician-of-the-inferior-eyes",
+  "description": "ABEL là một đại ma thuật sư sau cùng team chinh phạt ma tộc thắng lợi hòa bình được lặp lại main bị buộc rời khỏi đội của mình. Nguyên do là main có một đôi mắt màu hổ phách (tượng trưng cho ma tộc) nó được coi là một thứ tồn tại thừa thãi trong thế giới hòa bình.Thay vì lựa chọn sống trong một dinh thự do đồng chuẩn bị sẵn main đã lựa chọn cách rời đi và đã xuyên không đến 200 năm sau. Ở thế giới đó ABEL đã gặp LILITH( con gái của ma zương) người mà main đã cứu trong cuộc chinh phạt ma tộc. Hai",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/384.png?v=1694770646",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    }
+  ],
+  "viewCount": 87678,
+  "follow": 1567,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.913Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f47"
+  },
+  "title": "Samurai Kiếm Tre",
+  "slug": "samurai-kiem-tre",
+  "description": "Ngày đầu năm mới, anh chàng samurai vô chủ Senou Souichirou đến ngụ tại khu trọ Katagi ở Edo. Bắt đầu manh nha những hỗn loạn phá vỡ chuỗi ngày bình yên của dân cư khu trọ Katagi... Senou Souichirou là ai và liệu anh có thể sống bình yên bên những người dân ở Katagi? Tác phẩm đã giành giải Nhất Giải Thưởng Văn Hóa Osamu Tezuka lần thứ 15 (2011).",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49415.png?v=1708955373",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef66"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef73"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    null
+  ],
+  "viewCount": 66,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.915Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f4d"
+  },
+  "title": "Arya Bàn Bên Thỉnh Thoảng Lại Trêu Ghẹo Tôi Bằng Tiếng Nga",
+  "slug": "arya-ban-ben-thinh-thoang-lai-treu-gheo-toi-bang-tieng-nga",
+  "description": "Tôi- một cậu học sinh lười nhát nhất trường, lại không có tài cán gì đặc biệt. Tình cờ hôm nọ, tôi bắt gặp được Arya- cô bạn bàn bên mới chuyển đến trưởng tôi. Với lực học luôn đứng top 1 lớp đã thế lại giỏi thể thao, Arya sớm gây được ấn tượng với tụi con trai trong trường. Thế nhưng cô nàng bàn bên này lại chỉ thích ghẹo và mắng tôi mới lại. Liệu phải chăng Arya đã phải lòng một thằng loser như tôi rồi không? Mời độc giả hãy cùng đón đọc nhé!!!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/306.png?v=1694770619",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    null
+  ],
+  "viewCount": 7046,
+  "follow": 106,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.920Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f49"
+  },
+  "title": "Kết Đẹp Với Chú Út Kiếp Trước Sau Chia Tay",
+  "slug": "ket-djep-voi-chu-ut-kiep-truoc-sau-chia-tay",
+  "description": "Truyện tranh Kết Đẹp Với Chú Út Kiếp Trước Sau Chia Tay được cập nhật nhanh và đầy đủ nhất tại NetTruyen. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ NetTruyen ra các chương mới nhất của truyện Kết Đẹp Với Chú Út Kiếp Trước Sau Chia Tay.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39076.png?v=1698856206",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 956,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6630bc6e8e964d85eb000f51"
+  },
+  "title": "Sư Tôn: Nghịch Đồ Này Không Phải Là Thánh Tử",
+  "slug": "su-ton:-nghich-djo-nay-khong-phai-la-thanh-tu",
+  "description": "Truyện tranh Sư Tôn: Nghịch Đồ Này Không Phải Là Thánh Tử được cập nhật nhanh và đầy đủ nhất tại NetTruyen. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ NetTruyen ra các chương mới nhất của truyện Sư Tôn: Nghịch Đồ Này Không Phải Là Thánh Tử.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/166.png?v=1694770574",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 17194,
+  "follow": 40,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-04-30T09:39:58.924Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f52"
+  },
+  "title": "Liệu Nhân Loại Có Cần Nền Văn Minh Hậu Tận Thế Không?",
+  "slug": "lieu-nhan-loai-co-can-nen-van-minh-hau-tan-the-khong",
+  "description": "Năm XXXX công nguyên ở một thế giới tận thế được cai trị bởi thần loài người phải sống như chí phèo và số lượng nhân loại đã bị giảm một phần, nhưng giữa những điều trên, Kasago một cậu trai với lòng tin với thần với mừc mù quàng đã tham gia vào công cuộc \\\"phục hồi nền văn minh\\\" và lấy đi những nền văn minh khỏi người khác theo lệnh của thần. Trái lại, Mebaru, người mà Kasago tình cờ gặp trên đường thực hiện công việc đã không ngần ngại tỏ ý nghi ngờ về thần. Kasago muốn tìm lại gia đình và Mebaru muốn tìm kẻ đã giết cha cô. Cùng nhau họ rong ruổi trên cuộc hành trình thu hồi nền văn minh trong khi tiếp xúc với chúng.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1328.png?v=1694771121",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef84"
+    }
+  ],
+  "viewCount": 289,
+  "follow": 7,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.570Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f50"
+  },
+  "title": "Isekai De Saikyo Mao No Kodomotachi No Mama Ni Natchaimashita",
+  "slug": "isekai-de-saikyo-mao-no-kodomotachi-no-mama-ni-natchaimashita",
+  "description": "Nữ sinh trung học Akari khóc thương cho sự mất mát của người mẹ đã chết khi bà cố bảo vệ cho Akari khỏi một chiếc xe tải sắp đâm tới một năm về trước. Cô phát hiện ra game phiêu lưu mà mẹ cô đã tặng cho sinh nhật của mình thời gian trước đây, nhưng chưa từng có cơ hội thắng được. Đột nhiên, cô được triệu tập để trở thành mẹ của 10 đứa con của Quỷ vương ở một thế giới khác ...",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1380.png?v=1694771152",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    }
+  ],
+  "viewCount": 26214,
+  "follow": 479,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.562Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f54"
+  },
+  "title": "Tôi Đã Chuyển Sinh Thành Slime",
+  "slug": "toi-dja-chuyen-sinh-thanh-slime",
+  "description": "Một manga khác chuyển thể từ light novel đang hot ở nhật. Một anh chàng bị tên cướp đâm chết khi đang gặp vợ chưa cưới của đồng nghiệp. Khi đang thoi thóp trước khi chết, người đầy máu, anh ta nghe được một tiếng nói kỳ lạ. Giọng nói ấy chuyển thể sự tiếc nuối của anh chàng vì vẫn còn tân trước khi đi và ban cho anh ta chiêu thức đặc biệt [tiên nhân vĩ đại]. Liệu đây có phải là trò đùa?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1289.png?v=1694771099",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 158007,
+  "follow": 2836,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.572Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f56"
+  },
+  "title": "Waruta Hanga ~Truyền Thuyết Rắn Thần Đảo Yatogami~",
+  "slug": "waruta-hanga-~truyen-thuyet-ran-than-djao-yatogami~",
+  "description": "Thất nghiệp sau khi công ty đang làm bị phá sản, Yahiro đánh cược vào chuyến đi săn rắn thần Tsuchinoko trên đảo Yatogami do một nhà đài tổ chức. Nhưng đảo Yatogami nổi tiếng là một hòn đảo một đi không trở lại... Và nhóm người lên đảo đã sớm biết được lý do tại sao và họ phải chiến đấu để sống sót quay về !!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49588.png?v=1709955368",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef84"
+    }
+  ],
+  "viewCount": 94,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f58"
+  },
+  "title": "Tinh Linh Huyễn Tưởng Ký Tại Dị Giới",
+  "slug": "tinh-linh-huyen-tuong-ky-tai-di-gioi",
+  "description": "Amakawa Haruto, 1 thanh niên đã chết trước khi kịp tái ngộ với người bạn thời thơ ấu đã mất tích cách đây 5 năm của mình. Rio là một cậu bé sống trong khu ổ chuột nung nấu ý định trả thù cho người mẹ đã bị giết ngay trước mặt cậu khi cậu chỉ vừa 5 tuổi. Trái đất và thế giới khác, hai kẻ khác nhau hoàn toàn nhưng giờ đây kí ức và nhân cách của Haruto đã tái sinh vào trong cơ thể của Rio. Dù kí ức và nhận thức của cả hai có chút hỗn loạn nhưng giờ đây Rio (Haruto) quyết định sẽ sống ở thế giới mới",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/5243.png?v=1694773557",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 30400,
+  "follow": 997,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.577Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f5a"
+  },
+  "title": "Đánh Thức Kĩ Năng Ngủ, Tôi Xây Dựng Dàn Harem Mạnh Nhất",
+  "slug": "djanh-thuc-ki-nang-ngu-toi-xay-dung-dan-harem-manh-nhat",
+  "description": "Regnard bất chấp kì vọng và đăng ký vào Học viện Hoàng gia Lasarzia danh giá mặc dù từng bỏ học.Tuy nhiên trong Lễ ban phước, main nhận được một kỹ năng đặc biệt gọi là \\\"Phước lành về ngủ chung\\\", khiến các bạn cùng lớp chế giễu. Vượt qua sự chế nhạo, Regnard phát hiện ra tiềm năng thực sự của kỹ năng này khi anh ngủ với Frost, một học sinh tài năng.Khám phá này dẫn đến những cuộc phiêu lưu bất ngờ và một ảo mộng harem...",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50601.png?v=1714379351",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef62"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    }
+  ],
+  "viewCount": 125,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f5c"
+  },
+  "title": "Ta Tu Luyện Thành Thần Tại Đô Thị",
+  "slug": "ta-tu-luyen-thanh-than-tai-djo-thi",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50634.png?v=1714551858",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null,
+    null
+  ],
+  "viewCount": 63,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.582Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f5e"
+  },
+  "title": "Bắt Đầu Từ Việc Bị Từ Gia Chế Nhạo, Ta Giết Kẻ Địch Để Thăng Cấp",
+  "slug": "bat-djau-tu-viec-bi-tu-gia-che-nhao-ta-giet-ke-djich-dje-thang-cap",
+  "description": "Chu Hùng sống lại đến một trấn nhỏ trong Bắc Bình thời kỳ Minh Sơ! Một năm này, Minh Thái Tổ Chu Nguyên Chương đang hăng hái, lấy Thái tử Chu Tiêu làm phụ, chỉnh đốn triều cương, chỉnh đốn lãnh thổ quốc gia. Một năm này, Chu Hùng cùng nữ tử mình cứu về Từ Cẩm Nhi sinh hoạt hai năm, muốn kinh doanh tửu quán tổ mẫu để lại cho mình, cùng Cẩm Nhi vượt qua một đời bình thường, cũng là một năm này, người nhà Từ Cẩm Nhi tìm đến, nguyên lai nàng đúng là con gái khai quốc quốc công Từ Đạt, huynh đệ Từ gia tìm đến, bị khuất nhục.\\r\\n\\r\\n",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50510.png?v=1713929764",
+  "genre": [
+    null,
+    null,
+    null
+  ],
+  "viewCount": 115,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f60"
+  },
+  "title": "Địa Cầu Dị Biến,Ta Giết Thần Thăng Cấp",
+  "slug": "djia-cau-di-bienta-giet-than-thang-cap",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50636.png?v=1714552586",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.587Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f62"
+  },
+  "title": "Hoá Ra Ta Là Lão Tổ Ma Đạo?",
+  "slug": "hoa-ra-ta-la-lao-to-ma-djao",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50635.png?v=1714552572",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.590Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f64"
+  },
+  "title": "Khắc Đan Tu Tiên Chỉ Cẩu Trường Sinh",
+  "slug": "khac-djan-tu-tien-chi-cau-truong-sinh",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50637.png?v=1714553299",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null,
+    null
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.592Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f66"
+  },
+  "title": "Không Chỉ Là Bắt Nạt",
+  "slug": "khong-chi-la-bat-nat",
+  "description": "Nakajima kẻ đã \\\"thao túng” cả lớp học vì hắn là kẻ \\\"bắt nạt”. \\\"Nạn nhân” của hắn là Shirasaki - một cô bé yếu đuối. Ngày qua ngày, mọi chuyện chỉ ngày một xấu đi, thậm chí còn đi tới cả bạo lực. Tất cả đều vờ như không nhìn thấy. Ai cũng thừa hiểu, một khi can dự vào là họ sẽ trở thành mục tiêu tiếp theo. Và thế là, Nakajima được dịp thoả sức bắt nạt, tới độ như thể không khác gì bị ma nhập. Rốt cuộc có chuyện gì đó không ổn ở đây. Sao cậu ta lại hành xử kinh khủng như vậy? Thực tế sự thật đằng",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/98.png?v=1694770549",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef73"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef84"
+    }
+  ],
+  "viewCount": 24282,
+  "follow": 277,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.595Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f68"
+  },
+  "title": "Tinh Giáp Hồn Tướng",
+  "slug": "tinh-giap-hon-tuong",
+  "description": "Vị hoàng hồn sư cuối cùng của tộc người--Tống Vân Tường, dẫn theo hệ thống trọng sinh quay về lúc còn đi học. Lúc còn trẻ bởi vì hồn mạch khiếm khuyết mà bị người đời khinh thường, bởi vì yếu đuối nên chỉ có thể giương mắt nhìn bạn thân chết trước mặt mình. Nhưng kiếp này, dẫn theo hệ thống trọng sinh quay về, dùng kinh nghiệm chiến đấu với kiến thức kỹ thuật của 60 năm để cứu rỗi trường học, từ đó mở ra con đường Tạo Cơ Giáp siêu cấp để đánh quái thú...Chuyện đã từng hối hận, những người đã từng bỏ lỡ, lần này tuyệt đối sẽ không để lại hối tiếc gì.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/442.png?v=1694770670",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6f"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 545775,
+  "follow": 2062,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.597Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f6a"
+  },
+  "title": "Kỷ Nguyên Kỳ Lạ",
+  "slug": "ky-nguyen-ky-la",
+  "description": "Một trăm năm sau sự cố kỳ lạ, chỉ có một phần mười số nhân loại còn sống sót, và số lượng quỷ đã vượt qua con người! Để tồn tại, họ phải vật lộn để chiến đấu, cho đến khi ngự linh sư suất hiện. Sở hữu linh lực ngay từ khi họ được sinh ra, và không ngừng tu luyện linh quỷ khế ước của chính mình để chống lại ác linh. Thế giới đã bước vào một kỷ nguyên cùng tồn tại với linh quỷ!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/4090.png?v=1694772815",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 177316,
+  "follow": 802,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.599Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f6c"
+  },
+  "title": "Cùng Đỉnh Lưu Ảnh Đế Yêu Đương Phát Đường",
+  "slug": "cung-djinh-luu-anh-dje-yeu-djuong-phat-djuong",
+  "description": "Bộ truyện này đang được phát hành trên ứng dụng Beebook.Online.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/31.png?v=1694770528",
+  "genre": [
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef90"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    null,
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    }
+  ],
+  "viewCount": 28240,
+  "follow": 90,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.603Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f6e"
+  },
+  "title": "Ta Có 90 Tỷ Tiền Liếm Cẩu!",
+  "slug": "ta-co-90-ty-tien-liem-cau!",
+  "description": "Sinh viên Trần Viễn crush nữ thần Lâm Thư Hình ba năm, lại bị đối phương một cước đạp bay. Sau khi đau khổ lại ngoài ý muốn kích hoạt hệ thống tiền liếm cẩu, còn có 90 tỷ tiền liếm cẩu, công dụng chỉ để simp nữ nhân! Càng xài nhiều tiền, càng thu được các loại thuộc tính. Tên là Liếm Cẩu Kim Hệ Thống thì ta thật sự cần liếm cẩu sao? Chỉ cần đủ nhiều tiền ta chính là trap boy chỉ cần dùng tiền là có thể chứng minh với nữ thần là ta đang liếm cẩu! Lúc này Trần Viễn đã mở ra con đường nhân sinh của mình!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39124.png?v=1699590628",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    }
+  ],
+  "viewCount": 88034,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f70"
+  },
+  "title": "Thần Sủng Tiến Hóa",
+  "slug": "than-sung-tien-hoa",
+  "description": "Thiên địa dị biến, yêu thú sinh sôi, kỷ nguyên mới của nhân loại đã cho ra đời 1 nghề nghiệp mới: thu phục quái vật, nuôi dưỡng quái vật, huấn luyện quái vật, đây chính là nghề Ngự Sử,",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/265.png?v=1694770606",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    }
+  ],
+  "viewCount": 725035,
+  "follow": 3602,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.608Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f72"
+  },
+  "title": "Thiên Phú Của Ngươi, Giờ Là Của Ta",
+  "slug": "thien-phu-cua-nguoi-gio-la-cua-ta",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/38910.png?v=1696573506",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef89"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 15066,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.622Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f74"
+  },
+  "title": "Dũng Sĩ Hesman",
+  "slug": "dung-si-hesman",
+  "description": "Bộ truyện dũng sĩ hesman full bao gồm 159 tập. Dũng sĩ Hesman là một robot khổng lồ do năm con mãnh sư ghép lại mà thành. Cùng với thanh gươm ánh sáng vô cùng lợi hại, Hesman đã giúp đỡ các bạn của mình chống lại các thế lực xấu nhằm bảo vệ hòa bình cho vũ trụ và hành tinh Arus xinh đẹp. Những tập đầu là truyện scan nên chất lượng thấp, các bạn thông cảm nhé. Truyện này scan vì tác giả Việt Nam Hùng Lân vẽ tay vào những năm 1992 ( làm quái gì có máy vi tính ^___^ ) . Truyện này được dựng từ bộ truyện Voltron của nước ngoài.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50632.png?v=1714524490",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    }
+  ],
+  "viewCount": 72,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.629Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f76"
+  },
+  "title": "Hôm Nay Anh Có Lộ Bí Mật Chưa?",
+  "slug": "hom-nay-anh-co-lo-bi-mat-chua",
+  "description": "Mini là một \\\"người sành xỉ\\\", và nhiệm vụ mới nhất của cô là hoa hồng từ một cô con gái giàu có, hy vọng rằng cô có thể kiểm tra bạn trai của mình. Tuy nhiên, người thử nghiệm Triệu Nguyệt Minh là một quý ông và luôn không chơi bài theo thói quen của Mi Ni, điều này khiến Mi Ni, người luôn quen nhìn thấy \\\"những kẻ cặn bã\\\", cảm thấy hơi khó khăn. Cuộc giằng co giữa Aquaman và King Understand sắp nổ ra, ai rơi vào cạm bẫy tình yêu trước?!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49358.png?v=1708623389",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 155,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.632Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f78"
+  },
+  "title": "Monster Ga Afureru Sekai Ni Natta Node Suki Ni Ikitai To Omoimasu",
+  "slug": "monster-ga-afureru-sekai-ni-natta-node-suki-ni-ikitai-to-omoimasu",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6174.png?v=1694774162",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    }
+  ],
+  "viewCount": 8742,
+  "follow": 362,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.634Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f7a"
+  },
+  "title": "Tôi Bị Hoán Đổi Giới Tính, Vì Vậy Tôi Đã Hẹn Hò Với Người Bạn Thân Nhất Của Mình",
+  "slug": "toi-bi-hoan-djoi-gioi-tinh-vi-vay-toi-dja-hen-ho-voi-nguoi-ban-than-nhat-cua-minh",
+  "description": "Như tựa, nhma tưởng là gà hóa ra lại là thóc",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/777.png?v=1694770819",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef64"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    null
+  ],
+  "viewCount": 973,
+  "follow": 10,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.637Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f80"
+  },
+  "title": "Moto Saikyou No Kenshi Wa, Isekai Mahou Ni Akogareru",
+  "slug": "moto-saikyou-no-kenshi-wa-isekai-mahou-ni-akogareru",
+  "description": "Anh main nhà ta,kiếm sĩ mạnh nhất tái sinh thành thanh niên vô năng",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/5264.png?v=1694773571",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6d"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 12974,
+  "follow": 404,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.645Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f7c"
+  },
+  "title": "Quán Cà Phê Nữ Thần",
+  "slug": "quan-ca-phe-nu-than",
+  "description": "Kasukabe Hayato đã được nhận vào Đại Học Tokyo ngay trong lần thi đầu tiên. Nhưng sau khi nhận được tin bà nội qua đời, anh trở về ngôi nhà thời thơ ấu của mình, quán cà phê Familia.  Và thấy 5 cô gái lạ mặt tự xưng là \\\"Gia đình của bà\\\"! Cuộc sống mới của Hayato tại một thị trấn ven biển với năm cô gái định mệnh bắt đầu từ đây!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/563.png?v=1694770721",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 29089,
+  "follow": 331,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.639Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f82"
+  },
+  "title": "Lại Gặp Nhau Ở Ban Công Rồi",
+  "slug": "lai-gap-nhau-o-ban-cong-roi",
+  "description": "Chuyện kể về một anh chàng 30 tuổi với sở thích chăm sóc cây cỏ trên ban công. Tại đây anh gặp một người phụ nữ ở căn hộ bên cạnh. Hai người họ đã bắt đầu trò chuyện với nhau nhưng lại không hề biết mặt nhau. Người phụ nữ ấy lại là một nữ diễn viên mới nổi, Narumi Yuu. Liệu rằng câu chuyện giữa hai người họ sẽ đi về đâu?",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1105.png?v=1694770993",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    null
+  ],
+  "viewCount": 999,
+  "follow": 1,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.647Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f7e"
+  },
+  "title": "Level 1 With S-Rank Drop Rate Is The Strongest",
+  "slug": "level-1-with-s-rank-drop-rate-is-the-strongest",
+  "description": "Satou Ryouta, người đã chết vì làm việc quá sức đã tái sinh ở một thế giới khác. Mặc dù Ryouta còn sống, nhưng giờ đây anh ta đang phải chịu đựng về level ở thế giới mới này. Dù không tăng được level nhưng anh ta dùng kỹ năng gian lận như tạo ra một con quái vật không tồn tại trên thế giới này.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6309.png?v=1694774256",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    }
+  ],
+  "viewCount": 5462,
+  "follow": 333,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.643Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f84"
+  },
+  "title": "Em Đến Cùng Cơn Gió",
+  "slug": "em-djen-cung-con-gio",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50622.png?v=1714475531",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef61"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    null
+  ],
+  "viewCount": 12,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f86"
+  },
+  "title": "Murabito Desu Ga Nani Ka?",
+  "slug": "murabito-desu-ga-nani-ka",
+  "description": "Vâng! thưa các bạn Lại là truck-sama, Truck idol của chúng ta.... đã hóa kiếp cho main chính nhà ta để được chuyển sinh vào một thế giới khác mà ở đó có rồng và yêu tinh, thế nhưng anh ta lại là một \\\"dân làng\\\". Với vốn kiến thức đã có từ thế giới cũ, anh ta sẽ đem lại những gì cho thế giới mới đây? cùng đón xem main chính cùng với Job của anh ta là \\\" dân làng \\\" nào.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/401.png?v=1694770654",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 38561,
+  "follow": 1044,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.653Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f88"
+  },
+  "title": "Ta Vô Địch Ở Thế Giới Huyền Huyễn Tận Thế",
+  "slug": "ta-vo-djich-o-the-gioi-huyen-huyen-tan-the",
+  "description": "Bên trong thế giới Thi Tu lan tàn, đệ tử tạp dịch Trần Nguyên bị gian nhân làm hại, ngoài ý muốn thức tỉnh hệ thống rút ra vạn vật, có thể rút ra bất luận , tu vi, công pháp, linh lực của tử vật vân vân.\\\\\\\"Cho nên, chỉ cần giết hắn, mấy chục năm tu vi chính là của ta?\\\\\\\"Có hệ thống gia trì, Trần Nguyên một đường đánh quái thăng cấp, đại sát tứ phương, kết bạn đồng bạn quan trọng, trải qua trùng điệp khảo nghiệm, thật tình không biết, phía sau tất cả khảo nghiệm , đều là âm mưu to lớn nhằm vào hắn...",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50633.png?v=1714541043",
+  "genre": [
+    null,
+    null,
+    null
+  ],
+  "viewCount": 23,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.655Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f8a"
+  },
+  "title": "Sao Cứ Phải Dây Dưa Với Nhân Vật Phụ Như Ta",
+  "slug": "sao-cu-phai-day-dua-voi-nhan-vat-phu-nhu-ta",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50621.png?v=1714471936",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 30,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.658Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f8c"
+  },
+  "title": "Noa-Senpai Wa Tomodachi",
+  "slug": "noa-senpai-wa-tomodachi",
+  "description": "3 chap đầu là bản dịch của Ayamikotrans. The reader xin phép được tiếp tục dịch từ chapter 4 nhé!Lấy bối cảnh một công ty trò chơi, Rihito Otsuka (23t), người làm công ăn lương và Noa Saotome (27t), người phụ nữ có sự nghiệp tuyệt vời. Hai nhân vật có cuộc sống không thể giao nhau lại tình cờ trở thành \\\"bạn bè\\\". Một vở hài kịch về \\\"bạn bè\\\" văn phòng ngọt ngào bắt đầu!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50600.png?v=1714379298",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    null
+  ],
+  "viewCount": 64,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f8e"
+  },
+  "title": "Bên Bếp Lửa Nhà Alice-San",
+  "slug": "ben-bep-lua-nha-alice-san",
+  "description": "Sau mười năm ở Tokyo, Alice trở về quê hương và sống trong căn nhà truyền thống kiểu Nhật bên một bếp lửa hồng rực. Harumi, người bạn thuở nhỏ của cô, có đôi chút bối rối khi gặp lại nhau sau một khoảng thời gian dài, nhưng hơi ấm từ căn bếp và Alice vẫn ấm áp như xưa...Bên bếp lửa nhà Alice-san, cả hai cùng tận hưởng những bữa ăn ngon và những phút giây thật yên bình.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/48786.png?v=1706276167",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5d"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    null
+  ],
+  "viewCount": 179,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.663Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f90"
+  },
+  "title": "Maseki Gurume: Mamono No Chikara O Tabeta Ore Wa Saikyou!",
+  "slug": "maseki-gurume:-mamono-no-chikara-o-tabeta-ore-wa-saikyou!",
+  "description": "Tại thế giới này, chỉ có mình tôi là có thể mạnh lên nhờ ăn những đá phép thuật! Tại vì nữ thần cảm thấy cái chết của tôi quá thương tâm nên quyết định cho tôi chuyển sinh và có một cuộc sống với, như bao nhiêu bộ thần sẽ trao sức mạnh mà main hằng mong muốn hoặc có thần thì ruồng bỏ main. Nhưng đây bà thần lại cho quay GACHA để lấy kĩ năng!! Và kỹ năng tôi nhận được lại là Phân hủy độc tố EX.... cái kỹ năng quái quỷ gì thế hả!!??",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/156.png?v=1694770570",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 33520,
+  "follow": 943,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.665Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f92"
+  },
+  "title": "Gokusotsu Kraken",
+  "slug": "gokusotsu-kraken",
+  "description": "Cùng tác giả với Akame ga Kill và Mato Seihei no Slave. Một cậu thanh niên tên Shimizu Kuuma đang phải lo lắng để tìm kiếm việc làm thì đột nhiên bị đưa sang một thế giới khác. Sau đó cậu bị đưa vào hải ngục thành - nhà tù giữa biển cả dành cho nữ giới. Ở đó cậu đã hợp nhất mới chúa tể biển cả Kraken - một sinh vật đã giao cho cậu nhiệm vụ phải đi giải cứu công chúa Zeina.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1342.png?v=1694771129",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef62"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    }
+  ],
+  "viewCount": 589,
+  "follow": 25,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.667Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f95"
+  },
+  "title": "Người Đi Đêm",
+  "slug": "nguoi-dji-djem",
+  "description": "Ở vùng thôn quê của vùng núi Lỗ Trung có một cặp ông cháu, họ có năng lực đối kháng lại với tà túy, và cũng có một khúc ngoặt kỳ lạ trong quá khứ. Sự xuất hiện của một cô gái, đem tới một bản đồ năm 1938 do một tiểu quỷ vẽ, còn cả hoa văn Samba thần bí trên bản đồ, tiết lộ một bí mật long trời lở đất.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49596.png?v=1710044659",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 1265,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f97"
+  },
+  "title": "Tái Sinh Thành Tên Cặn Bã Trong Bộ Manga Cắm Sừng Mình Từng Đọc. Thế Nhưng Giờ Đây, Cô Nàng Nữ Chính Của Bộ Manga Ấy Lại Chủ Động Tiếp Cận Tôi",
+  "slug": "tai-sinh-thanh-ten-can-ba-trong-bo-manga-cam-sung-minh-tung-djoc.-the-nhung-gio-djay-co-nang-nu-chinh-cua-bo-manga-ay-lai-chu-djong-tiep-can-toi",
+  "description": "Cái tựa dài ngoằng kia cũng chính là tóm tắt luôn rồi nhé",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/57.png?v=1694770535",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 3820,
+  "follow": 40,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f99"
+  },
+  "title": "Hương Vị Ngọt Ngào",
+  "slug": "huong-vi-ngot-ngao",
+  "description": "Kiều hiểu minh tình cờ gặp được một chàng trai người đầy máu nằm bất tỉnh nhân sự, và bất ngờ thay chàng trai ấy lại là thần tượng của cậu.....chuyện là sao đây, cùng đón đọc nhé",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/4094.png?v=1694772818",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef61"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 3332,
+  "follow": 78,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f9b"
+  },
+  "title": "Isekai Maou To Shoukan Shoujo No Dorei Majutsu",
+  "slug": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu",
+  "description": "Trong MMORPG Cross Reverie, Sakamoto Takuma tự hào về sức mạnh áp đảo của mình và được những player khác gọi là 『Ma Vương』. Một ngày kia, cậu được triệu hồi đến thế với khác với hình dáng trong game. Ở đó có hai người con gái cứ khăng khăng rằng mình là chủ triệu hồi. Takuma đã bị các cô gái áp dụng ma thuật nô lệ hóa dùng cho thú triệu hồi— Tuy nhiên, năng lực vốn có của cậu, 《Phản Hồi Ma Thuật》, đã kích hoạt! Chính các cô gái mới là người trở thành nô lệ! Takuma cảm thấy bối rối. Cậu tuy là ma",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/5411.png?v=1694773661",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef62"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 39083,
+  "follow": 595,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.680Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f9d"
+  },
+  "title": "Vưu Vật",
+  "slug": "vuu-vat",
+  "description": "Bộ truyện này đang được phát hành trên ứng dụng Beebook.Online.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1057.png?v=1694770967",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef90"
+    }
+  ],
+  "viewCount": 2439,
+  "follow": 20,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4f9f"
+  },
+  "title": "Phương Pháp Che Giấu Đứa Con Của Hoàng Đế",
+  "slug": "phuong-phap-che-giau-djua-con-cua-hoang-dje",
+  "description": "“Dù sao anh cũng chưa từng yêu tôi đúng không?” Cuộc hôn nhân mà cả đời Astell mong mỏi đã kết thúc chỉ trong một ngày. Từ khi mười tuổi, cô đã cố gắng nỗ lực từng ngày để có thể trở thành vợ của Kaizen, nhưng những gì còn ở lại với cô ấy chỉ là danh tiếng xấu “Phế Hoàng Hậu”. Gia tộc ruồng bỏ, Còn người đàn ông cô từng yêu, Kaizen mong muốn thoát khỏi Astell. “Đúng như vậy. Ta chưa từng yêu cô.” Cuối cùng Astell đưa ra lời nói dối. Vì người đàn ông từng là lẽ sống của cô, vì người đàn ông chỉ mới làm chồng cô trong một ngày. Tưởng rằng sẽ không bao giờ xuất hiện tiếp điểm với anh ta nữa ~ “Hình như…tôi đã có thai rồi?” Sáu năm sau, Astell gặp lại Kaizen, và lại nói dối anh ta. “Cô…đứa bé đó là sao?” “Là cháu của tôi.” Vì để bảo vệ đứa bé",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2267.png?v=1694771669",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5e"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 21572,
+  "follow": 198,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.685Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fa1"
+  },
+  "title": "Usogui",
+  "slug": "usogui",
+  "description": "Trong các sòng bạc chui tại nhật bản,nơi mạng sống của người chơi cũng có thể mang ra cá cược như những món đồ.Sòng bạc cùng các thế lực lớn ở đây luôn tìm mọi cách để móc túi người chơi,biến họ thành những con nợ.Baku Madarame một con bạc đã giúp nhiều người thoát khỏi cám dỗ.....",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/688.png?v=1694770778",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef73"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    }
+  ],
+  "viewCount": 2483,
+  "follow": 7,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fa3"
+  },
+  "title": "Trở Thành Hầu Nữ Còn Quan Trọng Hơn Là Làm Công Chúa",
+  "slug": "tro-thanh-hau-nu-con-quan-trong-hon-la-lam-cong-chua",
+  "description": "Siana, người từng là một vị công chúa cao quý của một vương quốc nhỏ nọ. Cho đến khi cuộc xâm lăng từ những đội quân hoàng gia vào đế quốc của cô diễn ra…. Ngay vào thời khắc trước khi chuẩn bị bị tên thái tử tàn bạo ấy chém đầu, Siana đã dùng hết sự dũng cảm và thốt lên rằng, “Cầu xin các người hãy tha mạng cho tôi!” Cùng với khuôn mặt xinh đẹp không tì vết tựa như được chạm khắc, giờ đây đã nhuốm màu máu đỏ tươi, cô cất giọng và hướng về phía hoàng tử van xin trong sự cầu khẩn một cách tha thiết. “Tôi có biết và đã lãnh tựu được rất nhiều các kỹ năng trong cung điện trong thời gian qua. Thế nên chẳng phải nếu để tôi làm cung nữ hầu hạ cho ngài là quá phù hợp rồi sao?” Sau câu nói đó, không ngờ Siana lại thực sự đã trở thành một cung nữ hiện đang tập sự trong cung điện. Thế nhưng, bất ngờ thay, công việc này thế mà lại vô cùng phù hợp, vượt ngoài sức tưởng tượng của chính cô?! Cô cứ dùng chổi để quét dọn hành lang, thì sàn nhà sẽ dần trở nên sạch bong, không một vết dơ nào còn sót. Còn nếu cô nhào bột mì, thì những chiếc vừa mới ra lò sẽ có vị vô cùng thơm ngon, không thể cưởng lại được. Hay nếu giao cho cô việc giặt giũ, thì các tấm chăn bông nhất định sẽ trở nên trắng tinh tươm và tỏa hương thơm dễ chịu! Cô đã thực sự làm việc vô cùng chăm chỉ và chuyên tâm và luôn làm tốt bổn phận của một cung nữ, và vì thế mà cuối cùng những người hoàng tộc cũng đã dần bị thuyết phục bởi Siana và bắt đầu mở lòng hơn với cô…. “Trà mà cô pha luôn là ngon nhất.” “Đây là chiếc váy do chính cô làm sao? Nó trông thật đẹp!” “Ta muốn nhờ cô chỉ dạy cho hoàng tử giúp ta.” Thế nhưng, Siana lại không hề trong thân tâm có ý định muốn chiếm lấy trái tim của người đàn ông ấy cả…. “Ta cũng thế.” “……” “Ta cũng không thể nào sống nếu thiếu em được, Siana à.” Cái giọng nói nức nở, quá đổi là tủi thân ấy của hoàng tử đã khiến Siana vào khoảnh khắc ấy, đã phải nhắm chặt mắt mình lại. Điện hạ à, tôi chỉ đơn giản là muốn được sống một cuộc đời thật bình dị của một cung nữ mà thôi!",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/49619.png?v=1710252167",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5e"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6c"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 308,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fa5"
+  },
+  "title": "Tôi Đã Biến Người Bạn Thơ Ấu Thành Con Gái",
+  "slug": "toi-dja-bien-nguoi-ban-tho-au-thanh-con-gai",
+  "description": "Hm... một anh chàng thích trang điểm và trap cho bạn thủa nhỏ và.....",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/589.png?v=1694770732",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef64"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    }
+  ],
+  "viewCount": 24818,
+  "follow": 289,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.691Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fa7"
+  },
+  "title": "Thổ Lộ Với Mỹ Nữ Tông Chủ Xong, Ta Vô Địch Rồi?",
+  "slug": "tho-lo-voi-my-nu-tong-chu-xong-ta-vo-djich-roi",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50639.png?v=1714553344",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.693Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fab"
+  },
+  "title": "Ta Đem Hoàng Tử Dưỡng Thành Hắc Hóa",
+  "slug": "ta-djem-hoang-tu-duong-thanh-hac-hoa",
+  "description": "Truyện tranh Ta Đem Hoàng Tử Dưỡng Thành Hắc Hóa được cập nhật nhanh và đầy đủ nhất tại NetTruyen. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ NetTruyen ra các chương mới nhất của truyện Ta Đem Hoàng Tử Dưỡng Thành Hắc Hóa.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1760.png?v=1694771380",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef5e"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 13318,
+  "follow": 152,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fae"
+  },
+  "title": "Em Gái Sống Khép Kín Của Tôi",
+  "slug": "em-gai-song-khep-kin-cua-toi",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/5029.png?v=1694773427",
+  "genre": [],
+  "viewCount": 1399,
+  "follow": 37,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.727Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fb0"
+  },
+  "title": "1001 Cách Chinh Phục Chồng Yêu",
+  "slug": "1001-cach-chinh-phuc-chong-yeu",
+  "description": "Đu idol chi bằng theo đuổi chồng, Bạch Dao Dao xuyên về thời học sinh quyết định thực hiện quyền lợi vợ chồng sớm, sau này là phú hào, hiện tại là giáo thảo, theo đuổi chồng! Đón đọc truyện tranh 1001 Cách Chinh Phục Chồng Yêu sớm nhất tại website Soái Ca Comic. Ngoài ra, còn rất nhiều thể loại hấp dẫn, nhiều đầu truyện hay và hoàn toàn miễn phí. Chúc các bạn đọc truyện vui vẻ. Đừng quên thả tim và bình luận thật nhiều để ủng hộ mình nha các bạn.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/611.png?v=1694770742",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 6123,
+  "follow": 60,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.729Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66323b036ab2eb37c55d4fa9"
+  },
+  "title": "Cơ Quan Thức Tỉnh, Ta Bỗng Dưng Vô Địch Rồi!",
+  "slug": "co-quan-thuc-tinh-ta-bong-dung-vo-djich-roi!",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50638.png?v=1714553329",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T12:52:19.696Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23b9"
+  },
+  "title": "The Blue Period",
+  "slug": "the-blue-period",
+  "description": "Từ năm hai đến năm cuối cao trung, vô tư và chăm chỉ, Yataro Yaguchi cuối cùng tìm được niềm vui từ mỹ thuật. Không có kinh nghiệm vẽ trước đây, cậu ấy vẫn quyết định nộp đơn vào trường đại học mỹ thuật. Một quyết định với những kết quả thảm họa.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39278.png?v=1700975409",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef75"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    null
+  ],
+  "viewCount": 352,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.295Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23bb"
+  },
+  "title": "Cuộc Đối Đầu Gay Gắt",
+  "slug": "cuoc-djoi-djau-gay-gat",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50611.png?v=1714432330",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef61"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null
+  ],
+  "viewCount": 66,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.302Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23bd"
+  },
+  "title": "Kiếp Thiên Vận",
+  "slug": "kiep-thien-van",
+  "description": "Cải biên từ tiểu thuyết \\\"Dưỡng Qủy Vi Họa\\\". Trước khi ta sinh ra đã bị người ta tính kế, ngũ âm câu toàn, thiên sinh chiêu lệ quỷ, tiên sinh đồng hành nói ta sống không quá bảy tuổi, sau khi chết sẽ cho người dưỡng thành tiểu quỷ huyết y hại người. Bà ngoại vì cứu ta, cho ta cưới vợ cho ta, nuôi ta từ bé để cho ta sống yên ổn một thời gian, mặc dù sau này ta phát hiện vợ ta không phải người... TTwf nhỏ hơi thở đã lay lắn, ta có thể sống tới bây giờ vốn đã quen thuộc nhẫn nhục chịu đựng, nhưng du",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/7894.png?v=1694775297",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 30994,
+  "follow": 332,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.305Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23bf"
+  },
+  "title": "Sự Quyến Rủ Của 2.5D",
+  "slug": "su-quyen-ru-cua-2.5d",
+  "description": "Cosplay , gái cute con mai que",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/1856.png?v=1694771434",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef65"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef7a"
+    }
+  ],
+  "viewCount": 27686,
+  "follow": 542,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.309Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23c1"
+  },
+  "title": "Gả Cho Phản Diện",
+  "slug": "ga-cho-phan-dien",
+  "description": "Bộ truyện này đang được phát hành trên ứng dụng Beebook.Online.",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/151.png?v=1694770569",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    null,
+    null,
+    null
+  ],
+  "viewCount": 1416,
+  "follow": 14,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23c3"
+  },
+  "title": "Yukionna To Kani Wo Kuu: Okinawa-Hen",
+  "slug": "yukionna-to-kani-wo-kuu:-okinawa-hen",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50431.png?v=1713546730",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef60"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef62"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6a"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef73"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef74"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef84"
+    }
+  ],
+  "viewCount": 216,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.423Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23c5"
+  },
+  "title": "Băng Hỏa Ma Trù",
+  "slug": "bang-hoa-ma-tru",
+  "description": "Chúng ta hãy cùng chứng kiến chàng thanh niên Dung Niệm Băng, mang trên người mối thù sát hại phụ thân, một lòng quyết luyện phép thuật để báo thù, dẫn dắt người xem vào một thế giới kỳ lạ nơi trù nghệ kết hợp với ma pháp thành một đường có một không hai : ma trù ma pháp. Cốt truyện biến ảo quái dị, lại thêm tài vẽ gấm thêu hoa và khả năng sáng tạo kinh người của Đường gia Tam Thiếu, khẳng định đây là một tác phẩm không thể bỏ qua",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6765.png?v=1694774551",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 153333,
+  "follow": 1445,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.426Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23c7"
+  },
+  "title": "Girl And Science",
+  "slug": "girl-and-science",
+  "description": "Nam chính là Phong Tiểu Vũ trong lúc đang dẫn cô bạn thanh mai trúc mã Lăng Vân Tiêu (cô nàng là ác ma ở trường học) trốn khỏi sự truy đuổi của mấy tép riu :)) thì cả 2 bị ngã khỏi sân thượng và xuyên vào một thế giới khác. Nào là dị giới sinh mệnh, nào là khung uyên thế giới và con người có thể đạt được những năng lực vô tận....... Mời xem tiếp",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/6497.png?v=1694774378",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 158428,
+  "follow": 621,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.429Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23c9"
+  },
+  "title": "Cố Tình Chiếm Đoạt",
+  "slug": "co-tinh-chiem-djoat",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/39457.png?v=1702138923",
+  "genre": [
+    null,
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    }
+  ],
+  "viewCount": 605,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.431Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23cb"
+  },
+  "title": "Ngự Linh Thế Giới",
+  "slug": "ngu-linh-the-gioi",
+  "description": "Một họa sĩ truyện tranh xuyên qua dị giới Đến lúc đó, hắn nhận ra 1 vấn đề \\\"Ta không phải nhân vật chính ? Mà là nhân vật phản diện đối địch với nhân vật chính ?\\\" \\\"Cái kịch bản này không đúng nha!\\\"",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/2622.png?v=1694771885",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 1361557,
+  "follow": 3229,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.438Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23cd"
+  },
+  "title": "Tu Chân Nói Chuyện Phiếm Quần",
+  "slug": "tu-chan-noi-chuyen-phiem-quan",
+  "description": "Một ngày, Tống Thư Hàng ngoài ý muốn gia nhập một nhóm chat nghiện tiên hiệp thâm niên, các thành viên trong nhóm đều lấy \\'Đạo hữu\\' xưng hô, danh hiệu đều là Phủ chủ, Động chủ, Chân nhân, Thiên Sư.Ngay cả con chó cảnh lạc đường của chủ nhóm đều xưng là đại yêu khuyển rời nhà trốn đi. Cả ngày nói chuyện là luyện đan, xông bí cảnh, luyện công kinh nghiệm cái gì. Đột nhiên có một ngày, lặn xuống nước hồi lâu hắn đột nhiên phát hiện...Trong đám mỗi một cái quần viên, vậy mà toàn bộ là tu chân giả, c",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/3612.png?v=1694772503",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef58"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef70"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    }
+  ],
+  "viewCount": 882018,
+  "follow": 3298,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.446Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23cf"
+  },
+  "title": "Truyền Võ",
+  "slug": "truyen-vo",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/7737.png?v=1694775188",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef56"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef63"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef81"
+    },
+    null,
+    {
+      "$oid": "662601392ae8626b17cfef77"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef67"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef89"
+    }
+  ],
+  "viewCount": 117509,
+  "follow": 678,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.453Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66324fa7b6020c84a09b23d1"
+  },
+  "title": "Cứu Mạng! Nhân Vật Phản Diện Tôi Viết Đã Tới Cửa Rồi",
+  "slug": "cuu-mang!-nhan-vat-phan-dien-toi-viet-dja-toi-cua-roi",
+  "description": "",
+  "coverImage": "https://cmangaog.com/assets/tmp/album/50158.png?v=1712150658",
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef6b"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef71"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef87"
+    },
+    {
+      "$oid": "662601392ae8626b17cfef8a"
+    }
+  ],
+  "viewCount": 68,
+  "follow": 0,
+  "status": "Đang Cập Nhật",
+  "releaseDate": {
+    "$date": "2024-05-01T14:20:23.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663a413d3d71d418ef6359ee"
+  },
+  "title": "test",
+  "slug": "test",
+  "description": "t",
+  "createdBy": {
+    "$oid": "65fc8b0a0a4d8f6c9f80708b"
+  },
+  "genre": [
+    {
+      "$oid": "662601392ae8626b17cfef5e"
+    }
+  ],
+  "viewCount": 0,
+  "follow": 0,
+  "status": "Đang cập nhật",
+  "releaseDate": {
+    "$date": "2024-05-07T14:57:01.122Z"
+  },
+  "__v": 0,
+  "coverImage": "https://res.cloudinary.com/dev0dudpd/image/upload/v1715093821/comicMarket/wggd7966k5kixafygqbm.webp"
+}]
