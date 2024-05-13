@@ -1,5 +1,6 @@
 - Cài đặt Nodejs
 - Clone reposistory github: https://github.com/Tatu2002vz/DATN/
+
 Mở Terminal nhập:
 git clone https://github.com/Tatu2002vz/DATN/
  
