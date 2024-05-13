@@ -3,9 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { FilterTag, Comic, Pagination } from "../components";
 import { createContext, useEffect, useRef, useState } from "react";
 import { apiGetComicFilter } from "../apis";
+import Loading from "../components/Loading";
 export const comicContext = createContext();
 const Home = () => {
-  const [comics, setComics] = useState([]);
+  const [comics, setComics] = useState(null);
   let totalPage = useRef();
 
   const {search} = useLocation()
@@ -17,19 +18,21 @@ const Home = () => {
     return acc;
   }, {});
   const fetchComic = async () => {
-    const response = await apiGetComicFilter({...filterFinal});
-
+    const response = await apiGetComicFilter({...filterFinal})
     if (response?.success) {
       totalPage.current = response?.counts / process.env.REACT_APP_LIMIT_COMIC;
-      setComics([...response?.mes]);
+      setComics(response?.mes);
     }
   };
   useEffect(() => {
-    fetchComic();
+    setTimeout(() => {
+      fetchComic();
+    }, 10000)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
   return (
     <comicContext.Provider value={{ comics, setComics }}>
+      {comics ? '' : <Loading/>}
       <div className="p-[10px] min-[1300px]:p-0">
         <Link to={"https://www.facebook.com/vantu2002"} target="_blank">
           <img src={slider} alt="" className="w-full object-cover" />

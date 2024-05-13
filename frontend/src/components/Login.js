@@ -58,7 +58,9 @@ const Login = ({ setIsShow, active, setActive }) => {
     }
     if (invalid === 0) {
       if (!active && !isForgotPassword) {
+        setIsLoading(true);
         const res = await apiLogin(payload);
+        setIsLoading(false);
         if (res?.success) {
           await dispatch(
             login({
@@ -98,7 +100,9 @@ const Login = ({ setIsShow, active, setActive }) => {
         }
       }
       if (isForgotPassword) {
+        setIsLoading(true);
         const res = await apiForgotPassword(payload);
+        setIsLoading(false);
         if (res?.success) {
           Swal.fire({
             title: "Thành công!",
