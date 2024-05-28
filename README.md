@@ -22,4 +22,4 @@ method: Post - url: http://localhost:8888/api/insert/comic
 method: Post - url: http://localhost:8888/api/insert/chapter
 
 - Truy cập vào url http://localhost:3000/ để sử dụng hệ thống
-- Demo web: https://youtu.be/58ACQ8ZCbUU
+- Demo web: https://youtu.be/WyPxlq7dxnQ
